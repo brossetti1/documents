@@ -1,0 +1,231 @@
+Received: (qmail 14551 invoked by uid 30297); 10 Dec 2013 14:43:38 -0000
+Received: from unknown (HELO p3plibsmtp01-05.prod.phx3.secureserver.net) ([10.6.12.127])
+          (envelope-sender <jennifer.li@barefoot.com>)
+          by p3plsmtp02-02.prod.phx3.secureserver.net (qmail-1.03) with SMTP
+          for <isaac@mybookingpal.com>; 10 Dec 2013 14:43:38 -0000
+Received: from p3plsmtpa06-03.prod.phx3.secureserver.net ([173.201.192.104])
+	by p3plibsmtp01-05.prod.phx3.secureserver.net with bizsmtp
+	id zqY81m01i2FcQjR01qjdwU; Tue, 10 Dec 2013 07:43:37 -0700
+X-Authority-Analysis: v=2.0 cv=ffRzPTsF c=1 sm=1
+ a=Db2PxGekRPC2exRQCkMz5g==:17 a=k0q0l4KqraUA:10 a=BxV2N8jWBc4A:10
+ a=St88gMdEnD8A:10 a=3T32k0G4AAAA:8 a=FcOaiy8NvsoA:10 a=Nn1dfLRiAAAA:8
+ a=qtJH2uDUnPkycXaZiRMA:9 a=QEXdDO2ut3YA:10 a=gx_uwfSf-W4A:10
+ a=plUw0Ljkhc0A:10 a=glM6Ou1a23MA:10 a=pGLkceISAAAA:8 a=_W_S_7VecoQA:10
+ a=MSl-tDqOz04A:10 a=BuQpvtiQlnZTUoLV:21 a=eQXMfFYh3vJKhPuWcRBqww==:117
+Received: from jenPC ([119.32.239.195])
+	by p3plsmtpa06-03.prod.phx3.secureserver.net with 
+	id zqja1m0094Def2F01qjbpP; Tue, 10 Dec 2013 07:43:37 -0700
+Message-ID: <1E2FA8C5A5BD48BE9E043812356B1110@jenPC>
+From: <jennifer.li@barefoot.com>
+To: <isaac@mybookingpal.com>
+Cc: "Nima Afrasiabi" <amoonima@gmail.com>
+References: <20131203164644.1212958dbd6aafb3c5d89ef21fff7da8.991c277820.wbe@email02.secureserver.net>
+In-Reply-To: <20131203164644.1212958dbd6aafb3c5d89ef21fff7da8.991c277820.wbe@email02.secureserver.net>
+Subject: Re: Get availability calendar for each property
+Date: Tue, 10 Dec 2013 09:43:36 -0500
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+	boundary="----=_NextPart_000_0126_01CEF58C.4C38CAE0"
+X-Priority: 3
+X-MSMail-Priority: Normal
+Importance: Normal
+X-Mailer: Microsoft Windows Live Mail 15.4.3555.308
+X-MimeOLE: Produced By Microsoft MimeOLE V15.4.3555.308
+X-Nonspam: None
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_0126_01CEF58C.4C38CAE0
+Content-Type: text/plain;
+	charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+Hi, Isaac,
+
+there is a method  GetPropertyBookingDateForAllXML to  return all =
+blocked dates for all active properties.
+if you only need to call once a day, we suggest you to do so at night =
+time.
+If you need property availability up to date, then we suggest you to =
+call=20
+GetPropertyBookingDateForAllXML once and save all property availability =
+on your local server
+then call method=20
+GetLastUpdatedPropertyIDs
+or=20
+GetLastAvailChangedProperties
+to get only updated property availability to avoid put too much pressure =
+on our server .
+
+Please let me know if anything unclear
+Jennifer
+
+
+From: isaac@mybookingpal.com=20
+Sent: Tuesday, December 03, 2013 6:46 PM
+To: jennifer.li@barefoot.com=20
+Cc: Nima Afrasiabi=20
+Subject: Get availability calendar for each property
+
+Hi  Jennifer,
+
+
+I received your contact information from Edward Ulmer. I work at =
+BookingPal, as the integration Engineer. I was wondering if you could =
+please let me know how to get the availability schedule for all =
+properties? My current plan is to keep calling isavailable() for each =
+property each day for two years.=20
+Thank you for your time and help.=20
+Isaac Mahgrefteh
+
+
+Isaac Mahgrefteh | BookingPal, Inc.
+O: 949 333 0724 ext 806 | Website: www.mybookingpal.com
+Skype ID: isaac@mybookingpal.com=20
+101 Pacifica, Suite 250, Irvine, CA 92618
+
+------=_NextPart_000_0126_01CEF58C.4C38CAE0
+Content-Type: text/html;
+	charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+<HTML><HEAD></HEAD>
+<BODY dir=3Dltr>
+<DIV dir=3Dltr>
+<DIV style=3D"FONT-SIZE: 12pt; FONT-FAMILY: 'Calibri'; COLOR: #000000">
+<DIV>Hi, Isaac,</DIV>
+<DIV>&nbsp;</DIV>
+<DIV>there is a method&nbsp; <A style=3D"name: _toc373656853"><SPAN=20
+style=3D"FONT-FAMILY: ; mso-bidi-font-size: 12.0pt; =
+mso-fareast-font-family: simsun; mso-font-kerning: 1.0pt; =
+mso-ansi-language: en-us; mso-fareast-language: zh-cn; =
+mso-bidi-language: ar-sa"><SPAN=20
+style=3D"mso-bookmark: _toc373723495"><SPAN=20
+style=3D"mso-bookmark: _toc373729272"><SPAN=20
+style=3D"mso-bookmark: _toc373731093"><SPAN=20
+style=3D"mso-bookmark: _toc373731187"><SPAN=20
+style=3D"mso-bookmark: _toc374428932"><FONT face=3D"Times New =
+Roman"><FONT=20
+style=3D"FONT-SIZE: =
+10.5pt">GetPropertyBookingDateForAllXML</FONT></FONT></SPAN></SPAN></SPAN=
+></SPAN></SPAN></SPAN></A>=20
+to&nbsp; return all blocked dates for all active properties.</DIV>
+<DIV>if you only need to call once a day, we suggest you to do so at =
+night=20
+time.</DIV>
+<DIV>If you need property availability up to date, then we suggest you =
+to call=20
+</DIV>
+<DIV><A style=3D"name: _toc373656853"><SPAN=20
+style=3D"FONT-FAMILY: ; mso-bidi-font-size: 12.0pt; =
+mso-fareast-font-family: simsun; mso-font-kerning: 1.0pt; =
+mso-ansi-language: en-us; mso-fareast-language: zh-cn; =
+mso-bidi-language: ar-sa"><SPAN=20
+style=3D"mso-bookmark: _toc373723495"><SPAN=20
+style=3D"mso-bookmark: _toc373729272"><SPAN=20
+style=3D"mso-bookmark: _toc373731093"><SPAN=20
+style=3D"mso-bookmark: _toc373731187"><SPAN=20
+style=3D"mso-bookmark: _toc374428932"><FONT face=3D"Times New =
+Roman"><FONT=20
+style=3D"FONT-SIZE: =
+10.5pt">GetPropertyBookingDateForAllXML</FONT></FONT></SPAN></SPAN></SPAN=
+></SPAN></SPAN></SPAN></A>=20
+once and save all property availability on your local server</DIV>
+<DIV>then call method </DIV>
+<H3 style=3D"MARGIN: 12pt 0in 3pt; TEXT-JUSTIFY: inter-ideograph" =
+align=3Djustify><A=20
+style=3D"name: _toc373723534"><SPAN style=3D"mso-bookmark: =
+_toc374428920"><FONT=20
+face=3DArial><FONT style=3D"FONT-WEIGHT: normal"=20
+size=3D3>GetLastUpdatedPropertyIDs</FONT></FONT></SPAN></A></H3>
+<DIV style=3D"MARGIN: 12pt 0in 3pt; TEXT-JUSTIFY: inter-ideograph"=20
+align=3Djustify>or </DIV>
+<H3 style=3D"MARGIN: 12pt 0in 3pt; TEXT-JUSTIFY: inter-ideograph" =
+align=3Djustify><A=20
+style=3D"name: _toc255335463"><SPAN style=3D"mso-bookmark: =
+_toc255336642"><SPAN=20
+style=3D"mso-bookmark: _toc255459424"><SPAN=20
+style=3D"mso-bookmark: _toc274373867"><SPAN=20
+style=3D"mso-bookmark: _toc274680996"><SPAN=20
+style=3D"mso-bookmark: _toc280135524"><SPAN=20
+style=3D"mso-bookmark: _toc280135604"><SPAN=20
+style=3D"mso-bookmark: _toc280254651"><SPAN=20
+style=3D"mso-bookmark: _toc307265438"><SPAN=20
+style=3D"mso-bookmark: _toc316431163"><SPAN=20
+style=3D"mso-bookmark: _toc316431339"><SPAN=20
+style=3D"mso-bookmark: _toc373656843"><SPAN=20
+style=3D"mso-bookmark: _toc373723485"><SPAN=20
+style=3D"mso-bookmark: _toc373729262"><SPAN=20
+style=3D"mso-bookmark: _toc373731083"><SPAN=20
+style=3D"mso-bookmark: _toc373731177"><SPAN=20
+style=3D"mso-bookmark: _toc374428922"><FONT face=3DArial><FONT=20
+style=3D"FONT-WEIGHT: normal"=20
+size=3D3>GetLastAvailChangedProperties</FONT></FONT></SPAN></SPAN></SPAN>=
+</SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></S=
+PAN></SPAN></SPAN></A></H3>
+<DIV>to get only updated property availability to avoid put too much =
+pressure on=20
+our server .</DIV>
+<DIV>&nbsp;</DIV>
+<DIV>Please let me know if anything unclear</DIV>
+<DIV>Jennifer</DIV>
+<DIV>&nbsp;</DIV>
+<DIV=20
+style=3D'FONT-SIZE: small; TEXT-DECORATION: none; FONT-FAMILY: =
+"Calibri"; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; =
+DISPLAY: inline'>
+<DIV style=3D"FONT: 10pt tahoma">
+<DIV>&nbsp;</DIV>
+<DIV style=3D"BACKGROUND: #f5f5f5">
+<DIV style=3D"font-color: black"><B>From:</B> <A =
+title=3Disaac@mybookingpal.com=20
+href=3D"mailto:isaac@mybookingpal.com">isaac@mybookingpal.com</A> </DIV>
+<DIV><B>Sent:</B> Tuesday, December 03, 2013 6:46 PM</DIV>
+<DIV><B>To:</B> <A title=3Djennifer.li@barefoot.com=20
+href=3D"mailto:jennifer.li@barefoot.com">jennifer.li@barefoot.com</A> =
+</DIV>
+<DIV><B>Cc:</B> <A title=3Damoonima@gmail.com=20
+href=3D"mailto:amoonima@gmail.com">Nima Afrasiabi</A> </DIV>
+<DIV><B>Subject:</B> Get availability calendar for each=20
+property</DIV></DIV></DIV>
+<DIV>&nbsp;</DIV></DIV>
+<DIV=20
+style=3D'FONT-SIZE: small; TEXT-DECORATION: none; FONT-FAMILY: =
+"Calibri"; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; =
+DISPLAY: inline'><SPAN=20
+style=3D"FONT-SIZE: 10pt; FONT-FAMILY: verdana; COLOR: #000000">
+<DIV><FONT size=3D2 face=3D"verdana, geneva">Hi&nbsp; =
+Jennifer,</FONT></DIV>
+<DIV><FONT size=3D2 face=3D"verdana, geneva"><BR></FONT></DIV>
+<DIV><FONT size=3D2 face=3D"verdana, geneva">I received your contact =
+information=20
+from Edward Ulmer. I work at BookingPal, as the integration Engineer. I =
+was=20
+wondering if you could please let me know how to get the availability =
+schedule=20
+for all properties? My current plan is to keep calling isavailable() for =
+each=20
+property each day for two years. </FONT></DIV>
+<DIV><FONT size=3D2 face=3D"verdana, geneva">Thank you for your time and =
+help.=20
+</FONT></DIV>
+<DIV><FONT size=3D2 face=3D"verdana, geneva">Isaac =
+Mahgrefteh</FONT></DIV>
+<DIV><FONT size=3D2 face=3D"verdana, geneva"><BR></FONT></DIV>
+<DIV><FONT size=3D2 face=3D"verdana, geneva">Isaac Mahgrefteh | =
+BookingPal,=20
+Inc.</FONT></DIV>
+<DIV><FONT size=3D2 face=3D"verdana, geneva">O: 949 333 0724 ext 806 | =
+Website: <A=20
+href=3D"http://www.mybookingpal.com">www.mybookingpal.com</A></FONT></DIV=
+>
+<DIV><FONT size=3D2 face=3D"verdana, geneva">Skype ID: <A=20
+href=3D"mailto:isaac@mybookingpal.com">isaac@mybookingpal.com</A>&nbsp;</=
+FONT></DIV>
+<DIV><FONT size=3D2 face=3D"verdana, geneva">101 Pacifica, Suite 250, =
+Irvine, CA=20
+92618</FONT></DIV>
+<DIV>&nbsp;</DIV></SPAN></DIV></DIV></DIV></BODY></HTML>
+
+------=_NextPart_000_0126_01CEF58C.4C38CAE0--
+
