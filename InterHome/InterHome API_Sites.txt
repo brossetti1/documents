@@ -1,0 +1,4 @@
+Production Site: https://webservices.interhome.com/partnerV3/WebService.asmx
+Test Site:       https://webservices.interhome.com/quality/partnerV3/WebService.asmx
+
+FTP SITE:        ftp://ihxmlpartner:S13oPjEu@ftp.interhome.com/

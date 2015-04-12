@@ -1,0 +1,53 @@
+ 
+                       Lake Tahoe Accommodations, Inc.
+                    Reservation Date Calculation Algorithm
+                              [lta_ratecalc.txt]
+                                April, 2 2014
+
+Each property has six standard daily rates, in a 6-tier rate table.
+Each rate can be set individually for each unit, but generally rates
+#1, #2, #4, #5 and #6 are calculated automatically based on #3.
+
+Daily Rates:
+#1 is 80% of standard
+#2 is same as standard, except for selected properties
+#3 standard daily rate (used as base of calculation-not rate guest pays)
+#4 is 120% of standard
+#5 is 150% of standard
+#6 is 200% of standard (generally Xmas, New Years)
+
+There is a rate table calendar which dictates which rate is in effect
+for each day of the year, along with the minimum allowed stay (in days)
+for that unit. The highest rate in effect for any day of a guest's stay
+determines which rate will be used for the rate calculation. Abnormal
+situations are expected to be resolved by the reservationist (one day in
+high season for a long reservation that would otherwise be at the
+standard rate, for example).
+
+The basic rental rate is simply the number of days times the daily rate,
+there is no automatic discount for a seven-day reservation.
+
+One hundred and fifty percent of the cleaning fee is added to the total
+rent.
+
+There is a 10% reservation service charge calculated on the total of
+the rental amount and the cleaning fee.           
+
+There is a $30 booking fee added to the rent, which is not refundable
+unless the reservation is canceled soon after being booked (7 days?).
+
+Occupancy tax is calculated on the total of the rental fee, cleaning fee,
+and the booking fee.
+
+There is a trip cancelation insurance fee of 6.5% which is not taxable
+which is calculated on the total of rent, cleaning fee, reservation
+service charge and tax.
+
+TOTALDUE= ((((DAILYRATE X NRDAYS + (CLEANAMT X 1.5)) X 1.1) + BOOKFEE) X
+          1.TAXRATE-DECIMAL) X 1.065
+
+There are some special rules about advance deposits (deposits necessary
+to confirm a reservation).
+
+To be provided....
+

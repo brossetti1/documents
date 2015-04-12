@@ -1,0 +1,1 @@
+http://rp.test.ws.newyse.com/nwsservice_roompot_acceptatie/documentation/

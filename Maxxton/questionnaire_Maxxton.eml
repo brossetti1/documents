@@ -1,0 +1,734 @@
+X-Account-Key: account1
+X-UIDL: 1384288941.901920.p3plgemini02-04.prod.phx.3248531776
+X-Mozilla-Status: 0001
+X-Mozilla-Status2: 00000000
+X-Mozilla-Keys:                                                                                 
+Received: (qmail 13741 invoked by uid 30297); 12 Nov 2013 20:42:21 -0000
+Received: from unknown (HELO p3plibsmtp01-08.prod.phx3.secureserver.net) ([10.6.12.195])
+          (envelope-sender <imahgref+caf_=isaac=mybookingpal.com@gmail.com>)
+          by p3plsmtp02-03.prod.phx3.secureserver.net (qmail-1.03) with SMTP
+          for <isaac@mybookingpal.com>; 12 Nov 2013 20:42:21 -0000
+Received: from mail-ve0-f181.google.com ([209.85.128.181])
+	by p3plibsmtp01-08.prod.phx3.secureserver.net with bizsmtp
+	id okiE1m00r3uxdQZ01kiEB5; Tue, 12 Nov 2013 13:42:15 -0700
+X-Authority-Analysis: v=2.0 cv=QMS2sH3L c=1 sm=1 a=C_tijSrycZQA:10
+ a=c4R1ylhUR_IA:10 a=woODg1KqAAAA:8 a=pGLkceISAAAA:8 a=6lHg8UYrcNAA:10
+ a=n5eAcDcCAAAA:8 a=Nn1dfLRiAAAA:8 a=micXuVJiAAAA:8 a=kZAr8wC7AAAA:8
+ a=jU4qhlNgAAAA:8 a=AG6HqkvxrtIOoAcTs0MA:9 a=pILNOxqGKmIA:10 a=Y15XHy_20CAA:10
+ a=GLy5BaUPnzAA:10 a=gx_uwfSf-W4A:10 a=Lw9tm1ozGWAA:10 a=AsTqsJ7yIB8A:10
+ a=sO9r5KFj-boA:10 a=OLZMSwSWjPYA:10 a=Hl4GmM-m6YEA:10 a=HTB5U2U3Yj8A:10
+ a=MSl-tDqOz04A:10 a=plUw0Ljkhc0A:10 a=3K94kPo1o_LwscuB:21
+ a=fJ7JqWxOzeGMyr1_:21 a=M1qjhexHAAAA:8 a=0iX8Yka-wE8JTL7g-gIA:9
+ a=tXsnliwV7b4A:10 a=pbWR9x6TCA0A:10 a=5BJeYZ5Sb6H5tlBg:21
+ a=N0tUbK8X9O1IROSx:21 a=TjB8f1kKGn1WZNrm+o+feg==:117
+Received: by mail-ve0-f181.google.com with SMTP id jx11so4245598veb.12
+        for <isaac@mybookingpal.com>; Tue, 12 Nov 2013 12:42:14 -0800 (PST)
+X-Received: by 10.220.174.200 with SMTP id u8mr30784353vcz.6.1384288933913;
+        Tue, 12 Nov 2013 12:42:13 -0800 (PST)
+X-Forwarded-To: isaac@mybookingpal.com
+X-Forwarded-For: imahgref@gmail.com isaac@mybookingpal.com
+Delivered-To: imahgref@gmail.com
+Received: by 10.58.173.42 with SMTP id bh10csp154520vec;
+        Tue, 12 Nov 2013 12:42:13 -0800 (PST)
+X-Received: by 10.14.210.8 with SMTP id t8mr43789544eeo.39.1384288932433;
+        Tue, 12 Nov 2013 12:42:12 -0800 (PST)
+Return-Path: <c.connar@maxxton.com>
+Received: from mail-ea0-f200.google.com (mail-ea0-f200.google.com [209.85.215.200])
+        by mx.google.com with ESMTPS id z46si23616809eep.301.2013.11.12.12.42.12
+        for <imahgref@gmail.com>
+        (version=TLSv1 cipher=ECDHE-RSA-RC4-SHA bits=128/128);
+        Tue, 12 Nov 2013 12:42:12 -0800 (PST)
+Received-SPF: neutral (google.com: 209.85.215.200 is neither permitted nor denied by best guess record for domain of c.connar@maxxton.com) client-ip=209.85.215.200;
+Authentication-Results: mx.google.com;
+       spf=neutral (google.com: 209.85.215.200 is neither permitted nor denied by best guess record for domain of c.connar@maxxton.com) smtp.mail=c.connar@maxxton.com
+Received: by mail-ea0-f200.google.com with SMTP id a10so8715505eae.11
+        for <imahgref@gmail.com>; Tue, 12 Nov 2013 12:42:11 -0800 (PST)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:in-reply-to:references:date
+         :message-id:subject:from:to:content-type;
+        bh=kTFFFvyQFWhdVEksI5UHJpLvIG8VlGms4ni2MJqLM08=;
+        b=BoFa3G16z47VK183nWxZE1hV95ua2q9695XCTNqDui4016nAX+rQ5GtBDUJ5TpBJol
+         rcKg8ekpGV2C2VV24BWTB0L7owC3GuVMy+nw/bhJey7faJJb/5gjfStGlx3CxvLPiJtw
+         LtrdM4oYz81HAXnYqmjZD80TU9hGR3Ec1I5MJnV7eFhtHKUZoViANSnSi7jNdKZDsNnJ
+         bkAmXQxaMsshICU6HLDS7XZizzOB+RiuMtG71RKpk14nMZkSBFpFI1sZiwaSjR8YnvuX
+         i4jrYqwCmelUKN0GDSl5AG3krpSv8uTV15m3Q5/vcwrJFHMIarslXHbDEfIE5jHwo1lv
+         Tohg==
+X-Gm-Message-State: ALoCoQkDY2Uvy5FIYotyQJ9HijhQqqVsX+gIlsWAPFUmar3QeJzOkhj38kEyvrDkv4EgdRttQ2wS
+MIME-Version: 1.0
+X-Received: by 10.180.99.73 with SMTP id eo9mr10829891wib.50.1384288931850;
+ Tue, 12 Nov 2013 12:42:11 -0800 (PST)
+Received: by 10.216.202.194 with HTTP; Tue, 12 Nov 2013 12:42:11 -0800 (PST)
+In-Reply-To: <0BEBA57D-CAFA-4E0A-AC98-B0F4890CEB01@maxxton.com>
+References: <CAPG3zoPp6KiqiDogqRp-HA+o4GhgS4q+3bVoXhm7stUPi3pVWA@mail.gmail.com>
+	<52826C92.9030008@gmail.com>
+	<CADpaZaeMwyCA2RbRzCnUkFym4WTd8KnoZOHh=uB7pzHDWfeUyQ@mail.gmail.com>
+	<0BEBA57D-CAFA-4E0A-AC98-B0F4890CEB01@maxxton.com>
+Date: Tue, 12 Nov 2013 14:42:11 -0600
+Message-ID: <CADpaZac8PLVhAnh3gayB8wjaqUqhqpK70rveqgj_yZFssUdEAg@mail.gmail.com>
+Subject: Fwd: integration of Maxxton's listings with Booking Pal
+From: Chris Connar <c.connar@maxxton.com>
+To: imahgref@gmail.com
+Content-Type: multipart/alternative; boundary=f46d04428f480cc78b04eb00e221
+X-Nonspam: None
+
+--f46d04428f480cc78b04eb00e221
+Content-Type: text/plain; charset=windows-1252
+Content-Transfer-Encoding: quoted-printable
+
+Hello,
+
+Please see the responses below. Let me know if you need additional
+information or need to jump on a call.
+Thanks!
+
+*Chris Connar *
+*Vice President, Sales & Marketing - Americas *
+*Maxxton US Corp.* | 2101 Cedar Springs Rd. | Suite 1050 | Dallas, TX 75201
+T:214.347.0651M:469.585.5567E:c.connar@maxxton.comW:
+
+www.maxxton.com
+We are speaking the VRMA European Seminar
+<http://www.vrma.com/europeanseminar>* in Belgium *
+*9-11 December 2013*
+
+
+*This email is from Maxxton USA. It may contain information that is
+confidential and privileged. It is for the exclusive use of the intended
+recipient(s). If you are not the intended recipient(s) please note that any
+form of distribution, copying or use of this communication or the
+information in it is strictly prohibited and may be unlawful. If you have
+received this communication in error please return it to the sender. The
+opinions expressed within this communication are not necessarily those
+expressed by Maxxton USA.*
+
+
+---------- Forwarded message ----------
+From: Jean-Pierre Mampaey <j.p.mampaey@maxxton.com>
+Date: Tue, Nov 12, 2013 at 12:54 PM
+Subject: Re: integration of Maxxton's listings with Booking Pal
+To: Chris Connar <c.connar@maxxton.com>
+
+
+
+
+On 12 Nov 2013, at 19:13, Chris Connar <c.connar@maxxton.com> wrote:
+
+---------- Forwarded message ----------
+From: "Isaac M" <imahgref@gmail.com>
+Date: Nov 12, 2013 11:59 AM
+Subject: integration of Maxxton's listings with Booking Pal
+To: <c.connar@maxxton.com>, "Eric Mason" <eric@mybookingpal.com>
+Cc:
+
+ Hi Chris,
+
+I am working with our CEO, Alex Aydin to follow up regarding the
+integration of Maxxton's listings.
+
+Can  you please fill out a short questionnaire that the PMS integration
+team has developed.
+
+1. Your properties will appear in searches that are performed by consumers
+on various sites. To insure that we are giving the consumers the correct
+information please answer the following questions :
+    a. Can we load availability calendar of the property at the same time
+we load the properties?
+
+=3D=3D> Yes, but normally you will use more than only one call. Property
+details will be loaded once, availability and prices x times a day/week
+
+    b. If the answer is yes to "a" then can we get delta changes from the
+last time we did the upload, if no then how can we determine what has
+changed from our last update?
+
+=3D=3D> depends on the way you use the interface. For Booking.com we work w=
+ith
+delta changes, other OTA's get always the complete set again.
+
+    c. If the availability calendar is not available then how can we get
+the availability for each property?
+    d. How can we determine which property is capable of being booked
+online via credit card?
+
+=3D=3D> All of them are
+
+    e. In the property upload do you provide an specials pricing, pricing
+windows, additional fees or any other pricing that we would use to adjust
+from the standard rack rate?
+
+Depends of the property. Our CRS/PMS supports all kinds of combinations,
+additional fees, rate types, =85.
+
+
+2. When a consumer selects a property from the search and wishes to book
+the property we will request confirmation from the PMS. To insure that we
+are booking the property correctly please answer the following questions:
+    a. How do we confirm the availability of a specific property?
+
+=3D=3D> by a call "check availability". Most of the OTA's using "type level=
+" ,
+not the physical accommodation, but the system allows both
+
+    b. Which API call do we use to reserve or book the property?
+
+=3D=3D> depends on the property. Some are using only the booking of the
+accommodation, some also additional fees, products, packages, =85 The way i=
+t
+works is described in the documentation
+
+    c. Can we include our reservation ID in the confirmation to you?
+
+=3D=3D> yes
+
+
+
+3. When a consumer books a property a confirmation email will be sent to
+them with the property booking information. This will include the property
+managers contact information. Can you answer the following questions If the
+consumer were to call the PM and cancel the booking:
+    a. If the PM canceled the booking on your PMS and it is one of our
+bookings, can you call our API to cancel the booking?
+
+=3D=3D> yes, not easy, booking can also changing on dates, property, ...
+
+    b. If you cannot call our API then how would we know that the our
+booking was canceled on your PMS?
+
+=3D=3D> we can also send a automated email
+
+
+Thank you for your time and help.  If there is anything I can do for you,
+please, don't hesitate to let me know
+
+All the best,
+
+Isaac
+
+Isaac Mahgrefteh | BookingPal, Inc.
+O: 949-333-0724
+Fax: 949-272-5553
+E: isaac@mybookingpal.com | Website: www.mybookingpal.com
+101 Pacifica, Suite 250, Irvine, CA 92618
+
+
+
+---------- Forwarded message ----------
+From: Jean-Pierre Mampaey <j.p.mampaey@maxxton.com>
+Date: Tue, Nov 12, 2013 at 6:07 AM
+Subject: Re: Follow up
+To: Alex Aydin <alex@mybookingpal.com>
+Cc: Chris Connar <c.connar@maxxton.com>
+
+
+Hi Alex,
+
+ You can find our general description for our webservice here
+
+ http://rp.test.ws.newyse.com/nwsservice_roompot_acceptatie/documentation/
+
+ This is the one for our biggest customer, but they all work in the same
+way.
+
+ Hope it's possible to connect with this one.
+
+ Kind regards,
+Met vriendelijke groet,
+
+Jean-Pierre Mampaey
+*CEO*
+
+  *We are speaking at the VRMA European Seminar
+<http://www.vrma.com/europeanseminar> in Bruges, Belgium*
+*9-11 December 2013*
+    *Maxxton BV* | Dam 6 | 4331 GJ Middelburg | The Netherlands
+    T: +31 (0)118 671010 <%2B31%20%280%29118%20671010>  F: +31 (0)118
+671011<%2B31%20%280%29118%20671011>
+E: j.p.mampaey@maxxton.com  W: www.maxxton.com
+View<http://nl.linkedin.com/pub/jean-pierre-mampaey/2/b48/133>my
+LinkedIn profile
+*This email is from Maxxton bv. It may contain information that is
+confidential and privileged. It is for the exclusive use of the intended
+recipient(s). If you are not the intended recipient(s) please note that any
+form of distribution, copying or use of this communication or the
+information in it is strictly prohibited and may be unlawful. If you have
+received this communication in error please return it to the sender. The
+opinions expressed within this communication are not necessarily those
+expressed by Maxxton bv.*
+
+
+On 11 November 2013 20:03, Alex Aydin <alex@mybookingpal.com> wrote:
+
+>  Hi Jean Pierre,
+>
+>
+> It was a pleasure meeting you at VRMA conference.  I wanted to get a copy
+> of your API document so that we can start supporting it. It will enable
+> your PM=92s to distribute their inventory through our channel partners.  =
+What
+> do we need to do next to get started?
+>
+>
+> All the best,
+>
+>
+> Alex Aydin
+>
+> BookingPal, Inc.
+>
+> 101 Pacifica, Suite 250
+>
+> Irvine, CA 92618
+>
+> Office: 949-216-7137
+>
+> Mobile: 949-836-4900
+>
+> Fax: 949-272-5553
+>
+> www.mybookingpal.com
+>
+>
+> [image: logo]
+>
+>
+
+--f46d04428f480cc78b04eb00e221
+Content-Type: text/html; charset=windows-1252
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div class=3D"gmail_default" style=3D"font-family:trebuche=
+t ms,sans-serif;font-size:small">Hello,</div><div class=3D"gmail_default" s=
+tyle=3D"font-family:trebuchet ms,sans-serif;font-size:small"><br></div><div=
+ class=3D"gmail_default" style=3D"font-family:trebuchet ms,sans-serif;font-=
+size:small">
+Please see the responses below. Let me know if you need additional informat=
+ion or need to jump on a call.=A0</div><div class=3D"gmail_default" style=
+=3D"font-family:trebuchet ms,sans-serif;font-size:small">Thanks!</div><div =
+class=3D"gmail_default" style=3D"font-family:trebuchet ms,sans-serif;font-s=
+ize:small">
+<br></div><div><div dir=3D"ltr"><div><div style=3D"color:rgb(85,85,85)"><em=
+>Chris Connar </em><br style=3D"color:rgb(85,85,85);font-family:Arial,Helve=
+tica,sans-serif;font-size:12px"><em>Vice President, Sales &amp; Marketing -=
+ Americas </em><br style=3D"color:rgb(85,85,85);font-family:Arial,Helvetica=
+,sans-serif;font-size:12px">
+</div><div style=3D"color:rgb(85,85,85)"><table width=3D"420" style=3D"marg=
+in:2px 0px;color:rgb(85,85,85);font-family:Arial,Helvetica,sans-serif;font-=
+size:12px;border-collapse:collapse" border=3D"0"><tbody><tr><td height=3D"1=
+0" style=3D"line-height:0" colspan=3D"4">
+<img style=3D"display:block" src=3D"http://www.maxxton.com/email/maxxton/li=
+ne.jpg"></td></tr><tr><td height=3D"20" style=3D"font-family:Arial,Helvetic=
+a,sans-serif"><strong>Maxxton=A0US Corp.</strong>=A0| 2101 Cedar Springs Rd=
+. | Suite 1050 | Dallas, TX 75201 <br>
+</td></tr></tbody></table></div><div style=3D"color:rgb(85,85,85)"><table w=
+idth=3D"400" style=3D"color:rgb(85,85,85);font-family:Arial,Helvetica,sans-=
+serif;font-size:12px" border=3D"0"><tbody><tr><td width=3D"23" height=3D"10=
+" style=3D"color:rgb(248,152,29)">
+T:</td><td width=3D"230" height=3D"10">214.347.0651</td><td width=3D"150" v=
+align=3D"top" style=3D"line-height:0" rowspan=3D"4"><img width=3D"96" heigh=
+t=3D"51" align=3D"right" style=3D"display:block" src=3D"http://www.maxxton.=
+com/email/maxxton/maxxton-logo.png"></td>
+</tr><tr><td width=3D"23" height=3D"10" style=3D"color:rgb(248,152,29)">M:<=
+/td><td width=3D"230" height=3D"10"><a value=3D"+31118671011">469.585.5567<=
+/a></td></tr><tr><td width=3D"23" height=3D"10" style=3D"color:rgb(248,152,=
+29)">E:</td><td width=3D"230" height=3D"10">
+<a href=3D"mailto:c.connar@maxxton.com" target=3D"_blank">c.connar@maxxton.=
+com</a></td></tr><tr><td width=3D"23" height=3D"10" style=3D"color:rgb(248,=
+152,29)">W:</td><td width=3D"230" height=3D"10"><p><a style=3D"color:rgb(85=
+,85,85);text-decoration:none!important" href=3D"http://www.maxxton.com" tar=
+get=3D"_blank">www.maxxton.com</a></p>
+</td></tr></tbody></table></div><div><div style=3D"color:rgb(85,85,85);font=
+-family:arial,sans-serif;font-size:13px"><font color=3D"#777777" style=3D"f=
+ont-family:Arial,sans-serif;font-size:13.63636302947998px;line-height:14.65=
+9090995788574px;font-weight:bold">We are speaking the=A0</font><a href=3D"h=
+ttp://www.vrma.com/europeanseminar" style=3D"color:rgb(17,85,204);font-fami=
+ly:Arial,sans-serif;font-size:13.63636302947998px;line-height:14.6590909957=
+88574px;font-weight:bold" target=3D"_blank"><font color=3D"#ff9900">VRMA Eu=
+ropean Seminar </font></a><font color=3D"#777777" style=3D"font-family:Aria=
+l,sans-serif;font-size:13.63636302947998px;line-height:14.659090995788574px=
+"><b>=A0in Belgium=A0</b><br>
+<b>9-11 December 2013</b></font></div><div><div style=3D"color:rgb(85,85,85=
+);font-family:arial,sans-serif;font-size:13px"><img src=3D"http://vrma.memb=
+ershipsoftware.org/content_images/2013Europe/vrma_3clogo_european.gif" widt=
+h=3D"96" height=3D"60"><br>
+</div></div><div style=3D"color:rgb(85,85,85);font-family:arial,sans-serif;=
+font-size:13px"><em style=3D"color:rgb(85,85,85);font-family:Arial,Helvetic=
+a,sans-serif;font-size:12px"></em>=A0</div></div><div style=3D"color:rgb(85=
+,85,85)">
+<em style=3D"color:rgb(85,85,85);font-family:Arial,Helvetica,sans-serif;fon=
+t-size:12px">This email is from Maxxton USA. It may contain information tha=
+t is confidential and privileged. It is for the exclusive use of the intend=
+ed recipient(s). If you are not the intended recipient(s) please note that =
+any form of distribution, copying or use of this communication or the infor=
+mation in it is strictly prohibited and may be unlawful. If you have receiv=
+ed this communication in error please return it to the sender. The opinions=
+ expressed within this communication are not necessarily those expressed by=
+ Maxxton USA.</em><br>
+</div><div></div></div><div><div><em></em></div></div></div></div>
+<br><br><div class=3D"gmail_quote">---------- Forwarded message ----------<=
+br>From: <b class=3D"gmail_sendername">Jean-Pierre Mampaey</b> <span dir=3D=
+"ltr">&lt;<a href=3D"mailto:j.p.mampaey@maxxton.com">j.p.mampaey@maxxton.co=
+m</a>&gt;</span><br>
+Date: Tue, Nov 12, 2013 at 12:54 PM<br>Subject: Re: integration of Maxxton&=
+#39;s listings with Booking Pal<br>To: Chris Connar &lt;<a href=3D"mailto:c=
+.connar@maxxton.com">c.connar@maxxton.com</a>&gt;<br><br><br><div style=3D"=
+word-wrap:break-word">
+<div><div><span style=3D"text-indent:0px;letter-spacing:normal;font-variant=
+:normal;text-align:-webkit-auto;font-style:normal;font-weight:normal;line-h=
+eight:normal;text-transform:none;font-size:medium;white-space:normal;font-f=
+amily:Helvetica;word-spacing:0px"><span style=3D"text-indent:0px;letter-spa=
+cing:normal;font-variant:normal;text-align:-webkit-auto;font-style:normal;f=
+ont-weight:normal;line-height:normal;text-transform:none;font-size:medium;w=
+hite-space:normal;font-family:Helvetica;word-spacing:0px"><span style=3D"te=
+xt-indent:0px;letter-spacing:normal;font-variant:normal;text-align:-webkit-=
+auto;font-style:normal;font-weight:normal;line-height:normal;text-transform=
+:none;font-size:medium;white-space:normal;font-family:Helvetica;word-spacin=
+g:0px"><br>
+
+</span></span></span></div>
+</div><br><div><div>On 12 Nov 2013, at 19:13, Chris Connar &lt;<a href=3D"m=
+ailto:c.connar@maxxton.com" target=3D"_blank">c.connar@maxxton.com</a>&gt; =
+wrote:</div><br><blockquote type=3D"cite"><div class=3D"gmail_quote">------=
+---- Forwarded message ----------<br>
+From: &quot;Isaac M&quot; &lt;<a href=3D"mailto:imahgref@gmail.com" target=
+=3D"_blank">imahgref@gmail.com</a>&gt;<br>Date: Nov 12, 2013 11:59 AM<br>Su=
+bject: integration of Maxxton&#39;s listings with Booking Pal<br>
+To:  &lt;<a href=3D"mailto:c.connar@maxxton.com" target=3D"_blank">c.connar=
+@maxxton.com</a>&gt;, &quot;Eric Mason&quot; &lt;<a href=3D"mailto:eric@myb=
+ookingpal.com" target=3D"_blank">eric@mybookingpal.com</a>&gt;<br>Cc: <br><=
+br type=3D"attribution">
+
+ =20
+
+   =20
+ =20
+  <div bgcolor=3D"#FFFFFF" text=3D"#000000">
+    Hi Chris, <br>
+    <br>
+    I am working with our CEO, Alex Aydin to follow up regarding the
+    integration of Maxxton&#39;s listings. <br>
+    =A0<br>
+    Can=A0 you please fill out a short questionnaire that the PMS
+    integration team has developed.<br>
+    <br>
+    1. Your properties will appear in searches that are performed by
+    consumers on various sites. To insure that we are giving the
+    consumers the correct information please answer the following
+    questions :<br>
+    =A0=A0=A0 a. Can we load availability calendar of the property at the s=
+ame
+    time we load the properties?<br></div></div></blockquote>=3D=3D&gt; Yes=
+, but normally you will use more than only one call. Property details will =
+be loaded once, availability and prices x times a day/week<br><blockquote t=
+ype=3D"cite">
+<div class=3D"gmail_quote"><div bgcolor=3D"#FFFFFF" text=3D"#000000">
+    =A0=A0=A0 b. If the answer is yes to &quot;a&quot; then can we get delt=
+a changes
+    from the last time we did the upload, if no then how can we
+    determine what has changed from our last update?<br></div></div></block=
+quote>=3D=3D&gt; depends on the way you use the interface. For <a href=3D"h=
+ttp://Booking.com" target=3D"_blank">Booking.com</a> we work with delta cha=
+nges, other OTA&#39;s get always the complete set again.<br>
+<blockquote type=3D"cite"><div class=3D"gmail_quote"><div bgcolor=3D"#FFFFF=
+F" text=3D"#000000">
+    =A0=A0=A0 c. If the availability calendar is not available then how can=
+ we
+    get the availability for each property?<br>
+    =A0=A0=A0 d. How can we determine which property is capable of being
+    booked online via credit card?<br></div></div></blockquote>=3D=3D&gt; A=
+ll of them are<br><blockquote type=3D"cite"><div class=3D"gmail_quote"><div=
+ bgcolor=3D"#FFFFFF" text=3D"#000000">
+    =A0=A0=A0 e. In the property upload do you provide an specials pricing,
+    pricing windows, additional fees or any other pricing that we would
+    use to adjust from the standard rack rate?<br></div></div></blockquote>=
+Depends of the property. Our CRS/PMS supports all kinds of combinations, ad=
+ditional fees, rate types, =85.<br><blockquote type=3D"cite"><div class=3D"=
+gmail_quote">
+<div bgcolor=3D"#FFFFFF" text=3D"#000000">
+    <br>
+    2. When a consumer selects a property from the search and wishes to
+    book the property we will request confirmation from the PMS. To
+    insure that we are booking the property correctly please answer the
+    following questions:<br>
+    =A0=A0=A0 a. How do we confirm the availability of a specific property?=
+<br></div></div></blockquote>=3D=3D&gt; by a call &quot;check availability&=
+quot;. Most of the OTA&#39;s using &quot;type level&quot; , not the physica=
+l accommodation, but the system allows both<br>
+<blockquote type=3D"cite"><div class=3D"gmail_quote"><div bgcolor=3D"#FFFFF=
+F" text=3D"#000000">
+    =A0=A0=A0 b. Which API call do we use to reserve or book the property?<=
+br></div></div></blockquote>=3D=3D&gt; depends on the property. Some are us=
+ing only the booking of the accommodation, some also additional fees, produ=
+cts, packages, =85 The way it works is described in the documentation<br>
+<blockquote type=3D"cite"><div class=3D"gmail_quote"><div bgcolor=3D"#FFFFF=
+F" text=3D"#000000">
+    =A0=A0=A0 c. Can we include our reservation ID in the confirmation to y=
+ou?<br></div></div></blockquote>=3D=3D&gt; yes<br><blockquote type=3D"cite"=
+><div class=3D"gmail_quote"><div bgcolor=3D"#FFFFFF" text=3D"#000000">
+    <br>
+    <br>
+    3. When a consumer books a property a confirmation email will be
+    sent to them with the property booking information. This will
+    include the property managers contact information. Can you answer
+    the following questions If the consumer were to call the PM and
+    cancel the booking:<br>
+    =A0=A0=A0 a. If the PM canceled the booking on your PMS and it is one o=
+f
+    our bookings, can you call our API to cancel the booking?<br></div></di=
+v></blockquote>=3D=3D&gt; yes, not easy, booking can also changing on dates=
+, property, ...<br><blockquote type=3D"cite"><div class=3D"gmail_quote"><di=
+v bgcolor=3D"#FFFFFF" text=3D"#000000">
+
+    =A0=A0=A0 b. If you cannot call our API then how would we know that the
+    our booking was canceled on your PMS? <br></div></div></blockquote>=3D=
+=3D&gt; we can also send a automated email<br><blockquote type=3D"cite"><di=
+v class=3D"gmail_quote"><div bgcolor=3D"#FFFFFF" text=3D"#000000">
+    <br>
+    Thank you for your time and help.=A0 If there is anything I can do for
+    you, please, don&#39;t hesitate to let me know<br>
+    <br>
+    <pre>All the best, =20
+
+Isaac
+
+Isaac Mahgrefteh | BookingPal, Inc.
+O: <a href=3D"tel:949-333-0724" value=3D"+19493330724" target=3D"_blank">94=
+9-333-0724</a>
+Fax: <a href=3D"tel:949-272-5553" value=3D"+19492725553" target=3D"_blank">=
+949-272-5553</a>
+E:=A0<a href=3D"mailto:isaac@mybookingpal.com" target=3D"_blank">isaac@mybo=
+okingpal.com</a>=A0| Website:=A0<a href=3D"http://www.mybookingpal.com/" ta=
+rget=3D"_blank">www.mybookingpal.com</a>
+101 Pacifica, Suite 250, Irvine, CA 92618
+</pre>
+    <br>
+    <div>
+      <div dir=3D"ltr"><br>
+        <div class=3D"gmail_quote">---------- Forwarded message ----------<=
+br>
+          From: <b class=3D"gmail_sendername">Jean-Pierre Mampaey</b> <span=
+ dir=3D"ltr">&lt;<a href=3D"mailto:j.p.mampaey@maxxton.com" target=3D"_blan=
+k">j.p.mampaey@maxxton.com</a>&gt;</span><br>
+          Date: Tue, Nov 12, 2013 at 6:07 AM<br>
+          Subject: Re: Follow up<br>
+          To: Alex Aydin &lt;<a href=3D"mailto:alex@mybookingpal.com" targe=
+t=3D"_blank">alex@mybookingpal.com</a>&gt;<br>
+          Cc: Chris Connar &lt;<a href=3D"mailto:c.connar@maxxton.com" targ=
+et=3D"_blank">c.connar@maxxton.com</a>&gt;<br>
+          <br>
+          <br>
+          <div dir=3D"ltr">Hi Alex,
+            <div><br>
+            </div>
+            <div>You can find our general description for our webservice
+              here</div>
+            <div><br>
+            </div>
+            <div><a href=3D"http://rp.test.ws.newyse.com/nwsservice_roompot=
+_acceptatie/documentation/" target=3D"_blank">http://rp.test.ws.newyse.com/=
+nwsservice_roompot_acceptatie/documentation/</a><br>
+            </div>
+            <div><br>
+            </div>
+            <div>This is the one for our biggest customer, but they all
+              work in the same way.=A0</div>
+            <div><br>
+            </div>
+            <div>Hope it&#39;s possible to connect with this one.</div>
+            <div class=3D"gmail_extra"><br clear=3D"all">
+              <div>
+                <div dir=3D"ltr"><font><span style=3D"font-family:Arial,Hel=
+vetica,sans-serif;color:rgb(85,85,85)">Kind
+                      regards,</span><br>
+                    <span style=3D"font-family:Arial,Helvetica,sans-serif;c=
+olor:rgb(85,85,85)">Met
+                      vriendelijke groet,</span><br>
+                    <br>
+                    <span style=3D"font-family:Arial,Helvetica,sans-serif;c=
+olor:rgb(85,85,85)">Jean-Pierre
+                      Mampaey</span><br>
+                    <font color=3D"#555555" face=3D"Arial, Helvetica,
+                      sans-serif"><i>CEO</i></font></font>
+                  <div>
+                    <div style=3D"font-size:13px">
+                      <br>
+                    </div>
+                    <div style=3D"font-size:13px">
+                      <div style=3D"font-size:medium;font-family:Helvetica"=
+><span style=3D"font-size:10pt;line-height:14.65625px;font-family:Arial,san=
+s-serif;color:rgb(119,119,119)" lang=3D"EN-GB">
+                          <div style=3D"color:rgb(34,34,34);font-family:ari=
+al,sans-serif;line-height:normal"><span style=3D"font-size:10pt;line-height=
+:14.65625px;font-family:Arial,sans-serif" lang=3D"EN-GB"><b><font color=3D"=
+#777777">We
+                                  are speaking at the=A0</font><a href=3D"h=
+ttp://www.vrma.com/europeanseminar" style=3D"color:rgb(17,85,204)" target=
+=3D"_blank"><font color=3D"#ff9900">VRMA
+                                    European Seminar</font></a><font color=
+=3D"#777777">=A0in Bruges, Belgium</font></b></span></div>
+                          <div style=3D"color:rgb(34,34,34);font-family:ari=
+al,sans-serif;line-height:normal"><span style=3D"font-size:10pt;line-height=
+:14.65625px;font-family:Arial,sans-serif;color:rgb(119,119,119)" lang=3D"EN=
+-GB"><b>9-11 December 2013</b></span></div>
+
+
+                        </span></div>
+                    </div>
+                    <table style=3D"font-family:Arial,Helvetica,sans-serif;=
+margin:2px 0px;color:rgb(85,85,85);border-collapse:collapse" border=3D"0" w=
+idth=3D"420">
+                      <tbody>
+                        <tr>
+                          <td style=3D"line-height:0" colspan=3D"4" height=
+=3D"10"><img style=3D"display:block"></td>
+                        </tr>
+                        <tr>
+                          <td style=3D"font-family:Arial,Helvetica,sans-ser=
+if" height=3D"20"><font><strong>Maxxton BV</strong>
+                              | Dam 6 | 4331 GJ Middelburg | The
+                              Netherlands <br>
+                            </font></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <table style=3D"font-family:Arial,Helvetica,sans-serif;=
+color:rgb(85,85,85)" border=3D"0" width=3D"400">
+                      <tbody>
+                        <tr>
+                          <td style=3D"color:rgb(248,152,29)" height=3D"10"=
+ width=3D"23"><font>T:</font></td>
+                          <td height=3D"10" width=3D"230"><font><a href=3D"=
+tel:%2B31%20%280%29118%20671010" value=3D"+31118671010" target=3D"_blank">+=
+31
+                                (0)118 671010</a></font></td>
+                          <td style=3D"line-height:0" rowspan=3D"4" valign=
+=3D"top" width=3D"150"><img style=3D"display:block" align=3D"right" height=
+=3D"68" width=3D"125"></td>
+                        </tr>
+                        <tr>
+                          <td style=3D"color:rgb(248,152,29)" height=3D"10"=
+ width=3D"23"><font>F:</font></td>
+                          <td height=3D"10" width=3D"230"><font><a href=3D"=
+tel:%2B31%20%280%29118%20671011" value=3D"+31118671011" target=3D"_blank">+=
+31
+                                (0)118 671011</a></font></td>
+                        </tr>
+                        <tr>
+                          <td style=3D"color:rgb(248,152,29)" height=3D"10"=
+ width=3D"23"><font>E:</font></td>
+                          <td height=3D"10" width=3D"230"><a style=3D"color=
+:rgb(85,85,85);text-decoration:none!important" href=3D"mailto:j.p.mampaey@m=
+axxton.com" target=3D"_blank">j.p.mampaey@maxxton.com</a></td>
+                        </tr>
+                        <tr>
+                          <td style=3D"color:rgb(248,152,29)" height=3D"10"=
+ width=3D"23">
+                            <font>W:</font></td>
+                          <td height=3D"10" width=3D"230"><a style=3D"color=
+:rgb(85,85,85);text-decoration:none!important" href=3D"http://www.maxxton.c=
+om/" target=3D"_blank">www.maxxton.com</a></td>
+                        </tr>
+                        <tr>
+                          <td style=3D"line-height:0;padding-top:10px" heig=
+ht=3D"20" width=3D"23">
+                            <img style=3D"display:block" align=3D"absmiddle=
+"></td>
+                          <td style=3D"padding-top:10px" colspan=3D"2" widt=
+h=3D"350"><font><a style=3D"color:rgb(85,85,85);text-decoration:none!import=
+ant" title=3D"View
+                                my LinkedIn profile" href=3D"http://nl.link=
+edin.com/pub/jean-pierre-mampaey/2/b48/133" target=3D"_blank"> View</a> my =
+LinkedIn
+                              profile</font></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <font><br>
+                      <em style=3D"font-family:Arial,Helvetica,sans-serif">=
+This
+                        email is from Maxxton bv. It may contain
+                        information that is confidential and privileged.
+                        It is for the exclusive use of the intended
+                        recipient(s). If you are not the intended
+                        recipient(s) please note that any form of
+                        distribution, copying or use of this
+                        communication or the information in it is
+                        strictly prohibited and may be unlawful. If you
+                        have received this communication in error please
+                        return it to the sender. The opinions expressed
+                        within this communication are not necessarily
+                        those expressed by Maxxton bv.</em></font><br>
+                  </div>
+                </div>
+              </div>
+              <br>
+              <br>
+              <div class=3D"gmail_quote">On 11 November 2013 20:03, Alex
+                Aydin <span dir=3D"ltr">&lt;<a href=3D"mailto:alex@mybookin=
+gpal.com" target=3D"_blank">alex@mybookingpal.com</a>&gt;</span>
+                wrote:<br>
+                <blockquote class=3D"gmail_quote" style=3D"margin:0 0 0 .8e=
+x;border-left:1px #ccc solid;padding-left:1ex">
+                  <div link=3D"#0563C1" vlink=3D"#954F72" lang=3D"EN-US">
+                    <div><p class=3D"MsoNormal">Hi Jean Pierre,</p><div>=A0=
+<br></div><p class=3D"MsoNormal">It was a pleasure meeting you
+                        at VRMA conference. =A0I wanted to get a copy of
+                        your API document so that we can start
+                        supporting it. It will enable your PM=92s to
+                        distribute their inventory through our channel
+                        partners. =A0What do we need to do next to get
+                        started?</p>
+                      <div><div>=A0<br></div><p class=3D"MsoNormal">All the=
+ best,</p><div>=A0<br></div><p class=3D"MsoNormal"><span style=3D"font-size=
+:9.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">Alex
+                            Aydin</span></p><p class=3D"MsoNormal"><span st=
+yle=3D"font-size:9.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;=
+">BookingPal,
+                            Inc.</span></p><p class=3D"MsoNormal"><span sty=
+le=3D"font-size:9.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;"=
+>101
+                            Pacifica, Suite 250</span></p><p class=3D"MsoNo=
+rmal"><span style=3D"font-size:9.0pt;font-family:&quot;Arial&quot;,&quot;sa=
+ns-serif&quot;">Irvine,
+                            CA 92618</span></p><p class=3D"MsoNormal"><span=
+ style=3D"font-size:9.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&qu=
+ot;">Office:
+                            <a href=3D"tel:949-216-7137" value=3D"+19492167=
+137" target=3D"_blank">949-216-7137</a></span></p><p class=3D"MsoNormal"><s=
+pan style=3D"font-size:9.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif=
+&quot;">Mobile:
+                            <a href=3D"tel:949-836-4900" value=3D"+19498364=
+900" target=3D"_blank">949-836-4900</a></span></p><p class=3D"MsoNormal" st=
+yle=3D"background:white">
+                          <span style=3D"font-size:9.0pt;font-family:&quot;=
+Arial&quot;,&quot;sans-serif&quot;;color:#222222">Fax:
+                            <a href=3D"tel:949-272-5553" value=3D"+19492725=
+553" target=3D"_blank">949-272-5553</a></span></p><p class=3D"MsoNormal"><s=
+pan style=3D"font-size:9.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif=
+&quot;"><a href=3D"http://www.mybookingpal.com/" target=3D"_blank">www.mybo=
+okingpal.com</a></span></p>
+<div>
+                          =A0<br></div>
+                      </div><p class=3D"MsoNormal"><img alt=3D"logo" border=
+=3D"0" height=3D"50" width=3D"190"></p><div>=A0<br></div>
+                    </div>
+                  </div>
+                </blockquote>
+              </div>
+              <br>
+            </div>
+          </div>
+        </div>
+        <br>
+      </div>
+      <br>
+    </div>
+    <br>
+  </div>
+
+</div>
+</blockquote></div><br></div></div><br></div>
+
+--f46d04428f480cc78b04eb00e221--
+
+

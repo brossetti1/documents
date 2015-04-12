@@ -1,0 +1,498 @@
+This interface was never expected to be used by outside companies, so the
+documentation has never been finished off to professional standards. This
+info should help you, if you have questions you are free to e-mail me.
+
+Regards,
+  John K.
+
+
+LAKE TAHOE ACCOMMODATIONS UNIT DESCRIPTION CODES
+
+  "AMEN" => "Cmplx Amenities",
+  "BDBK" => "Bed & Breakfast",
+  "BIKE" => "Bike Trails",
+  "CITY" => "Downtown Area",
+  "CTEN" => "Tennis Courts",
+  "CTUB" => "Spa in Complex",
+  "DOCK" => "Boat Dock",
+  "DUPL" => "Duplex Unit",
+  "GOLF" => "Near Golf Cse",
+  "GRUP" => "Groups OK",
+  "HOUS" => "House",
+  "HTUB" => "Private Hottub",
+  "INET" => "Internet Conn",
+  "JACZ" => "Jacuzzi",
+  "LGON" => "Lagoon Front",
+  "LKFT" => "Lakefront",
+  "LKVW" => "Lake View",
+  "LVRP" => "Lake Vlg Resort",
+  "NBCH" => "Near Beach",
+  "NBHD" => "Neighborhood",
+  "NCAS" => "Near Casinos",
+  "NSKI" => "Near Ski Area",
+  "NSMO" => "No Smoking",
+  "NVEW" => "No View",
+  "PBCH" => "Beach Access",
+  "PETS" => "Pets Allowed",
+  "PNUD" => "Private Area",
+  "POOL" => "Pool Avail",
+  "PTBL" => "Pool Table",
+  "SISO" => "Ski Lift Close",
+  "SMOK" => "Smoking Allowed",
+  "THTR" => "Home Theatre",
+  "TOWN" => "Downtown Area",
+  "VIEW" => "Distant View",
+  "WDSY" => "Near Woods",
+  "WIFI" => "Wireless Inet" ,
+  "WODS" => "Forest Adjacent",
+  "WOOD" => "Firewd Provided"
+
+
+
+LAKE TAHOE ACCOMMODATIONS LOCATION CODES
+
+  "CO" => "County Area",
+  "CY" => "S. Lake Tahoe",
+  "HC" => "Heavenly-Calif",
+  "HN" => "Heavenly (NV)",
+  "KW" => "Kingswood",
+  "LL" => "Lakeland Vlg",
+  "LV" => "Lake Village",
+  "NV" => "Stateline (NV)",
+  "TK" => "Tahoe Keys",
+  "AM" => "Alpine Meadows",
+  "NS" => "North Shore",
+  "PW" => "Pinewild (NV)",
+  "SV" => "Squaw Valley",
+  "TC" => "Tahoe City",
+  "WS" => "West Shore",
+  "IV" => "Incline Vlg",
+  "CD" => "Couer du Lac",
+  "FP" => "Forest Pines",
+  "MC" => "McCloud",
+  "MS" => "Mtn Shadows",
+  "TH" => "Third Creek",
+  "WD" => "Woodstock",
+  "Lake" => "Entire Lake",
+  "South" => "South Shore(Cal)",
+  "North" => "North Shore(Cal)",
+  "Incln" => "Incline Vlg Area",
+  "State" => "South Shore(Nev)"
+
+
+
+LAKE TAHOE ACCOMMODATIONS UNIT DESCRIPTION FILE SPECIFICATIONS
+              Copyright (c) 2012, Victorex, Inc.
+                      [bldwun4.txt]
+                    November 9, 2012
+
+Standard file name: wdunit.lst
+
+File is in comma-delimited, ASCII format, and all fields are enclosed in
+double-quotes as text. Double quotes embedded in the data have been con-
+verted to single quotes.
+
+All quoted fields are separated by commas only.
+
+No field contains the double-quote character, any double-quotes in text
+  fields have been replaced with single quotes.
+
+Each record consists of a single line of ASCII characters, terminated
+  with a LF (which should be expanded on transfer to a CR,LF on WINDOWS/DOS
+  based systems). Due to the extended comments that can exist for
+  each property, most lines will contain several thousand characters.
+  It is not believed any line is longer than 10,000 characters, but
+  this is not a certainty. Not all fields are necessary, and a very
+  few are are present in the availabiity file.
+
+The first line contains labels for each field. Labels are four to
+  six characters in length, and may contain digits. The sequence
+  may not match the sequence in this document.
+
+Field name    Type/Size Comments
+----------    --------- ----------------------
+UNITID        8 char    LL PNNNN (See below)
+OFCODE        3 char    IVO/NSO/NVO/SSO (office codes)
+#BDRM        Integer  0 (studio) to 8 (but only 1-6 have bed config)
+#BATHS        Decimal  1 to 8 (tenths are half-baths)
+AREA          Integer  100 to 10000 (SQFT)
+LOCN          2 char    LL (Subset of UNITID)
+STADR        26 char  Street Address (no city)
+DESC1        4-char    Description code (see list)
+DESC2        4-char    Desc code, may be null
+DESC3        4-char    Desc code, may be null
+DESC4        4-char    Desc code, may be null
+DESC5        4-char    Desc code, may be null
+DESC6        4-char    Desc code, may be null
+DESC7        4-char    Desc code, may be null
+GRADE        2-char    Unit grade: C- to A+ (9 grades)
+SOFABD        Integer  Nr of sofabeds (may be zero)
+MAXOCP        Integer  Maximum occupancy
+FIREPL        6-char    Fireplace desc (free form codes, may be null)
+PARKSP        6-char    Parking info (see table)
+BARBCU        6-char    Type of barbecue (see table)
+WASDRY        3-char    YES or NO
+SECDEP        Integer  Security Dep Amount (used for initial dep)
+
+Page 2
+
+Field name    Type/Size Comments
+----------    --------- ----------------------
+# Note: 2-day and Weekly rates are no longer used, they are calculated
+# from the daily (extra day) rates.
+2DA_T1        Integer  Two-day rate-rate table #1
+XDA_T1        Integer  Extra day rate-rate table #1
+WEK_T1        Integer  Weekly rate-rate table #1
+MIN_T1        Integer  Standard minimum stay-rate table #1
+2DA_T2        Integer  Two-day rate-rate table #2
+XDA_T2        Integer  Extra day rate-rate table #2
+WEK_T2        Integer  Weekly rate-rate table #2
+MIN_T2        Integer  Standard minimum stay-rate table #2
+2DA_T3        Integer  Two-day rate-rate table #3
+XDA_T3        Integer  Extra day rate-rate table #3
+WEK_T3        Integer  Weekly rate-rate table #3
+MIN_T3        Integer  Standard minimum stay-rate table #3
+2DA_T4        Integer  Two-day rate-rate table #4
+XDA_T4        Integer  Extra day rate-rate table #4
+WEK_T4        Integer  Weekly rate-rate table #4
+MIN_T4        Integer  Standard minimum stay-rate table #4
+2DA_T5        Integer  Two-day rate-rate table #5
+XDA_T5        Integer  Extra day rate-rate table #5
+WEK_T5        Integer  Weekly rate-rate table #5
+MIN_T5        Integer  Standard minimum stay-rate table #5
+2DA_T6        Integer  Two-day rate-rate table #6
+XDA_T6        Integer  Extra day rate-rate table #6
+WEK_T6        Integer  Weekly rate-rate table #6
+MIN_T6        Integer  Standard minimum stay-rate table #6
+BR1BED        6-char    Beds in bedroom #1 See below
+BR2BED        6-char    Beds in bedroom #2 See below
+BR3BED        6-char    Beds in bedroom #3 See below
+BR4BED        6-char    Beds in bedroom #4 See below
+BR5BED        6-char    Beds in bedroom #5 See below
+BR6BED        6-char    Beds in bedroom #6 See below
+BR1LOC        4-char    UP,DOWN.LOFT See below
+BR2LOC        4-char    UP,DOWN,LOFT See below
+BR3LOC        4-char    UP,DOWN,LOFT See below
+BR4LOC        4-char    UP,DOWN,LOFT See below
+BR5LOC        4-char    UP,DOWN,LOFT See below
+BR6LOC        4-char    UP,DOWN,LOFT See below
+BR1TV        4-char    NO,B&W,COLOR,DVD,VCR See below
+BR2TV        4-char    NO,B&W,COLOR,DVD,VCR See below
+BR3TV        4-char    NO,B&W,COLOR,DVD,VCR See below
+BR4TV        4-char    NO,B&W,COLOR,DVD,VCR See below
+BR5TV        4-char    NO,B&W,COLOR,DVD,VCR See below
+BR6TV        4-char    NO,B&W,COLOR,DVD,VCR See below
+INTCMT1      50-char  Internal comment #1 (NOT for website use)
+INTCMT2      50-char  Internal comment #2 (NOT for website use)
+INTCMT3      50-char  Internal comment #3 (NOT for website use)
+WWWCMT        2000-char Descriptive memo, without any CRs or LFs.
+                        This text field provides free-form descrip-
+                        tive comments for the website
+GSTCMT        2000-char Descriptive memo, without any CRs or LFs.
+                        Contains comments from (happy) guests. May
+                        be null.
+
+Page 3
+
+UNITTYPE    6-char      RENTAL
+DATEADD    mm/dd/yy    Date added to the unit file (leading zero on day)
+DATECHG    mm/dd/yy    Date changed on unit file (leading zero on day)
+COMMISN    Integer    LTA commission rate in percent
+RSRVAMT    Integer    Owner reserve amount (target amt to be held by LTA)
+MNTHFEE    Integer    Monthly management fee
+CLENCRG    Integer    Standard cleaning charge (paid by owners)
+CLENFEE    Integer    Standard cleaning fee charged to renters
+GRSRENT    Decimal    Year-to-date gross rent
+NETRENT    Decimal    Year-to-date net rent (gross less commission & fees)
+OWNREXP    Decimal    Year-to-date charges (expenses) to owner
+RENTDAY    Integer    Year-to-date number of days rented
+OWNRDAY    Integer    Year-to-date number of days occupied by owner
+FRNDDAY    Integer    Year-to-date number of days occupied by owner friends
+OMNTDAY    Integer    Year-to-date number of owner maintenance days
+MANTDAY    Integer    Year-to-date LTA maintenance days
+CLUBDAY    Integer    Not used
+GESTDAY    Integer    Year-to-date days used for LTA guests
+BLOCKDT    Date or Int Date unit blocked, or length (days) of rolling block
+BFYACCT    6-char      NAVIS account ID (for phones, housekeeping)
+BFYPHON    1-char      Y or N (Has Navis phone)
+LATITUD    Decimal    Latitude
+LONGTUD    Decimal    Longitude (west is negative)
+
+UNITID (LL PNNNN) is formatted as follows. The embedded space is
+  sometimes removed when unit id is processed.  On the website,
+  locations have been divided into four geographic areas associated
+  the four LTA offices:
+
+  LL=location code (names and areas follow)
+    South Shore (California) (SSO)
+      CO/County-South Lake Tahoe
+      CY/City-South Lake Tahoe
+      HC/Heavenly Valley-California
+      LL/Lakeland Village
+      TK/Tahoe Keys Resort     
+    South Shore (Nevada) (NVO)
+      HN/Heavenly Valley-Nevada
+      LV/Lake Village
+      NV/South Shore-Nevada
+      PW/Pinewild (condos)
+    North & West Shore (Calif) (NSO)
+      AM/Alpine Meadows
+      NS/North Shore
+      SV/Squaw Valley
+      TC/Tahoe City
+      WS/West Shore-North Shore
+    North Shore-Incline Village (Nevada) (IVO)
+      CD/Couer do Lac (condos)
+      IV/Incline Village
+      FP/Forest Pines (condos)
+      MC/McCloud (condos)
+      MS/Mountain Shadows (condos)
+      TH/Third Creek (condos)
+      WD/Woodstock (condos)
+    P=project code:
+      C=condo
+      H=house
+    NNNN=unit number:
+    0 to 9999, with leading if less than 1000
+
+Page 4
+
+Description codes (used to specify specific amenities and
+other attributes of interest for each property. In the unit
+records, they are listed in sequence by relevance. A property
+with a marginal view of the lake may have VIEW listed last,
+a hilltop property with a commanding view of the lake may
+have VIEW listed first. Not all codes are in use.
+
+  AMEN => Cmplx Amenities
+  BDBK => Bed & Breakfast
+  BIKE => Bike Trails
+  BRAT => Was a BRAT unit
+  CBIV => Was a Coldwell Banker unit
+  CITY => Downtown Area
+  CTEN => Tennis Courts
+  CTUB => Spa in Complex
+  DOCK => Boat Dock
+  DUPL => Duplex Unit
+  GOLF => Near Golf Cse
+  GRUP => Groups OK
+  HOUS => House
+  HTUB => Private Hottub
+  INET => Internet connection
+  JACZ => Jacuzzi
+  LGON => Lagoon Front
+  LKFT => Lakefront
+  LKVW => Lake View
+  LVRP => Was a Lake Village unit
+  NBCH => Near Beach
+  NBHD => Neighborhood
+  NCAS => Near Casinos
+  NSKI => Near Ski Area
+  NSMO => No Smoking
+  NVEW => No View
+  PBCH => Beach Access
+  PETS => Pets Allowed
+  PNUD => Private Area
+  POOL => Pool Avail
+  PTBL => Pool Table
+  SISO => Ski Lift Close
+  SMOK => Smoking OK
+  THTR => Home theatre
+  TOWN => Downtown Area
+  VIEW => Distant View
+  WDSY => Near Woods
+  WIFI => WiFi Internet connection
+  WODS => Forest Adjacent
+  WOOD => Firewd Provided
+
+Page 5
+
+Fireplace and parking fields are technially free-form, but LTA
+has a coding scheme that reservationists use for these fields.
+If these codes are needed, they will be provided separately.
+
+Bedroom bed configuration. One 6-character string which will be null
+for non-existing bedrooms. It will reflect up to 3 bed types, and the
+number of each, in format "NTNTNT where N is number and T is Type.
+The type codes are: K=king, Q=queen, D=double, S=single, B=bunk, H=
+hideaway.  Thus, "1K2B" would signify 1 king, 2 bunk beds.
+
+Bedroom location:
+  Null-not defined or no such bedroom
+  DOWN-downstairs
+  UP-upstairs
+  LOFT-loft
+
+Bedroom TV:
+  Null-not defined or no such bedroom
+  NONE-No TV in bedroom
+  B&W-Black & White
+  COLOR-Color TV
+  VCR-Has VCR on TV, color implied
+
+Barbecue:
+  CHAR-Charcoal
+  COMM-Community
+  ELEC-Electric
+  GAS-Gas
+  NONE-None
+
+Parking:
+  The parking field consists of one or two code, separated by a plus
+  (+) sign when there are two codes.  Each code consists of a single
+  digit, followed by one or two letters. The digit indicates the number
+  of parking spaces provided with the property, the letter(s) indicate
+  the type of parking, as follows:
+    C=Carport
+    D=Driveway
+    G=Garage
+    PP=Parking lot
+    Anything else is undefined.
+  Example: 2G+2D means two spaces in garage, two spaces in driveway.
+
+None of the rate information provided in this file is used on the LTA
+website. See the rate calculation algorithms represented in the unit
+availability file. The minimum stay requirements here have also been
+included in the availability file (wduavl.dat), and are not used
+directly from this file.
+
+
+
+                          Victorex, Inc.
+            Documentation re Website Reservation Availablity File
+  Information provided to eEnterprise per non-disclosure agreement
+      This information remains the property of Victorex, Inc.
+                        [bldwrs4.txt]
+
+Copyright (c) 2007, Victorex, Inc.  All rights reserved.
+
+[12/22/08] Chged bathrooms. Half baths are now tenths vice halves,
+          which provides the capability for specifying multiple half-
+          baths.
+
+There are two files:
+  wduavl.idx    Ascii text file-indexes the data file. Contains one
+                line of information for each unit (property) in the
+                availability file. Usually sorted by sortkey, but is
+                initially created in unit ID sequence.  Contains fields
+                as follows.  Each field is separated by a comma. There
+                in one special end-of-file record (see below).
+    Unit ID:    8-characters, all uppercase, with one embedded space:
+                    2-character location code (see separate table)
+                    1-character space
+                    1-character property type: C=condo, H=house
+                    4-digit property number, with leading zeros as needed.
+                      In general, first two digits represent max occupancy
+                      for the unit, but this info is more reliably available
+                      elsewhere
+  *Sort Key:  10-character sort key. File is usually sorted in decending
+                order. This results in all available A+ units listed first,
+                then A units, then A- units. Within each grade, the units
+                with the least future bookings are listed first. Within
+                units with same occupancy factor, highest priced units are
+                listed first.
+                Sort key is constructed as follows:
+                    2-character quality field (numeric, higher is better)
+                      (73=A+, 72=A, ... 65=C-)
+                    2-character future occupancy field (numeric, lower
+                      is more occupied, higher is less occupied, 99 is
+                      no future occupancy)
+                    6-digit price factor, highest priced units first. Numeric
+                      with leading blanks. Value is standard daily rate.
+    Unit Index: Starts at zero, incremented for each unit in file. It is
+                used when index file is sorted to find the unit record in
+                the availability file. Index for unit one corresponds to
+                record one in the availability file.
+    Quality:    Same as first 2-characters of sort key.             
+    Bedrooms:  Number of bedrooms (1 to 6)               
+    Bathrooms:  Number of baths. Each half bath is one tenth.
+    Max Occp:  Maximum occupancy                         
+    SqFt:      Area of property in square feet
+    DescCodes:  One to seven 4-character description codes (see table)
+
+    At the end of the file there is a special 16-byte EOF record, which
+      contains "eof" for the unit ID, a comma, then a 12-byte date and time
+    stamp (YYYYMMDDHHSS) in place of the sort key. If it is missing,
+    the file should be considered corrupted.
+
+Page 2
+
+
+  wduavl.dat    This must be treated as a binary file, even though
+                much of the data contained therein is ASCII. It
+                does contain nulls. It is composed of 965-byte fixed
+                length records, with NO line endings (no CR or LF),
+                except at the end of the file where there is a CRLF pair).
+                The record structure is as follows. (All data is ASCII
+                unless otherwise specified)
+    Flag:      1-byte start of record flag (^)
+    Unit ID:    8-byte unit ID (same format as index file)
+    Beg Date:  8-bytes: Beginning date for availability data (YYYYMMDD)
+    Nr Days:    4-bytes: Nr of days of data in file (currently 800)
+    2-Day Rate: Six 5-byte fields, one for each of six rate tables. This
+                is the basic 2-day rate. All rates are expressed in whole
+                dollars. This rate should not be used. See rate calcs.
+    XtraDay:    Six 5-byte fields, one for each of six rate tables. Used
+                for all rate calcs.
+    Weekly:    Six 5-byte fields, one for each of six rate tables. Not
+                currently used, weekly rate is calculated from the extra
+                day rate
+  *MinStay:    Six 5-byte fields, one for each of six rate tables. Contains
+                minimum stay requirements for each rate period, in days.
+                Higher minimums may apply, depending on season, this is
+                a lower minimum that cannot generally be overriden. NOT USED
+    SecDep:    5-byte security deposit amount (whole dollars)
+    CleanFee:  5-byte cleaning fee (used in rate calculations). (whole
+                dollars)
+    Tax Rate:  5-byte decimal (n.nnn) tax rate (12%=0.120)
+  *Tax Flags:  Five bytes used for tax rules which vary by tax district
+                1-byte: 0=forfeited rent not taxed, cancel fees not taxed
+                        1=forfeited rent taxed, but not cancel fees
+                        2=forfeited rent and cancel fees taxed
+                1-byte: 1=cleaning fee included in rent is taxable
+                1-byte: NOT USED
+                1-byte: 1=reservation fee taxable, but not on canceled rsvns
+                        2=reservation svc fee taxable on canceled rsvns (but
+                          not applicable, as rsf is not charged on canceled
+                          reservations.)
+                1-byte: 1=booking fee is taxable (but not on canceled rsvns)
+                        2=booking fee is taxable on canceled reservations
+    Max Occup:  2-byte numeric with maximum occupancy (also in index file)
+  *MinStayFlg: 1-byte flag. When set (non-zero) cannot put less than
+                minimum stay reservation in a "window" that exactly
+                fits the reservation request. NOT IN CURRENT USE.
+  *Spl Tax:    1-byte flag. Used for per diem tax rate. Usually zero,
+                when non-zero it contains the per diem tax rate multiplied
+                by 10 that must be added to the tax calculated using the
+                tax rate (30 is $3/day).
+    AvailArray: Array of 800 binary (not ASCII) bytes, for each of next
+                800 days starting with the beginning date.  Each byte is
+                coded as follows:
+                  0  (null) Date is not available
+                #0  Date is available.  Rate table in effect is stored
+                    in low 4 bits (1 to 6).  Minimum stay requirements
+                    are stored in high four bits (2 to 7, generally).
+
+    Last 16 bytes contain end-of-file flag the same as for the index file.
+If missing, consider the file corrupted and/or incomplete. If present,
+the date and time stamp should match the date and time stamp in the
+index file, else the files are not a pair.
+
+Page 3
+
+ 
+  Files named xduavl.idx/dat and zduavl.idx/dat are older, recently
+outdated (usually within an hour), copies of the wduavl.idx/dat files.
+These older copies are retained in the event that the tranfer of the most
+recent file is interrupted, leaving a corrupted file pair in place.
+The search engine will detect the corruption and will rollback to
+the next best set of files which are not corrupted.
+
+
+Change notes:
+[03/13/07] Fixed notes on UAV'SPLR, added scaling factor.
+[09/30/09] Fixed name of wduavl.dat (said .idx)
+
+ 
+
+

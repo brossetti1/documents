@@ -1,0 +1,138 @@
+ 
+                          Victorex, Inc.
+            Documentation re Website Reservation Availablity File
+  Information provided to eEnterprise per non-disclosure agreement
+       This information remains the property of Victorex, Inc.
+                         [bldwrs5.txt]
+
+Copyright (c) 2007, Victorex, Inc.  All rights reserved.
+
+Revision history
+[03/13/07] Fixed notes on UAV'SPLR, added scaling factor;jvk
+[12/22/08] Chged bathrooms. Half baths are now tenths vice halves,
+           which provides the capability for specifying multiple half-
+           baths;jvk
+[09/30/09] Fixed name of wduavl.dat (said .idx);jvk
+[04/02/14] Minor comment changes, no changes of substance;jvk
+
+There are two files:
+  wduavl.idx    Ascii text file-indexes the data file. Contains one
+                line of information for each unit (property) in the
+                availability file. Usually sorted by sortkey, but is
+                initially created in unit ID sequence.  Contains fields
+                as follows.  Each field is separated by a comma. There
+                in one special end-of-file record (see below).
+    Unit ID:    8-characters, all uppercase, with one embedded space:
+                    2-character location code (see separate table)
+                    1-character space
+                    1-character property type: C=condo, H=house
+                    4-digit property number, with leading zeros as needed.
+                       In general, first two digits represent max occupancy
+                       for the unit, but this info is more reliably available
+                       elsewhere
+   *Sort Key:   10-character sort key. File is usually sorted in decending
+                order. This results in all available A+ units listed first,
+                then A units, then A- units. Within each grade, the units
+                with the least future bookings are listed first. Within
+                units with same occupancy factor, highest priced units are
+                listed first.
+                Sort key is constructed as follows:
+                    2-character quality field (numeric, higher is better)
+                      (73=A+, 72=A, ... 65=C-)
+                    2-character future occupancy field (numeric, lower
+                      is more occupied, higher is less occupied, 99 is
+                      no future occupancy)
+                    6-digit price factor, highest priced units first. Numeric
+                      with leading blanks. Value is standard daily rate.
+    Unit Index: Starts at zero, incremented for each unit in file. It is
+                used when index file is sorted to find the unit record in
+                the availability file. Index for unit one corresponds to
+                record one in the availability file.
+    Quality:    Same as first 2-characters of sort key.              
+    Bedrooms:   Number of bedrooms (1 to 6)                 
+    Bathrooms:  Number of baths. Each half bath is one tenth.
+    Max Occp:   Maximum occupancy                          
+    SqFt:       Area of property in square feet
+    DescCodes:  One to seven 4-character description codes (see table)
+
+    At the end of the file there is a special 16-byte EOF record, which
+      contains "eof" for the unit ID, a comma, then a 12-byte date and time
+    stamp (YYYYMMDDHHSS) in place of the sort key. If it is missing,
+    the file should be considered corrupted.
+
+Page 2
+
+
+  wduavl.dat    This must be treated as a binary file, even though
+                much of the data contained therein is ASCII. It
+                does contain nulls. It is composed of 965-byte fixed 
+                length records, with NO line endings (no CR or LF),
+                except at the end of the file where there is a CRLF pair).
+                The record structure is as follows. (All data is ASCII
+                unless otherwise specified)
+    Flag:       1-byte start of record flag (^)
+    Unit ID:    8-byte unit ID (same format as index file)
+    Beg Date:   8-bytes: Beginning date for availability data (YYYYMMDD)
+    Nr Days:    4-bytes: Nr of days of data in file (currently 800)
+    2-Day Rate: Six 5-byte fields, one for each of six rate tables. This
+                is the basic 2-day rate. All rates are expressed in whole
+                dollars. This rate should not be used. See rate calcs.
+    XtraDay:    Six 5-byte fields, one for each of six rate tables. Used
+                for all rate calcs.
+    Weekly:     Six 5-byte fields, one for each of six rate tables. Not
+                currently used, weekly rate is calculated from the extra
+                day rate
+   *MinStay:    Six 5-byte fields, one for each of six rate tables. Contains
+                minimum stay requirements for each rate period, in days.
+                Higher minimums may apply, depending on season, this is
+                a lower minimum that cannot generally be overriden. NOT USED
+    SecDep:     5-byte security deposit amount (whole dollars)
+    CleanFee:   5-byte cleaning fee (used in rate calculations). (whole
+                dollars)
+    Tax Rate:   5-byte decimal (n.nnn) tax rate (12%=0.120)
+   *Tax Flags:  Five bytes used for tax rules which vary by tax district
+                1-byte: 0=forfeited rent not taxed, cancel fees not taxed
+                        1=forfeited rent taxed, but not cancel fees
+                        2=forfeited rent and cancel fees taxed
+                1-byte: 1=cleaning fee included in rent is taxable
+                1-byte: NOT USED
+                1-byte: 1=reservation fee taxable, but not on canceled rsvns
+                        2=reservation svc fee taxable on canceled rsvns (but
+                          not applicable, as rsf is not charged on canceled
+                          reservations.)
+                1-byte: 1=booking fee is taxable (but not on canceled rsvns)
+                        2=booking fee is taxable on canceled reservations
+    Max Occup:  2-byte numeric with maximum occupancy (also in index file)
+   *MinStayFlg: 1-byte flag. When set (non-zero) cannot put less than
+                minimum stay reservation in a "window" that exactly
+                fits the reservation request. NOT IN CURRENT USE.
+   *Spl Tax:    1-byte flag. Used for per diem tax rate. Usually zero,
+                when non-zero it contains the per diem tax rate multiplied
+                by 10 that must be added to the tax calculated using the
+                tax rate (30 is $3/day).
+    AvailArray: Array of 800 binary (not ASCII) bytes, for each of next
+                800 days starting with the beginning date.  Each byte is
+                coded as follows:
+                  0  (null) Date is not available
+                 #0  Date is available.  Rate table in effect is stored
+                     in low 4 bits (1 to 6).  Minimum stay requirements
+                     are stored in high four bits (2 to 7, generally).
+
+    Last 16 bytes contain end-of-file flag the same as for the index file.
+If missing, consider the file corrupted and/or incomplete. If present,
+the date and time stamp should match the date and time stamp in the
+index file, else the files are not a pair.
+
+Page 3
+
+  
+  Files named xduavl.idx/dat and zduavl.idx/dat are older, recently
+outdated (usually within an hour), copies of the wduavl.idx/dat files.
+These older copies are retained in the event that the tranfer of the most
+recent file is interrupted, leaving a corrupted file pair in place.
+The search engine will detect the corruption and will rollback to
+the next best set of files which are not corrupted. [This only applies
+to the implementation on the original LTA website, which is no longer
+operating.]
+
+

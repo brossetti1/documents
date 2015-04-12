@@ -1,0 +1,276 @@
+
+ LAKE TAHOE ACCOMMODATIONS UNIT DESCRIPTION FILE SPECIFICATIONS
+               Copyright (c) 2012, Victorex, Inc.
+                      [bldwun5.txt]
+                      April 2, 2014
+
+Standard file name: wdunit.lst
+
+File is in comma-delimited, ASCII format, and all fields are enclosed in
+double-quotes as text.
+
+All quoted fields are separated by commas only.
+
+No field contains the double-quote character, any double-quotes in text
+   fields have been replaced with single quotes. 
+
+Each record consists of a single line of ASCII characters, terminated
+  with a LF (which should be expanded on transfer to a CR,LF on WINDOWS/DOS
+  based systems). Due to the extended comments that can exist for
+  each property, most lines will contain several thousand characters.
+  It is not believed any line is longer than 10,000 characters, but 
+  this is not a certainty. Not all fields are necessary, and a very
+  few are are present in the availabiity file.
+
+The first line contains labels for each field. Labels are four to 
+  six characters in length, and may contain digits. The sequence
+  may not match the sequence in this document.
+
+Field name    Type/Size Comments
+----------    --------- ----------------------
+UNITID        8 char    LL PNNNN (See below)
+OFCODE        3 char    IVO/NSO/NVO/SSO (office codes)
+#BDRM         Integer   0 (studio) to 8 (but only 1-6 have bed config)
+#BATHS        Decimal   1 to 8 (tenths are half-baths)
+AREA          Integer   100 to 10000 (SQFT)
+LOCN          2 char    LL (Subset of UNITID) 
+STADR         26 char   Street Address (no city)
+DESC1         4-char    Description code (see list)
+DESC2         4-char    Desc code, may be null
+DESC3         4-char    Desc code, may be null
+DESC4         4-char    Desc code, may be null
+DESC5         4-char    Desc code, may be null
+DESC6         4-char    Desc code, may be null
+DESC7         4-char    Desc code, may be null
+GRADE         2-char    Unit grade: C- to A+ (9 grades)
+SOFABD        Integer   Nr of sofabeds (may be zero)
+MAXOCP        Integer   Maximum occupancy
+FIREPL        6-char    Fireplace desc (free form codes, may be null)
+PARKSP        6-char    Parking info (see table)
+BARBCU        6-char    Type of barbecue (see table)
+WASDRY        3-char    YES or NO
+SECDEP        Integer   Security Dep Amount (used for initial dep)
+
+Page 2
+
+Field name    Type/Size Comments
+----------    --------- ----------------------
+# Note: 2-day and Weekly rates are no longer used, they are calculated
+# from the daily (extra day) rates.
+2DA_T1        Integer   Two-day rate-rate table #1
+XDA_T1        Integer   Extra day rate-rate table #1
+WEK_T1        Integer   Weekly rate-rate table #1
+MIN_T1        Integer   Standard minimum stay-rate table #1
+2DA_T2        Integer   Two-day rate-rate table #2
+XDA_T2        Integer   Extra day rate-rate table #2
+WEK_T2        Integer   Weekly rate-rate table #2
+MIN_T2        Integer   Standard minimum stay-rate table #2
+2DA_T3        Integer   Two-day rate-rate table #3
+XDA_T3        Integer   Extra day rate-rate table #3
+WEK_T3        Integer   Weekly rate-rate table #3
+MIN_T3        Integer   Standard minimum stay-rate table #3
+2DA_T4        Integer   Two-day rate-rate table #4
+XDA_T4        Integer   Extra day rate-rate table #4
+WEK_T4        Integer   Weekly rate-rate table #4
+MIN_T4        Integer   Standard minimum stay-rate table #4
+2DA_T5        Integer   Two-day rate-rate table #5
+XDA_T5        Integer   Extra day rate-rate table #5
+WEK_T5        Integer   Weekly rate-rate table #5
+MIN_T5        Integer   Standard minimum stay-rate table #5
+2DA_T6        Integer   Two-day rate-rate table #6
+XDA_T6        Integer   Extra day rate-rate table #6
+WEK_T6        Integer   Weekly rate-rate table #6
+MIN_T6        Integer   Standard minimum stay-rate table #6
+BR1BED        6-char    Beds in bedroom #1 See below
+BR2BED        6-char    Beds in bedroom #2 See below
+BR3BED        6-char    Beds in bedroom #3 See below
+BR4BED        6-char    Beds in bedroom #4 See below
+BR5BED        6-char    Beds in bedroom #5 See below
+BR6BED        6-char    Beds in bedroom #6 See below
+BR1LOC        4-char    UP,DOWN.LOFT See below
+BR2LOC        4-char    UP,DOWN,LOFT See below
+BR3LOC        4-char    UP,DOWN,LOFT See below
+BR4LOC        4-char    UP,DOWN,LOFT See below
+BR5LOC        4-char    UP,DOWN,LOFT See below
+BR6LOC        4-char    UP,DOWN,LOFT See below
+BR1TV         4-char    NO,B&W,COLOR,DVD,VCR See below
+BR2TV         4-char    NO,B&W,COLOR,DVD,VCR See below
+BR3TV         4-char    NO,B&W,COLOR,DVD,VCR See below
+BR4TV         4-char    NO,B&W,COLOR,DVD,VCR See below
+BR5TV         4-char    NO,B&W,COLOR,DVD,VCR See below
+BR6TV         4-char    NO,B&W,COLOR,DVD,VCR See below
+INTCMT1       50-char   Internal comment #1 (NOT for website use)
+INTCMT2       50-char   Internal comment #2 (NOT for website use)
+INTCMT3       50-char   Internal comment #3 (NOT for website use)
+WWWCMT        2000-char Descriptive memo, without any CRs or LFs.
+                        This text field provides free-form descrip-
+                         tive comments for the website
+GSTCMT        2000-char Descriptive memo, without any CRs or LFs.
+                        Contains comments from (happy) guests. May
+                        be null.
+
+Page 3
+
+UNITTYPE    6-char      RENTAL
+DATEADD     mm/dd/yy    Date added to the unit file (leading zero on day)
+DATECHG     mm/dd/yy    Date changed on unit file (leading zero on day)
+COMMISN     Integer     LTA commission rate in percent
+RSRVAMT     Integer     Owner reserve amount (target amt to be held by LTA)
+MNTHFEE     Integer     Monthly management fee
+CLENCRG     Integer     Standard cleaning charge (paid by owners)
+CLENFEE     Integer     Standard cleaning fee charged to renters
+GRSRENT     Decimal     Year-to-date gross rent
+NETRENT     Decimal     Year-to-date net rent (gross less commission & fees)
+OWNREXP     Decimal     Year-to-date charges (expenses) to owner
+RENTDAY     Integer     Year-to-date number of days rented
+OWNRDAY     Integer     Year-to-date number of days occupied by owner
+FRNDDAY     Integer     Year-to-date number of days occupied by owner friends
+OMNTDAY     Integer     Year-to-date number of owner maintenance days
+MANTDAY     Integer     Year-to-date LTA maintenance days
+CLUBDAY     Integer     Not used
+GESTDAY     Integer     Year-to-date days used for LTA guests
+BLOCKDT     Date or Int Date unit blocked, or length (days) of rolling block
+BFYACCT     6-char      NAVIS account ID (for phones, housekeeping)
+BFYPHON     1-char      Y or N (Has Navis phone)
+LATITUD     Decimal     Latitude 
+LONGTUD     Decimal     Longitude (west is negative)
+
+UNITID (LL PNNNN) is formatted as follows. The embedded space is
+  sometimes removed when unit id is processed.  On the website,
+  locations have been divided into four geographic areas associated
+  the four LTA offices:
+
+  LL=location code (names and areas follow)
+    South Shore (California) (SSO)
+      CO/County-South Lake Tahoe
+      CY/City-South Lake Tahoe
+      HC/Heavenly Valley-California 
+      LL/Lakeland Village
+      TK/Tahoe Keys Resort      
+    South Shore (Nevada) (NVO)
+      HN/Heavenly Valley-Nevada
+      LV/Lake Village
+      NV/South Shore-Nevada 
+      PW/Pinewild (condos)
+    North & West Shore (Calif) (NSO)
+      AM/Alpine Meadows
+      NS/North Shore
+      SV/Squaw Valley
+      TC/Tahoe City
+      WS/West Shore-North Shore
+    North Shore-Incline Village (Nevada) (IVO)
+      CD/Couer do Lac (condos)
+      IV/Incline Village
+      FP/Forest Pines (condos)
+      MC/McCloud (condos)
+      MS/Mountain Shadows (condos)
+      TH/Third Creek (condos)
+      WD/Woodstock (condos)
+    P=project code:
+      C=condo
+      H=house
+    NNNN=unit number:
+     0 to 9999, with leading if less than 1000
+
+Page 4
+
+Description codes (used to specify specific amenities and
+other attributes of interest for each property. In the unit
+records, they are listed in sequence by relevance. A property
+with a marginal view of the lake may have VIEW listed last,
+a hilltop property with a commanding view of the lake may 
+have VIEW listed first. Not all codes are in use.
+
+  AMEN => Cmplx Amenities
+  BDBK => Bed & Breakfast
+  BIKE => Bike Trails
+  BRAT => Was a BRAT unit
+  CBIV => Was a Coldwell Banker unit
+  CITY => Downtown Area
+  CTEN => Tennis Courts
+  CTUB => Spa in Complex
+  DOCK => Boat Dock
+  DUPL => Duplex Unit
+  GOLF => Near Golf Cse
+  GRUP => Groups OK
+  HOUS => House
+  HTUB => Private Hottub
+  INET => Internet connection
+  JACZ => Jacuzzi
+  LGON => Lagoon Front 
+  LKFT => Lakefront
+  LKVW => Lake View
+  LVRP => Was a Lake Village unit
+  NBCH => Near Beach
+  NBHD => Neighborhood
+  NCAS => Near Casinos
+  NSKI => Near Ski Area
+  NSMO => No Smoking
+  NVEW => No View
+  PBCH => Beach Access
+  PETS => Pets Allowed
+  PNUD => Private Area
+  POOL => Pool Avail
+  PTBL => Pool Table
+  SISO => Ski Lift Close
+  SMOK => Smoking OK
+  THTR => Home theatre
+  TOWN => Downtown Area
+  VIEW => Distant View
+  WDSY => Near Woods
+  WIFI => WiFi Internet connection
+  WODS => Forest Adjacent
+  WOOD => Firewd Provided
+
+Page 5
+
+Fireplace and parking fields are technially free-form, but LTA
+has a coding scheme that reservationists use for these fields.
+If these codes are needed, they will be provided separately.
+
+Bedroom bed configuration. One 6-character string which will be null
+for non-existing bedrooms. It will reflect up to 3 bed types, and the
+number of each, in format "NTNTNT where N is number and T is Type.
+The type codes are: K=king, Q=queen, D=double, S=single, B=bunk, H=
+hideaway.  Thus, "1K2B" would signify 1 king, 2 bunk beds.
+
+Bedroom location:
+  Null-not defined or no such bedroom
+  DOWN-downstairs
+  UP-upstairs
+  LOFT-loft
+
+Bedroom TV:
+  Null-not defined or no such bedroom
+  NONE-No TV in bedroom
+  B&W-Black & White
+  COLOR-Color TV
+  VCR-Has VCR on TV, color implied
+
+Barbecue:
+  CHAR-Charcoal
+  COMM-Community
+  ELEC-Electric
+  GAS-Gas
+  NONE-None
+
+Parking:
+  The parking field consists of one or two code, separated by a plus
+  (+) sign when there are two codes.  Each code consists of a single
+  digit, followed by one or two letters. The digit indicates the number
+  of parking spaces provided with the property, the letter(s) indicate
+  the type of parking, as follows:
+    C=Carport
+    D=Driveway
+    G=Garage
+    PP=Parking lot
+    Anything else is undefined.
+  Example: 2G+2D means two spaces in garage, two spaces in driveway.
+
+None of the rate information provided in this file is used on the LTA
+website. See the rate calculation algorithms represented in the unit
+availability file. The minimum stay requirements here have also been
+included in the availability file (wduavl.dat), and are not used
+directly from this file.
+ 
+ 
