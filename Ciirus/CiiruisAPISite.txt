@@ -1,0 +1,4 @@
+These sites will also give the WSDL files. 
+
+http://xml.ciirus.com/CiirusXML.12.017.asmx 
+http://xml.ciirus.com/XMLAdditionalFunctions1.asmx?

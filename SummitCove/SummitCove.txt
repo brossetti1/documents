@@ -1,0 +1,229 @@
+Hello Chris,
+
+I'm Daniel Baumann, software developer at SummitCove. I'm excited by the possibilities opened up by our integration with RazorCloud.
+
+Peter has explained your need to create reservations in our system. This isn't something we've permitted in the past, but I'll be happy to work with you to make it happen. In the future we look forward to supporting the OpenTravel schema, but for now we're going to keep it simple. Here's what I have in mind:
+
+1. Adding a new reservation (https)
+
+Sample request (we'll send you valid auth credentials once the service is ready):
+
+POST /xml/service/reservations HTTP/1.1
+Host: www.summitcove.com
+Content-Type: application/xml
+Content-Length: length
+Authenticate: Basic cmF6b3JjbG91ZDpwYXNzd29yZA==
+
+<?xml version="1.0" encoding="utf-8"?>
+<Reservation>
+        <PropertyID>5</PropertyID>
+        <FirstName>John</FirstName>
+        <LastName>Doe</LastName>
+        <Address>123 First St.</Address>
+        <City>Springfield</City>
+        <State>IL</State>
+        <Zip>12345</Zip>
+        <Country>US</Country>
+        <DayPhone>123-456-7890</DayPhone>
+        <EveningPhone>9876543210</EveningPhone>
+        <Email>johndoe@gmail.com</Email>
+        <Adults>1</Adults>
+        <Children>2</Children>
+        <InsuranceOptIn>1<InsuranceOptIn>
+</Reservation>
+
+Our responses:
+
+200 Ok - reservation has been created
+400 Bad Request - reservation could not be created (night minimum not met or property not available)
+500 Internal Server Error - please send me an email
+
+Let me know if you need any other information in the body of the response, such as the new reservation id.
+
+
+
+2. Retrieving property information (there are some extra fields in here that aren't in /xml/properties.php).
+
+Your request:
+
+GET /xml/service/properties HTTP/1.1
+Host: www.summitcove.com
+Accept: application/xml
+Authenticate: Basic cmF6b3JjbG91ZDpwYXNzd29yZA==
+
+Sample response:
+
+HTTP/1.1 200 OK
+Content-Type: application/xml
+Content-Length: length
+
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<SummitCove_Properties>
+        <Property>
+                <PropertyID>5</PropertyID>
+                <PropertyActive>1</PropertyActive>
+                <PropertyName>Key Condo</PropertyName>
+                <PropertyUnit>2935A</PropertyUnit>
+                <PropertyAddress>1473 Keystone Road</PropertyAddress>
+                <PropertyCity>Keystone</PropertyCity>
+                <PropertyState>CO</PropertyState>
+                <PropertyZip>80435</PropertyZip>
+                <Latitude>39.605415</Latitude>
+                <Longitude>-105.949211</Longitude>
+                <SleepingCapacity>9</SleepingCapacity>
+                <SquareFeet>900</SquareFeet>
+                <Bedrooms>2</Bedrooms>
+                <Bathrooms>1.50</Bathrooms>
+                <SlopeProximity>0.280</SlopeProximity>
+                <CleaningCost>100.00</CleaningCost>
+                <SingleBeds>1</SingleBeds>
+                <QueenBeds>3</QueenBeds>
+                <KingBeds>1</KingBeds>
+                <TaxRate>5.800</TaxRate>
+                <ResortTaxRate>6.500</ResortTaxRate>
+                <DamageFee>35</DamageFee>
+                <CleaningFee>65</CleaningFee>
+                <OneLiner>Walk to the lifts!  This newly remodeled condo is slope side at Keystone and features a  loft perfect for kids.  With a top floor balcony, there is a great view of the surrounding peaks and ski runs.</OneLiner>
+                <PropertyDescriptionOverview>Key Condo is situated right at the base of the Keystone ski slopes and right on the banks of the Snake River. Simply get dressed in your condo and walk 100 yards to the ski lifts at either Mountain House or a quick 5 minute jaunt to River Run. Nestled among mature tall pine trees, Key Condo central to everything in Keystone including restaurants, shops and entertainment. Nearby  bike trails  lead down the hill to the Keystone golf courses, Lake Dillon and eventually to Frisco and Breckenridge. Key Condo offers covered parking and a clubhouse with a pool, sauna and jacuzzi tub.</PropertyDescriptionOverview>
+                <RoomTitle1>Kitchen</RoomTitle1>
+                <RoomTitle2>Living Area</RoomTitle2>
+                <RoomTitle3>Master Bedroom</RoomTitle3>
+                <RoomTitle4>Bunk Room</RoomTitle4>
+                <RoomTitle5>Loft</RoomTitle5>
+                <RoomTitle6>Upper level deck</RoomTitle6>
+                <RoomTitle7></RoomTitle7>
+                <RoomTitle8></RoomTitle8>
+                <RoomTitle9></RoomTitle9>
+                <RoomTitle10></RoomTitle10>
+                <RoomDescription1>The kitchen is fully equipped with all of the necessities and then some.  Enjoy home cooked meals while on vacation and save your money for recreation.</RoomDescription1>
+                <RoomDescription2>The cozy gas log fireplace is the centerpiece of the living room.  What can be better than sitting near the fire after a day in the snow.  Updated furniture features a sofa sleeper which provides extra sleeping for two and tasteful art decor creates an inviting modern atmosphere. The new flat screen TV is also a great addition to this living room!</RoomDescription2>
+                <RoomDescription3>Features a King size bed, and a view of the Snake River right outside.  Cozy log cabin furnishings give this room very unique appeal.  The master is equipped with a TV, just in case you are too tired to get to the living room after a day of play!</RoomDescription3>
+                <RoomDescription4>If you are traveling with a large group, this room has you covered.  With a full size bed on the bottom and a twin on the top, you can comfortably sleep 3 in this room alone.</RoomDescription4>
+                <RoomDescription5> The loft is only accessible by a ladder and has a low clearance ceiling. It is only recommended for children 8 or older.  With a queen bed and TV/VCR, your kids might not want to come down.</RoomDescription5>
+                <RoomDescription6>Features broken views through the tall spruce trees of the Continental Divide to the East and ski slopes to the South.  </RoomDescription6>
+                <RoomDescription7></RoomDescription7>
+                <RoomDescription8></RoomDescription8>
+                <RoomDescription9></RoomDescription9>
+                <RoomDescription10></RoomDescription10>
+                <PropertyFeaturesOverview>Key Condo #2935A is a skiers and Mtn Bikers paradise.  It&apos;s close to the slopes, and relaxing and cozy on the inside with all the mountain and skiing decor.  Newly remodeled in 2005, it has everything you need for a perfect vacation.  The owners are an active family that live in Golden Colorado and visit frequently during all seasons and enjoy snowboarding and biking.</PropertyFeaturesOverview>
+                <FeatureTitle1>Internet Access</FeatureTitle1>
+                <FeatureTitle2>Slopeside</FeatureTitle2>
+                <FeatureTitle3>Snake River</FeatureTitle3>
+                <FeatureTitle4>Ski Locker</FeatureTitle4>
+                <FeatureTitle5>Clubhouse</FeatureTitle5>
+                <FeatureTitle6></FeatureTitle6>
+                <FeatureTitle7></FeatureTitle7>
+                <FeatureTitle8></FeatureTitle8>
+                <FeatureTitle9></FeatureTitle9>
+                <FeatureTitle10></FeatureTitle10>
+                <FeatureDescription1>Free Wireless Internet Access is available in the Clubhouse, which is open from 10 A.M. to 10 P.M.</FeatureDescription1>
+                <FeatureDescription2>It&apos;s hard to get much closer to the slopes than this. Walk a short distance and you&apos;re at the lift.</FeatureDescription2>
+                <FeatureDescription3>Key Condo is located at the banks of the Snake River that starts in the mountains, goes through Keystone, and drains into Lake Dillon. Fly fish right out the door!</FeatureDescription3>
+                <FeatureDescription4>An outside ski locker is provided along with the condo to store your skis and other gear that normally clutters the inside of the condo.</FeatureDescription4>
+                <FeatureDescription5>Only 100 feet away, Indoor heated pool, Sauna, Workout Room, Lougne with TV, Outdoor Hot tub / Jacuzzi, Laundry facilities, Vending / Ice machines.</FeatureDescription5>
+                <FeatureDescription6></FeatureDescription6>
+                <FeatureDescription7></FeatureDescription7>
+                <FeatureDescription8></FeatureDescription8>
+                <FeatureDescription9></FeatureDescription9>
+                <FeatureDescription10></FeatureDescription10>
+                <PictureURL1>http://danielsummitcove/i/building-pics/KC/KC2935A/IMG_8900_1_2Adjust_(1).jpg</PictureURL1>
+                <PictureURL2>http://danielsummitcove/i/building-pics/KC/KC2935A/IMG_8942_3_4Adjust_(1).jpg</PictureURL2>
+                <PictureURL3>http://danielsummitcove/i/building-pics/KC/KC2935A/IMG_8888_89_90Adjust_(1).jpg</PictureURL3>
+                <PictureURL4>http://danielsummitcove/i/building-pics/KC/KC2935A/IMG_8915_6_7Adjust_(1).jpg</PictureURL4>
+                <PictureURL5>http://danielsummitcove/i/building-pics/KC/KC2935A/IMG_8842_3_4Adjust_(1).jpg</PictureURL5>
+                <PictureURL6>http://danielsummitcove/i/building-pics/KC/KC2935A/IMG_8836_7_8Adjust_(1).jpg</PictureURL6>
+                <PictureURL7>http://danielsummitcove/i/building-pics/KC/KC2935A/IMG_8839_40_41Adjust_(1).jpg</PictureURL7>
+                <PictureURL8>http://danielsummitcove/i/building-pics/KC/KC2935A/IMG_8875_(1).JPG</PictureURL8>
+                <PictureURL9>http://danielsummitcove/i/building-pics/KC/KC2935A/IMG_8945_6_7Adjust_(1).jpg</PictureURL9>
+                <PictureURL10>http://danielsummitcove/i/building-pics/KC/KC2935A/IMG_8827_8_9Adjust_(1).jpg</PictureURL10>
+                <PictureURL11>http://danielsummitcove/i/building-pics/KC/KC2935A/IMG_8894_5_6Adjust_(1).jpg</PictureURL11>
+                <PictureURL12>http://danielsummitcove/i/building-pics/KC/KC2935A/IMG_8936_7_8Adjust_(1).jpg</PictureURL12>
+                <PictureURL13>http://danielsummitcove/i/building-pics/KC/KC2935A/IMG_8903_4_5Adjust_(1).jpg</PictureURL13>
+                <PictureURL14>http://danielsummitcove/i/building-pics/KC/KC2935A/IMG_8824_5_6Adjust_(1).jpg</PictureURL14>
+                <PictureURL15>http://danielsummitcove/i/building-pics/KC/KC2935A/IMG_8845_6_7Adjust_(1).jpg</PictureURL15>
+                <PictureURL16>http://danielsummitcove/i/building-pics/KC/KC2935A/IMG_8918_19_20Adjust_(1).jpg</PictureURL16>
+                <PictureURL17>http://danielsummitcove/i/building-pics/KC/KC2935A/IMG_8851_2_3Adjust_(1).jpg</PictureURL17>
+                <PictureURL18>http://danielsummitcove/i/building-pics/KC/KC2935A/IMG_8939_40_41Adjust_(1).jpg</PictureURL18>
+                <PictureURL19>http://danielsummitcove/i/building-pics/KC/KC2935A/IMG_8830_1_2Adjust_(1).jpg</PictureURL19>
+                <PictureURL20>http://danielsummitcove/i/building-pics/KC/KC2935A/IMG_8891_2_3Adjust_(1).jpg</PictureURL20>
+                <PictureCaption1>Gorgeous condo is your mountain getaway!</PictureCaption1>
+                <PictureCaption2>Your private porch with Keystone views!</PictureCaption2>
+                <PictureCaption3>Bright, attractive mountain condo!</PictureCaption3>
+                <PictureCaption4>Newly furnished Key Condo!</PictureCaption4>
+                <PictureCaption5>Inviting King Bed in the Master</PictureCaption5>
+                <PictureCaption6>Bunk room with twin over full beds</PictureCaption6>
+                <PictureCaption7>Guest room</PictureCaption7>
+                <PictureCaption8>Queen Bed in the loft with TV</PictureCaption8>
+                <PictureCaption9>Enjoy winter Keystone views</PictureCaption9>
+                <PictureCaption10>Modern kitchen with bar seating</PictureCaption10>
+                <PictureCaption11>Plenty of counter space for cooking</PictureCaption11>
+                <PictureCaption12>Forest views from the private balcony</PictureCaption12>
+                <PictureCaption13>Newly furnished, attractive condo</PictureCaption13>
+                <PictureCaption14>Seating dining for four</PictureCaption14>
+                <PictureCaption15>Private TV in the Master bedroom</PictureCaption15>
+                <PictureCaption16>Beautifully updated furniture</PictureCaption16>
+                <PictureCaption17>Main Bathroom</PictureCaption17>
+                <PictureCaption18>View of Key Condos</PictureCaption18>
+                <PictureCaption19>Granite counter tops and tile floors</PictureCaption19>
+                <PictureCaption20>Vaulted ceilings </PictureCaption20>
+                <Season_Holiday_Start>2000-12-26</Season_Holiday_Start>
+                <Season_Holiday_End>2000-01-02</Season_Holiday_End>
+                <Season_Holiday_NightlyRate>339.00</Season_Holiday_NightlyRate>
+                <Season_Holiday_NightMin>4</Season_Holiday_NightMin>
+                <Season_Fall_Start>2000-09-19</Season_Fall_Start>
+                <Season_Fall_End>2000-11-15</Season_Fall_End>
+                <Season_Fall_NightlyRate>129.00</Season_Fall_NightlyRate>
+                <Season_Fall_NightMin>2</Season_Fall_NightMin>
+                <Season_Summer_Start>2000-04-14</Season_Summer_Start>
+                <Season_Summer_End>2000-09-18</Season_Summer_End>
+                <Season_Summer_NightlyRate>119.00</Season_Summer_NightlyRate>
+                <Season_Summer_NightMin>1</Season_Summer_NightMin>
+                <Season_Late-Spring_Start>2000-03-31</Season_Late-Spring_Start>
+                <Season_Late-Spring_End>2000-04-13</Season_Late-Spring_End>
+                <Season_Late-Spring_NightlyRate>109.00</Season_Late-Spring_NightlyRate>
+                <Season_Late-Spring_NightMin>1</Season_Late-Spring_NightMin>
+                <Season_Powder_Start>2000-02-19</Season_Powder_Start>
+                <Season_Powder_End>2000-03-07</Season_Powder_End>
+                <Season_Powder_NightlyRate>199.00</Season_Powder_NightlyRate>
+                <Season_Powder_NightMin>3</Season_Powder_NightMin>
+                <Season_Regular_Start>2000-01-03</Season_Regular_Start>
+                <Season_Regular_End>2000-01-17</Season_Regular_End>
+                <Season_Regular_NightlyRate>169.00</Season_Regular_NightlyRate>
+                <Season_Regular_NightMin>4</Season_Regular_NightMin>
+                <Season_Thanksgiving_Start>2000-11-16</Season_Thanksgiving_Start>
+                <Season_Thanksgiving_End>2000-12-20</Season_Thanksgiving_End>
+                <Season_Thanksgiving_NightlyRate>179.00</Season_Thanksgiving_NightlyRate>
+                <Season_Thanksgiving_NightMin>2</Season_Thanksgiving_NightMin>
+                <Season_Early_Start>2000-12-21</Season_Early_Start>
+                <Season_Early_End>2000-12-25</Season_Early_End>
+                <Season_Early_NightlyRate>239.00</Season_Early_NightlyRate>
+                <Season_Early_NightMin>3</Season_Early_NightMin>
+                <Season_Spring-Break_Start>2000-03-08</Season_Spring-Break_Start>
+                <Season_Spring-Break_End>2000-03-18</Season_Spring-Break_End>
+                <Season_Spring-Break_NightlyRate>269.00</Season_Spring-Break_NightlyRate>
+                <Season_Spring-Break_NightMin>4</Season_Spring-Break_NightMin>
+                <Season_MLK-Weekend_Start>2000-01-18</Season_MLK-Weekend_Start>
+                <Season_MLK-Weekend_End>2000-01-21</Season_MLK-Weekend_End>
+                <Season_MLK-Weekend_NightlyRate>189.00</Season_MLK-Weekend_NightlyRate>
+                <Season_MLK-Weekend_NightMin>3</Season_MLK-Weekend_NightMin>
+                <Season_Pre-Powder_Start>2000-01-22</Season_Pre-Powder_Start>
+                <Season_Pre-Powder_End>2000-02-13</Season_Pre-Powder_End>
+                <Season_Pre-Powder_NightlyRate>169.00</Season_Pre-Powder_NightlyRate>
+                <Season_Pre-Powder_NightMin>3</Season_Pre-Powder_NightMin>
+                <Season_Spring-Prime_Start>2000-03-19</Season_Spring-Prime_Start>
+                <Season_Spring-Prime_End>2000-03-30</Season_Spring-Prime_End>
+                <Season_Spring-Prime_NightlyRate>189.00</Season_Spring-Prime_NightlyRate>
+                <Season_Spring-Prime_NightMin>3</Season_Spring-Prime_NightMin>
+                <Season_Presidents-Day_Start>2000-02-14</Season_Presidents-Day_Start>
+                <Season_Presidents-Day_End>2000-02-18</Season_Presidents-Day_End>
+                <Season_Presidents-Day_NightlyRate>229.00</Season_Presidents-Day_NightlyRate>
+                <Season_Presidents-Day_NightMin>3</Season_Presidents-Day_NightMin>
+        </Property>
+</SummitCove_Properties>
+
+
+
+--
+Daniel Baumann
+Software Developer
+SummitCove.com, LLC.

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfManagementCompanies xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xml.ciirus.com/">
+  <ManagementCompanies>
+    <MCUserID>21517</MCUserID>
+    <MCCompanyName />
+  </ManagementCompanies>
+  <ManagementCompanies>
+    <MCUserID>22004</MCUserID>
+    <MCCompanyName />
+  </ManagementCompanies>
+  <ManagementCompanies>
+    <MCUserID>18866</MCUserID>
+    <MCCompanyName>Brady Property Services</MCCompanyName>
+  </ManagementCompanies>
+  <ManagementCompanies>
+    <MCUserID>17040</MCUserID>
+    <MCCompanyName>Champagne Property Management</MCCompanyName>
+  </ManagementCompanies>
+  <ManagementCompanies>
+    <MCUserID>15800</MCUserID>
+    <MCCompanyName>Desirable Villas</MCCompanyName>
+  </ManagementCompanies>
+  <ManagementCompanies>
+    <MCUserID>15088</MCUserID>
+    <MCCompanyName>Elite Florida Homes, LLC</MCCompanyName>
+  </ManagementCompanies>
+  <ManagementCompanies>
+    <MCUserID>17879</MCUserID>
+    <MCCompanyName>Escape</MCCompanyName>
+  </ManagementCompanies>
+  <ManagementCompanies>
+    <MCUserID>20380</MCUserID>
+    <MCCompanyName>Florida First Class Vacation Homes</MCCompanyName>
+  </ManagementCompanies>
+  <ManagementCompanies>
+    <MCUserID>11006</MCUserID>
+    <MCCompanyName>Floriwood Property Management</MCCompanyName>
+  </ManagementCompanies>
+  <ManagementCompanies>
+    <MCUserID>11840</MCUserID>
+    <MCCompanyName>GW Travel &amp; Management Services  Inc</MCCompanyName>
+  </ManagementCompanies>
+  <ManagementCompanies>
+    <MCUserID>16548</MCUserID>
+    <MCCompanyName>Nordic Property Management</MCCompanyName>
+  </ManagementCompanies>
+  <ManagementCompanies>
+    <MCUserID>21641</MCUserID>
+    <MCCompanyName>Orlando Premier Vacation Villas</MCCompanyName>
+  </ManagementCompanies>
+  <ManagementCompanies>
+    <MCUserID>13604</MCUserID>
+    <MCCompanyName>Orlando Vacation Homes</MCCompanyName>
+  </ManagementCompanies>
+  <ManagementCompanies>
+    <MCUserID>20810</MCUserID>
+    <MCCompanyName>Regal Oaks Vacation Homes</MCCompanyName>
+  </ManagementCompanies>
+</ArrayOfManagementCompanies>
