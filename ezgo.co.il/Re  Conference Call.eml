@@ -1,0 +1,2304 @@
+X-Account-Key: account1
+X-UIDL: 1392893057.977068.p3plgemini02-03.prod.phx.0689665792
+X-Mozilla-Status: 0015
+X-Mozilla-Status2: 00000000
+X-Mozilla-Keys:                                                                                 
+Received: (qmail 14829 invoked by uid 30297); 20 Feb 2014 10:44:17 -0000
+Received: from unknown (HELO p3pismtp01-057.prod.phx3.secureserver.net) ([10.6.12.121])
+          (envelope-sender <raananm@ezgo.co.il>)
+          by p3plsmtp02-04.prod.phx3.secureserver.net (qmail-1.03) with SMTP
+          for <isaac@mybookingpal.com>; 20 Feb 2014 10:44:17 -0000
+X-IronPort-Anti-Spam-Result: AsMBAIbaBVM+20MlnGdsb2JhbABWA4JCfKslSJRzgQ4WDgEBAQEBCAsJCRQogiUBAQEEBQMSAwgDBQEbHwcCAQcNAQICCQ8CBAEBBgEBARAIAQMDBwIUAQEBCAUgCQgBAQQBEQELh2YDFQEIsUOVEw2HcBcEjEuBMxEBGRECCQsLBQYBEQeCF4IJBItThG6BMwEBhE0BiFuFb4NbhRqBbw
+Received: from mail5.wishosting.net ([62.219.67.37])
+  by p3pismtp01-057.prod.phx3.secureserver.net with ESMTP; 20 Feb 2014 03:44:12 -0700
+Received: (qmail 15883 invoked by uid 399); 20 Feb 2014 10:44:50 -0000
+Received: from unknown (HELO raa01) (raananm@ezgo.co.il@31.168.121.185)
+  by mail5.wishosting.net with ESMTPAM; 20 Feb 2014 10:44:50 -0000
+X-Originating-IP: 31.168.121.185
+From: "Raanan - EZgo" <raananm@ezgo.co.il>
+To: "'Jonah Balakhaneh'" <jonah1707@gmail.com>,
+	"'Isaac Mahgrefteh'" <isaac@mybookingpal.com>
+Cc: "'Holiday Rentals'" <office@holiday-rentals.co.il>
+References: <CAOnErGvwLcG7VdmqEMxB5x8wTjTg+TeWVcFaGj8_xNC-tJYUPw@mail.gmail.com>	<CADQN0wPy3qtHCFDmfs4fYCCK35Rxv4h04C1EY1UmkmdSa0rc5A@mail.gmail.com>	<CAOnErGu3jpxEMHUFnaLqAuv9ZFXJdOD8JBoaKnGGx5h0Rue5xA@mail.gmail.com>	<CAOnErGsTBJhJtgAmK3ss-H_jMu4zf7cJ2LQsWXhKVjm0Lru=RQ@mail.gmail.com>	<CAOnErGt69g5bp91_Y-THO7w2SGHGdtFDN_84c46n5S3nP8wEnw@mail.gmail.com>	<CADQN0wP2YWwr=FZf3wh3pUUdkFJVp2a7q2nvYfsCt2XHoC2MqQ@mail.gmail.com>	<CAOnErGvx2My256Cp-anTqEvEhBVf6Wn26zeVVeWL960DvkwM0w@mail.gmail.com>	<52F2CB8A.20700@mybookingpal.com>	<CAOnErGv9=6_3U3ovA+nq+46u-jwiEvjP3vNizC6nUEf37Qq0bw@mail.gmail.com>	<002e01cf2836$e99254a0$bcb6fde0$@co.il>	<52FC1AD7.4030503@mybookingpal.com> <CAOnErGtv=jyhSVtOHmBbfWocUAbPtDLKjntkfs1dCJ2oo-cmmg@mail.gmail.com>
+In-Reply-To: <CAOnErGtv=jyhSVtOHmBbfWocUAbPtDLKjntkfs1dCJ2oo-cmmg@mail.gmail.com>
+Subject: RE: Conference Call
+Date: Thu, 20 Feb 2014 12:45:42 +0200
+Message-ID: <004901cf2e28$e752b340$b5f819c0$@co.il>
+MIME-Version: 1.0
+Content-Type: multipart/mixed;
+	boundary="----=_NextPart_000_004A_01CF2E39.AADB8340"
+X-Mailer: Microsoft Office Outlook 12.0
+Content-Language: he
+Thread-index: Ac8t08CeGpz4pHQpQRWwz+dBTUhVyAAPW/sg
+X-Nonspam: None
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_004A_01CF2E39.AADB8340
+Content-Type: multipart/related;
+	boundary="----=_NextPart_001_004B_01CF2E39.AADB8340"
+
+
+------=_NextPart_001_004B_01CF2E39.AADB8340
+Content-Type: multipart/alternative;
+	boundary="----=_NextPart_002_004C_01CF2E39.AADB8340"
+
+
+------=_NextPart_002_004C_01CF2E39.AADB8340
+Content-Type: text/plain;
+	charset="us-ascii"
+Content-Transfer-Encoding: 7bit
+
+Hello Isaac
+
+ 
+
+You can use iCal to get the reservations list of each apt. and use the
+webservice bellow to get the price for each apt. category.
+
+Itay from holiday rentals will give you a list of iCal's links. (I also
+attach file with a list of links).
+
+ 
+
+Price retrieving:
+
+Web service url:
+
+http://www.onlineres.ezgo.co.il/Service.asmx
+
+ 
+
+the procedure you are going to use is:
+
+ 
+<http://www.onlineres.ezgo.co.il/Service.asmx?op=XmlDailyVacancyPrice_AllDat
+a> XmlDailyVacancyPrice_AllData
+
+ 
+
+The proc returns xml string
+
+ 
+
+Input:
+
+XmlDailyVacancyPrice_AllData( int iItemId, string Password, string
+sdtLastUpdate)
+
+ 
+
+Holiday Rentals Items are:
+
+2655
+
+4446
+
+5181
+
+ 
+
+You need to call each Item separately.
+
+ 
+
+Password: HR07053
+
+ 
+
+Date format: "yyyy-MM-dd HH:mm"
+
+Example: "2013-01-01 12:00"
+
+ 
+
+On every call to proc, send the date string you got on the previous call.
+
+ 
+
+The output is the rows that changed from last call.
+
+ 
+
+Output:
+
+iSubItemId - is the apartment category. (int) (apt. id is 8 digits, last 4
+digits are category)(this is a unique number for all items)
+
+dtDate - price date
+
+cPrice_0 - price on currency: ILS
+
+cPrice_1 - price on currency: USD
+
+iVacancy  - you are going to get vacancy from iCal - ignore this.
+
+iMinStay - minimum nights on reservation.
+
+ 
+
+<root>
+
+  <Error />
+
+  <dtNow>2013-10-10 21:08:18</dtNow>
+
+  <Item>
+
+    <iItemId>1001</iItemId>
+
+    <Day>
+
+      <iSubItemId>6448</iSubItemId>
+
+      <dtDate>2013-08-11</dtDate>
+
+      <iVacancy>2</iVacancy>
+
+      <cPrice_0>700.0000</cPrice_0>
+
+      <cPrice_1>300.0000</cPrice_1>
+
+      <iMinStay>0</iMinStay>
+
+    </Day>
+
+    <Day>
+
+      <iSubItemId>6448</iSubItemId>
+
+      <dtDate>2013-08-12</dtDate>
+
+      <iVacancy>2</iVacancy>
+
+      <cPrice_0>700.0000</cPrice_0>
+
+      <cPrice_1>300.0000</cPrice_1>
+
+      <iMinStay>0</iMinStay>
+
+    </Day>
+
+Becouse you only get the Prices from this xml, please retrieve data one a
+day or less - the prices are changed Rarely.
+
+Do not hesitate to ask any thing
+
+Please send the IP of the calling server. - on the next month you can use it
+from every computer  (for develop use)
+
+ 
+
+ 
+
+Best Regards
+
+ 
+
+..........................................................
+
+Raanan MOR
+
+office: 972-9-8850248
+
+mobile: 972-54-4402880
+
+www.ezgo.co.il
+
+EZgoLogo_140
+
+ 
+
+From: Jonah Balakhaneh [mailto:jonah1707@gmail.com] 
+Sent: Thursday, February 20, 2014 2:35 AM
+To: Isaac Mahgrefteh
+Cc: Raanan - EZgo; Holiday Rentals
+Subject: Re: Conference Call
+
+ 
+
+Hi Etay and Raanan,
+
+ 
+
+Hope all is well on your end. I would like to get the integration process
+going. Can we schedule a call for this Monday at 8:00 AM PST / 6:00 PM
+Israel time? Isaac confirmed with me that he will be making conference call
+as well. Does the conference line below work?
+
+ 
+
+Conference Dial-In Number:
+
++1 424-203-8405
+
+Host Access Code:
+
+206166#
+
+Participant Access Code:
+
+550058
+
+ 
+
+Etay, have you had a chance to review the agreements? If so, please send
+them back executed or red-lined so I can process them, and get our
+partnership underway.
+
+ 
+
+ 
+
+All the best
+
+
+
+
+Jonah Balakhaneh
+
+BookingPal, Inc
+
+Regional Relationship Manager
+
+ 
+
+Offlice Line: 949.216.3169
+
+Email: Jonah@mybookingpal.com
+
+Site: www.mybookingpal.com
+
+Address: 101 Pacifica, Suite 250, Irvine CA
+
+ 
+
+On Wed, Feb 12, 2014 at 5:07 PM, Isaac Mahgrefteh <isaac@mybookingpal.com>
+wrote:
+
+Hi Raanan, 
+Sure I would be happy to: 
+
+1.Bookingpal will pull the property information from your system. 
+2. I am not sure I understand your question. We can talk about this on the
+call. 
+3. Yes.
+4. Yes, iCal will work. If you have pure xml of the booked dates that will
+also work. 
+5. Yes, I would like to talk to you. Do you have skype? If you do can you
+please add  <mailto:isaac@mybookingpal.com> "isaac@mybookingpal.com".  I
+will speak to Jonah about setting up a time. 
+
+Please let me know if you have any more questions. 
+
+
+Thank you for your time. 
+Isaac Mahgrefteh
+
+On 2/12/2014 1:10 PM, Raanan - EZgo wrote:
+
+Hi Isaac Mahgrefteh
+
+ 
+
+I am sorry, lately my hands are full.
+
+ 
+
+Can you please describe in a few words in which way you want to get the
+data, by pulling it from us, or by push,
+
+Do you support getting rates?
+
+Are you going to update us on reservation made on your website?
+
+Is iCal file is good enough?
+
+ 
+
+It is possible to speak with me over the phone. 
+
+the mornings, and around 23:00 Israel time it is good for me.
+
+ 
+
+ 
+
+ 
+
+Best Regards
+
+ 
+
+..........................................................
+
+Raanan MOR
+
+office: 972-9-8850248
+
+mobile: 972-54-4402880
+
+www.ezgo.co.il
+
+EZgoLogo_140
+
+ 
+
+From: Jonah Balakhaneh [mailto:jonah1707@gmail.com] 
+Sent: Wednesday, February 12, 2014 10:39 PM
+To: Isaac Mahgrefteh; Holiday Rentals; raananm@ezgo.co.il
+Subject: Re: Conference Call
+
+ 
+
+Hi Etay,
+
+ 
+
+I would like to make sure we get the integration process underway. As a
+quick reminder, what PMS platform do you use? Have you had a chance to
+review the agreements I sent you?
+
+ 
+
+Raanan has not connected with Isaac yet. Is there another way of contacting
+him?
+
+ 
+
+ 
+
+All the best
+
+
+
+
+Jonah Balakhaneh
+
+BookingPal, Inc
+
+Regional Relationship Manager
+
+ 
+
+Offlice Line: 949.216.3169
+
+Email: Jonah@mybookingpal.com
+
+Site: www.mybookingpal.com
+
+Address: 101 Pacifica, Suite 250, Irvine CA
+
+ 
+
+On Wed, Feb 5, 2014 at 3:38 PM, Isaac Mahgrefteh <isaac@mybookingpal.com>
+wrote:
+
+Hi Raanan, 
+
+It is great to connect with you. From my understanding holiday-rentals.co.il
+would like to distribute and display properties. Can we please set up a time
+to have a conference call  to discuss the technical aspects of doing this? 
+I am located in Los Angeles, California so their is a 10 hour time
+difference.  Please let me know what time works for you. 
+
+Thank you for your time. 
+Isaac Mahgrefteh 
+
+ 
+
+On 2/5/2014 8:56 AM, Jonah Balakhaneh wrote:
+
+Hi Etay, 
+
+ 
+
+It was a pleasure speaking with you. I will oversee that the process runs
+smooth from here on out. Attached are 2 simple contracts, a supplier and
+channel agreement, they are pretty straight forward, if you have any
+questions please feel free contacting me.
+
+ 
+
+Hi Raanan, I would like to introduce our integration engineer Isaac. He will
+oversee the integration process with you. He will be in touch shortly. 
+
+ 
+
+Looking forward to our partnership!
+
+ 
+
+ 
+
+All the best
+
+
+
+
+Jonah Balakhaneh
+
+BookingPal, Inc
+
+Regional Relationship Manager
+
+ 
+
+Offlice Line: 949.216.3169
+
+Email: Jonah@mybookingpal.com
+
+Site: www.mybookingpal.com
+
+Address: 101 Pacifica, Suite 250, Irvine CA
+
+ 
+
+On Wed, Feb 5, 2014 at 8:37 AM, Holiday Rentals
+<office@holiday-rentals.co.il> wrote:
+
+raananm@ezgo.co.il
+
+
+
+
+Many thanks!
+
+ 
+
+ 
+
+Etay Rapaport
+
+Marketing Manager
+
+ 
+
+Holiday Rentals
+
+Main office 
+
++972-3-9513964 <tel:%2B972-3-9513964> 
+
+www.holiday-rentals.co.il
+
+ 
+
+  <http://holiday-rentals.co.il/images/Logo.png> 
+
+ 
+<http://www.facebook.com/pages/Holiday-Rentals-Israel-Luxury-Apartments-for-
+Business-and-Vacations/175853342449119>  
+
+ 
+
+ 
+
+On Wed, Feb 5, 2014 at 6:31 PM, Jonah Balakhaneh <jonah1707@gmail.com>
+wrote:
+
+See the attachments
+
+
+
+
+Jonah Balakhaneh
+
+BookingPal, Inc
+
+Regional Relationship Manager
+
+ 
+
+Offlice Line: 949.216.3169
+
+Email: Jonah@mybookingpal.com
+
+Site: www.mybookingpal.com
+
+Address: 101 Pacifica, Suite 250, Irvine CA
+
+ 
+
+On Wed, Feb 5, 2014 at 8:18 AM, Jonah Balakhaneh <jonah1707@gmail.com>
+wrote:
+
+Hi Etay, 
+
+ 
+
+We got disconnected somehow. Send me your number and I can call you right
+back, or call me back
+
+
+
+
+Jonah Balakhaneh
+
+BookingPal, Inc
+
+Regional Relationship Manager
+
+ 
+
+Offlice Line: 949.216.3169
+
+Email: Jonah@mybookingpal.com
+
+Site: www.mybookingpal.com
+
+Address: 101 Pacifica, Suite 250, Irvine CA
+
+ 
+
+On Wed, Feb 5, 2014 at 8:09 AM, Jonah Balakhaneh <jonah1707@gmail.com>
+wrote:
+
+Just spoke with Lilach, she told me she will check with you and get back to
+me. You can call me at my number below
+
+
+
+
+Jonah Balakhaneh
+
+BookingPal, Inc
+
+Regional Relationship Manager
+
+ 
+
+Offlice Line: 949.216.3169
+
+Email: Jonah@mybookingpal.com
+
+Site: www.mybookingpal.com
+
+Address: 101 Pacifica, Suite 250, Irvine CA
+
+ 
+
+On Wed, Feb 5, 2014 at 8:07 AM, Holiday Rentals
+<office@holiday-rentals.co.il> wrote:
+
+I thought you gonna call me via phone. one sec
+
+
+
+
+Many thanks!
+
+ 
+
+ 
+
+Etay Rapaport
+
+Marketing Manager
+
+ 
+
+Holiday Rentals
+
+Main office 
+
++972-3-9513964 <tel:%2B972-3-9513964> 
+
+www.holiday-rentals.co.il
+
+ 
+
+  <http://holiday-rentals.co.il/images/Logo.png> 
+
+ 
+<http://www.facebook.com/pages/Holiday-Rentals-Israel-Luxury-Apartments-for-
+Business-and-Vacations/175853342449119>  
+
+ 
+
+ 
+
+On Wed, Feb 5, 2014 at 6:06 PM, Jonah Balakhaneh <jonah1707@gmail.com>
+wrote:
+
+Hi Etay, 
+
+ 
+
+I am currently on your line waiting to get thru to speak with you.
+
+
+Jonah Balakhaneh
+
+BookingPal, Inc
+
+Regional Relationship Manager
+
+ 
+
+Offlice Line: 949.216.3169
+
+Email: Jonah@mybookingpal.com
+
+Site: www.mybookingpal.com
+
+Address: 101 Pacifica, Suite 250, Irvine CA
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+-- 
+Isaac Mahgrefteh | BookingPal, Inc.
+O: 949 <tel:949%20%20379%208363>   379 8363 | W: www.mybookingpal.com
+API: http://www.razor-cloud.com/cloud/#tabs-pms
+Skype ID: isaac@mybookingpal.com 
+101 Pacifica, Suite 250, Irvine, CA 92618
+
+ 
+
+
+
+
+
+-- 
+Isaac Mahgrefteh | BookingPal, Inc.
+O: 949 <tel:949%20%20379%208363>   379 8363 | W: www.mybookingpal.com
+API: http://www.razor-cloud.com/cloud/#tabs-pms
+Skype ID: isaac@mybookingpal.com 
+101 Pacifica, Suite 250, Irvine, CA 92618
+
+ 
+
+
+------=_NextPart_002_004C_01CF2E39.AADB8340
+Content-Type: text/html;
+	charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+
+<html xmlns:v=3D"urn:schemas-microsoft-com:vml" =
+xmlns:o=3D"urn:schemas-microsoft-com:office:office" =
+xmlns:w=3D"urn:schemas-microsoft-com:office:word" =
+xmlns:m=3D"http://schemas.microsoft.com/office/2004/12/omml" =
+xmlns=3D"http://www.w3.org/TR/REC-html40"><head><META =
+HTTP-EQUIV=3D"Content-Type" CONTENT=3D"text/html; =
+charset=3Dus-ascii"><meta name=3DGenerator content=3D"Microsoft Word 12 =
+(filtered medium)"><!--[if !mso]><style>v\:* =
+{behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style><![endif]--><style><!--
+/* Font Definitions */
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+@font-face
+	{font-family:Consolas;
+	panose-1:2 11 6 9 2 2 4 3 2 4;}
+/* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";}
+a:link, span.MsoHyperlink
+	{mso-style-priority:99;
+	color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{mso-style-priority:99;
+	color:purple;
+	text-decoration:underline;}
+p
+	{mso-style-priority:99;
+	mso-margin-top-alt:auto;
+	margin-right:0cm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";}
+pre
+	{mso-style-priority:99;
+	mso-style-link:"HTML \05DE\05E2\05D5\05E6\05D1 \05DE\05E8\05D0\05E9 =
+\05EA\05D5";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Courier New";}
+p.MsoAcetate, li.MsoAcetate, div.MsoAcetate
+	{mso-style-priority:99;
+	mso-style-link:"\05D8\05E7\05E1\05D8 \05D1\05DC\05D5\05E0\05D9\05DD =
+\05EA\05D5";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:8.0pt;
+	font-family:"Tahoma","sans-serif";}
+span.HTML
+	{mso-style-name:"HTML \05DE\05E2\05D5\05E6\05D1 \05DE\05E8\05D0\05E9 =
+\05EA\05D5";
+	mso-style-priority:99;
+	mso-style-link:"HTML \05DE\05E2\05D5\05E6\05D1 \05DE\05E8\05D0\05E9";
+	font-family:Consolas;}
+span.a
+	{mso-style-name:"\05D8\05E7\05E1\05D8 \05D1\05DC\05D5\05E0\05D9\05DD =
+\05EA\05D5";
+	mso-style-priority:99;
+	mso-style-link:"\05D8\05E7\05E1\05D8 \05D1\05DC\05D5\05E0\05D9\05DD";
+	font-family:"Tahoma","sans-serif";}
+span.EmailStyle22
+	{mso-style-type:personal-reply;
+	font-family:"Calibri","sans-serif";
+	color:#1F497D;}
+.MsoChpDefault
+	{mso-style-type:export-only;}
+@page WordSection1
+	{size:612.0pt 792.0pt;
+	margin:72.0pt 90.0pt 72.0pt 90.0pt;}
+div.WordSection1
+	{page:WordSection1;}
+--></style><!--[if gte mso 9]><xml>
+<o:shapedefaults v:ext=3D"edit" spidmax=3D"2050" />
+</xml><![endif]--><!--[if gte mso 9]><xml>
+<o:shapelayout v:ext=3D"edit">
+<o:idmap v:ext=3D"edit" data=3D"1" />
+</o:shapelayout></xml><![endif]--></head><body lang=3DEN-US link=3Dblue =
+vlink=3Dpurple><div class=3DWordSection1><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span =
+style=3D'font-size:11.0pt;font-family:"Calibri","sans-serif";color:#1F497=
+D'>Hello </span><span =
+style=3D'color:#888888'>Isaac<o:p></o:p></span></p><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span =
+style=3D'color:#888888'><o:p>&nbsp;</o:p></span></p><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span =
+style=3D'color:#888888'>You can use iCal to get the reservations list of =
+each apt. and use the webservice bellow to get the price for each apt. =
+category.<o:p></o:p></span></p><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span =
+style=3D'font-size:11.0pt;font-family:"Calibri","sans-serif";color:#1F497=
+D'>Itay from holiday rentals will give you a list of iCal's links. (I =
+also attach file with a list of links).</span><o:p></o:p></p><p =
+class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span =
+style=3D'font-size:11.0pt;font-family:"Calibri","sans-serif";color:#1F497=
+D'>&nbsp;</span><o:p></o:p></p><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><b><u><span =
+style=3D'font-size:11.0pt;font-family:"Calibri","sans-serif";color:#1F497=
+D'>Price retrieving:</span></u></b><o:p></o:p></p><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span =
+style=3D'font-size:11.0pt;font-family:"Calibri","sans-serif";color:#1F497=
+D'>Web service url:</span><o:p></o:p></p><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span =
+style=3D'font-size:11.0pt;font-family:"Calibri","sans-serif";color:#1F497=
+D'><a href=3D"http://www.onlineres.ezgo.co.il/Service.asmx" =
+target=3D"_blank">http://www.onlineres.ezgo.co.il/Service.asmx</a></span>=
+<o:p></o:p></p><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span =
+style=3D'font-size:11.0pt;font-family:"Calibri","sans-serif";color:#1F497=
+D'>&nbsp;</span><o:p></o:p></p><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span =
+style=3D'font-size:11.0pt;font-family:"Calibri","sans-serif";color:#1F497=
+D'>the procedure you are going to use is:</span><o:p></o:p></p><p =
+class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><b><span =
+style=3D'font-size:11.0pt;font-family:"Calibri","sans-serif";color:#1F497=
+D'><a =
+href=3D"http://www.onlineres.ezgo.co.il/Service.asmx?op=3DXmlDailyVacancy=
+Price_AllData" target=3D"_blank"><span =
+style=3D'color:#1F497D'>XmlDailyVacancyPrice_AllData</span></a></span></b=
+><o:p></o:p></p><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span =
+style=3D'font-size:11.0pt;font-family:"Calibri","sans-serif";color:#1F497=
+D'>&nbsp;</span><o:p></o:p></p><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span =
+style=3D'font-size:11.0pt;font-family:"Calibri","sans-serif";color:#1F497=
+D'>The proc returns xml string</span><o:p></o:p></p><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span =
+style=3D'font-size:11.0pt;font-family:"Calibri","sans-serif";color:#1F497=
+D'>&nbsp;</span><o:p></o:p></p><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span =
+style=3D'font-size:11.0pt;font-family:"Calibri","sans-serif";color:#1F497=
+D'>Input:</span><o:p></o:p></p><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span =
+style=3D'font-family:"Courier New"'>XmlDailyVacancyPrice_AllData( int =
+iItemId, string <span style=3D'color:#A31515'>Password</span>, string =
+</span>sdtLastUpdate<span style=3D'font-family:"Courier =
+New"'>)</span><o:p></o:p></p><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span =
+style=3D'font-family:"Courier New"'>&nbsp;</span><o:p></o:p></p><p =
+class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span =
+style=3D'font-family:"Courier New"'>Holiday Rentals Items =
+are:</span><o:p></o:p></p><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span =
+style=3D'font-family:"Courier New"'>2655</span><o:p></o:p></p><p =
+class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><b><span =
+style=3D'font-family:"Courier New"'>4446</span></b><o:p></o:p></p><p =
+class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span =
+style=3D'font-family:"Courier New"'>5181</span><o:p></o:p></p><p =
+class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span =
+style=3D'font-family:"Courier New"'>&nbsp;</span><o:p></o:p></p><p =
+class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span =
+style=3D'font-family:"Courier New"'>You need to call each Item =
+separately.</span><o:p></o:p></p><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span =
+style=3D'font-family:"Courier New"'>&nbsp;</span><o:p></o:p></p><p =
+class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span =
+style=3D'font-family:"Courier New"'>Password: <span =
+style=3D'color:green'>HR07053</span></span><o:p></o:p></p><p =
+class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span =
+style=3D'font-family:"Courier New"'>&nbsp;</span><o:p></o:p></p><p =
+class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span =
+style=3D'font-family:"Courier New"'>Date format: &quot;yyyy-MM-dd =
+HH:mm&quot;</span><o:p></o:p></p><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span =
+style=3D'font-family:"Courier New";color:#A31515'>Example: =
+&quot;2013-01-01 12:00&quot;</span><o:p></o:p></p><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span =
+style=3D'font-family:"Courier =
+New";color:#A31515'>&nbsp;</span><o:p></o:p></p><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span =
+style=3D'font-family:"Courier New";color:#A31515'>On every call to proc, =
+send the date string you got on the previous =
+call.</span><o:p></o:p></p><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span =
+style=3D'font-family:"Courier =
+New";color:#A31515'>&nbsp;</span><o:p></o:p></p><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span =
+style=3D'font-family:"Courier New";color:#A31515'>The output is the rows =
+that changed from last call.</span><o:p></o:p></p><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span =
+style=3D'font-family:"Courier =
+New";color:#A31515'>&nbsp;</span><o:p></o:p></p><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span =
+style=3D'font-size:11.0pt;font-family:"Calibri","sans-serif";color:#1F497=
+D'>Output:</span><o:p></o:p></p><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;text-autospac=
+e:none'><span style=3D'font-family:"Courier =
+New";color:#A31515'>iSubItemId</span><span style=3D'font-family:"Courier =
+New";color:blue'> &#8211; is the apartment category. (int) (apt. id is 8 =
+digits, last 4 digits are category)(this is a unique number for all =
+items)</span><o:p></o:p></p><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;text-autospac=
+e:none'><span style=3D'font-family:"Courier =
+New";color:#A31515'>dtDate</span><span style=3D'font-family:"Courier =
+New";color:blue'> &#8211; price date</span><o:p></o:p></p><p =
+class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;text-autospac=
+e:none'><span style=3D'font-family:"Courier =
+New";color:#A31515'>cPrice_0</span><span style=3D'font-family:"Courier =
+New";color:blue'> &#8211; price on currency: ILS</span><o:p></o:p></p><p =
+class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;text-autospac=
+e:none'><span style=3D'font-family:"Courier =
+New";color:#A31515'>cPrice_1</span><span style=3D'font-family:"Courier =
+New";color:blue'> - price on currency: USD</span><o:p></o:p></p><p =
+class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;text-autospac=
+e:none'><span style=3D'font-family:"Courier =
+New";color:#A31515'>iVacancy</span><span style=3D'font-family:"Courier =
+New";color:blue'> &nbsp;- you are going to get vacancy from iCal &#8211; =
+ignore this.</span><o:p></o:p></p><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;text-autospac=
+e:none'><span style=3D'font-family:"Courier =
+New";color:#A31515'>iMinStay</span><span style=3D'font-family:"Courier =
+New";color:blue'> &#8211; minimum nights on =
+reservation.</span><o:p></o:p></p><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;text-autospac=
+e:none'><span style=3D'font-family:"Courier =
+New";color:blue'>&nbsp;</span><o:p></o:p></p><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;text-autospac=
+e:none'><span style=3D'font-family:"Courier =
+New";color:blue'>&lt;</span><span style=3D'font-family:"Courier =
+New";color:#A31515'>root</span><span style=3D'font-family:"Courier =
+New";color:blue'>&gt;</span><o:p></o:p></p><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;text-autospac=
+e:none'><span style=3D'font-family:"Courier New";color:blue'>&nbsp; =
+&lt;</span><span style=3D'font-family:"Courier =
+New";color:#A31515'>Error</span><span style=3D'font-family:"Courier =
+New";color:blue'> /&gt;</span><o:p></o:p></p><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;text-autospac=
+e:none'><span style=3D'font-family:"Courier New";color:blue'>&nbsp; =
+&lt;</span><span style=3D'font-family:"Courier =
+New";color:#A31515'>dtNow</span><span style=3D'font-family:"Courier =
+New";color:blue'>&gt;</span><span style=3D'font-family:"Courier =
+New"'>2013-10-10 21:08:18<span style=3D'color:blue'>&lt;/</span><span =
+style=3D'color:#A31515'>dtNow</span><span =
+style=3D'color:blue'>&gt;</span></span><o:p></o:p></p><p =
+class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;text-autospac=
+e:none'><span style=3D'font-family:"Courier New";color:blue'>&nbsp; =
+&lt;</span><span style=3D'font-family:"Courier =
+New";color:#A31515'>Item</span><span style=3D'font-family:"Courier =
+New";color:blue'>&gt;</span><o:p></o:p></p><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;text-autospac=
+e:none'><span style=3D'font-family:"Courier =
+New";color:blue'>&nbsp;&nbsp;&nbsp; &lt;</span><span =
+style=3D'font-family:"Courier New";color:#A31515'>iItemId</span><span =
+style=3D'font-family:"Courier New";color:blue'>&gt;</span><span =
+style=3D'font-family:"Courier New"'>1001<span =
+style=3D'color:blue'>&lt;/</span><span =
+style=3D'color:#A31515'>iItemId</span><span =
+style=3D'color:blue'>&gt;</span></span><o:p></o:p></p><p =
+class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;text-autospac=
+e:none'><span style=3D'font-family:"Courier =
+New";color:blue'>&nbsp;&nbsp;&nbsp; &lt;</span><span =
+style=3D'font-family:"Courier New";color:#A31515'>Day</span><span =
+style=3D'font-family:"Courier =
+New";color:blue'>&gt;</span><o:p></o:p></p><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;text-autospac=
+e:none'><span style=3D'font-family:"Courier =
+New";color:blue'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;</span><span =
+style=3D'font-family:"Courier New";color:#A31515'>iSubItemId</span><span =
+style=3D'font-family:"Courier New";color:blue'>&gt;</span><span =
+style=3D'font-family:"Courier New"'>6448<span =
+style=3D'color:blue'>&lt;/</span><span =
+style=3D'color:#A31515'>iSubItemId</span><span =
+style=3D'color:blue'>&gt;</span></span><o:p></o:p></p><p =
+class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;text-autospac=
+e:none'><span style=3D'font-family:"Courier =
+New";color:blue'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;</span><span =
+style=3D'font-family:"Courier New";color:#A31515'>dtDate</span><span =
+style=3D'font-family:"Courier New";color:blue'>&gt;</span><span =
+style=3D'font-family:"Courier New"'>2013-08-11<span =
+style=3D'color:blue'>&lt;/</span><span =
+style=3D'color:#A31515'>dtDate</span><span =
+style=3D'color:blue'>&gt;</span></span><o:p></o:p></p><p =
+class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;text-autospac=
+e:none'><span style=3D'font-family:"Courier =
+New";color:blue'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;</span><span =
+style=3D'font-family:"Courier New";color:#A31515'>iVacancy</span><span =
+style=3D'font-family:"Courier New";color:blue'>&gt;</span><span =
+style=3D'font-family:"Courier New"'>2<span =
+style=3D'color:blue'>&lt;/</span><span =
+style=3D'color:#A31515'>iVacancy</span><span =
+style=3D'color:blue'>&gt;</span></span><o:p></o:p></p><p =
+class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;text-autospac=
+e:none'><span style=3D'font-family:"Courier =
+New";color:blue'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;</span><span =
+style=3D'font-family:"Courier New";color:#A31515'>cPrice_0</span><span =
+style=3D'font-family:"Courier New";color:blue'>&gt;</span><span =
+style=3D'font-family:"Courier New"'>700.0000<span =
+style=3D'color:blue'>&lt;/</span><span =
+style=3D'color:#A31515'>cPrice_0</span><span =
+style=3D'color:blue'>&gt;</span></span><o:p></o:p></p><p =
+class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;text-autospac=
+e:none'><span style=3D'font-family:"Courier =
+New";color:blue'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;</span><span =
+style=3D'font-family:"Courier New";color:#A31515'>cPrice_1</span><span =
+style=3D'font-family:"Courier New";color:blue'>&gt;</span><span =
+style=3D'font-family:"Courier New"'>300.0000<span =
+style=3D'color:blue'>&lt;/</span><span =
+style=3D'color:#A31515'>cPrice_1</span><span =
+style=3D'color:blue'>&gt;</span></span><o:p></o:p></p><p =
+class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;text-autospac=
+e:none'><span style=3D'font-family:"Courier =
+New";color:blue'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;</span><span =
+style=3D'font-family:"Courier New";color:#A31515'>iMinStay</span><span =
+style=3D'font-family:"Courier New";color:blue'>&gt;</span><span =
+style=3D'font-family:"Courier New"'>0<span =
+style=3D'color:blue'>&lt;/</span><span =
+style=3D'color:#A31515'>iMinStay</span><span =
+style=3D'color:blue'>&gt;</span></span><o:p></o:p></p><p =
+class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;text-autospac=
+e:none'><span style=3D'font-family:"Courier =
+New";color:blue'>&nbsp;&nbsp;&nbsp; &lt;/</span><span =
+style=3D'font-family:"Courier New";color:#A31515'>Day</span><span =
+style=3D'font-family:"Courier =
+New";color:blue'>&gt;</span><o:p></o:p></p><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;text-autospac=
+e:none'><span style=3D'font-family:"Courier =
+New";color:blue'>&nbsp;&nbsp;&nbsp; &lt;</span><span =
+style=3D'font-family:"Courier New";color:#A31515'>Day</span><span =
+style=3D'font-family:"Courier =
+New";color:blue'>&gt;</span><o:p></o:p></p><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;text-autospac=
+e:none'><span style=3D'font-family:"Courier =
+New";color:blue'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;</span><span =
+style=3D'font-family:"Courier New";color:#A31515'>iSubItemId</span><span =
+style=3D'font-family:"Courier New";color:blue'>&gt;</span><span =
+style=3D'font-family:"Courier New"'>6448<span =
+style=3D'color:blue'>&lt;/</span><span =
+style=3D'color:#A31515'>iSubItemId</span><span =
+style=3D'color:blue'>&gt;</span></span><o:p></o:p></p><p =
+class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;text-autospac=
+e:none'><span style=3D'font-family:"Courier =
+New";color:blue'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;</span><span =
+style=3D'font-family:"Courier New";color:#A31515'>dtDate</span><span =
+style=3D'font-family:"Courier New";color:blue'>&gt;</span><span =
+style=3D'font-family:"Courier New"'>2013-08-12<span =
+style=3D'color:blue'>&lt;/</span><span =
+style=3D'color:#A31515'>dtDate</span><span =
+style=3D'color:blue'>&gt;</span></span><o:p></o:p></p><p =
+class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;text-autospac=
+e:none'><span style=3D'font-family:"Courier New";color:blue'>&nbsp; =
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;</span><span style=3D'font-family:"Courier =
+New";color:#A31515'>iVacancy</span><span style=3D'font-family:"Courier =
+New";color:blue'>&gt;</span><span style=3D'font-family:"Courier =
+New"'>2<span style=3D'color:blue'>&lt;/</span><span =
+style=3D'color:#A31515'>iVacancy</span><span =
+style=3D'color:blue'>&gt;</span></span><o:p></o:p></p><p =
+class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;text-autospac=
+e:none'><span style=3D'font-family:"Courier =
+New";color:blue'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;</span><span =
+style=3D'font-family:"Courier New";color:#A31515'>cPrice_0</span><span =
+style=3D'font-family:"Courier New";color:blue'>&gt;</span><span =
+style=3D'font-family:"Courier New"'>700.0000<span =
+style=3D'color:blue'>&lt;/</span><span =
+style=3D'color:#A31515'>cPrice_0</span><span =
+style=3D'color:blue'>&gt;</span></span><o:p></o:p></p><p =
+class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;text-autospac=
+e:none'><span style=3D'font-family:"Courier =
+New";color:blue'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;</span><span =
+style=3D'font-family:"Courier New";color:#A31515'>cPrice_1</span><span =
+style=3D'font-family:"Courier New";color:blue'>&gt;</span><span =
+style=3D'font-family:"Courier New"'>300.0000<span =
+style=3D'color:blue'>&lt;/</span><span =
+style=3D'color:#A31515'>cPrice_1</span><span =
+style=3D'color:blue'>&gt;</span></span><o:p></o:p></p><p =
+class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;text-autospac=
+e:none'><span style=3D'font-family:"Courier =
+New";color:blue'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;</span><span =
+style=3D'font-family:"Courier New";color:#A31515'>iMinStay</span><span =
+style=3D'font-family:"Courier New";color:blue'>&gt;</span><span =
+style=3D'font-family:"Courier New"'>0<span =
+style=3D'color:blue'>&lt;/</span><span =
+style=3D'color:#A31515'>iMinStay</span><span =
+style=3D'color:blue'>&gt;</span></span><o:p></o:p></p><p =
+class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span =
+style=3D'font-family:"Courier New";color:blue'>&nbsp;&nbsp;&nbsp; =
+&lt;/</span><span style=3D'font-family:"Courier =
+New";color:#A31515'>Day</span><span style=3D'font-family:"Courier =
+New";color:blue'>&gt;</span><o:p></o:p></p><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span =
+style=3D'font-family:"Courier New";color:blue'>Becouse you only get the =
+Prices from this xml, please retrieve data one a day or less &#8211; the =
+prices are changed Rarely.</span><o:p></o:p></p><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span =
+style=3D'font-size:11.0pt;font-family:"Calibri","sans-serif";color:#1F497=
+D'>Do not hesitate to ask any thing<o:p></o:p></span></p><p =
+class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span =
+style=3D'font-size:11.0pt;font-family:"Calibri","sans-serif";color:#1F497=
+D'>Please send the IP of the calling server. &#8211; on the next month =
+you can use it from every computer &nbsp;(for develop =
+use)</span><o:p></o:p></p><p class=3DMsoNormal><span =
+style=3D'font-size:11.0pt;font-family:"Calibri","sans-serif";color:#1F497=
+D'><o:p>&nbsp;</o:p></span></p><p class=3DMsoNormal><span =
+style=3D'font-size:11.0pt;font-family:"Calibri","sans-serif";color:#1F497=
+D'><o:p>&nbsp;</o:p></span></p><p class=3DMsoNormal><b><i><span =
+style=3D'font-size:11.0pt;font-family:"Calibri","sans-serif";color:#675C5=
+3'>Best Regards<o:p></o:p></span></i></b></p><p =
+class=3DMsoNormal><b><i><span =
+style=3D'font-size:11.0pt;font-family:"Calibri","sans-serif";color:#675C5=
+3'><o:p>&nbsp;</o:p></span></i></b></p><p class=3DMsoNormal><span =
+dir=3DRTL></span><b><i><span lang=3DHE dir=3DRTL =
+style=3D'font-size:11.0pt;font-family:"Arial","sans-serif";color:#675C53'=
+><span =
+dir=3DRTL></span>........................................................=
+..</span></i></b><b><i><span =
+style=3D'font-size:11.0pt;font-family:"Calibri","sans-serif";color:#675C5=
+3'><o:p></o:p></span></i></b></p><p class=3DMsoNormal><b><i><span =
+style=3D'font-size:11.0pt;font-family:"Calibri","sans-serif";color:#675C5=
+3'>Raanan MOR<o:p></o:p></span></i></b></p><p class=3DMsoNormal><span =
+lang=3DFR =
+style=3D'font-size:9.0pt;font-family:"Calibri","sans-serif";color:#675C53=
+'>office</span><span =
+style=3D'font-size:9.0pt;font-family:"Calibri","sans-serif";color:#675C53=
+'>: 972-9-8850248</span><span =
+style=3D'font-size:11.0pt;font-family:"Calibri","sans-serif";color:#675C5=
+3'><o:p></o:p></span></p><p class=3DMsoNormal><span =
+style=3D'font-size:9.0pt;font-family:"Calibri","sans-serif";color:#675C53=
+'>mobile: 972-54-4402880<o:p></o:p></span></p><p =
+class=3DMsoNormal><u><span =
+style=3D'font-size:11.0pt;font-family:"Calibri","sans-serif";color:#FF790=
+0'>www.ezgo.co.il<o:p></o:p></span></u></p><p class=3DMsoNormal><span =
+style=3D'font-size:11.0pt;font-family:"Calibri","sans-serif";color:#FF790=
+0'><img border=3D0 width=3D140 height=3D61 =
+id=3D"&#1514;&#1502;&#1493;&#1504;&#1492;_x0020_1" =
+src=3D"cid:image001.png@01CF2E22.8F69B8F0" =
+alt=3D"EZgoLogo_140"><u><o:p></o:p></u></span></p><p =
+class=3DMsoNormal><span =
+style=3D'font-size:11.0pt;font-family:"Calibri","sans-serif";color:#1F497=
+D'><o:p>&nbsp;</o:p></span></p><div =
+style=3D'border:none;border-top:solid #B5C4DF 1.0pt;padding:3.0pt 0cm =
+0cm 0cm'><p class=3DMsoNormal><b><span =
+style=3D'font-size:10.0pt;font-family:"Tahoma","sans-serif"'>From:</span>=
+</b><span style=3D'font-size:10.0pt;font-family:"Tahoma","sans-serif"'> =
+Jonah Balakhaneh [mailto:jonah1707@gmail.com] <br><b>Sent:</b> Thursday, =
+February 20, 2014 2:35 AM<br><b>To:</b> Isaac Mahgrefteh<br><b>Cc:</b> =
+Raanan - EZgo; Holiday Rentals<br><b>Subject:</b> Re: Conference =
+Call<o:p></o:p></span></p></div><p =
+class=3DMsoNormal><o:p>&nbsp;</o:p></p><div><p class=3DMsoNormal>Hi Etay =
+and Raanan,<o:p></o:p></p><div><p =
+class=3DMsoNormal><o:p>&nbsp;</o:p></p></div><div><p =
+class=3DMsoNormal>Hope all is well on your end. I would like to get the =
+integration process going. Can we schedule a call for this Monday at =
+8:00 AM PST / 6:00 PM Israel time? Isaac confirmed with me that he will =
+be making conference call as well. Does the conference line below =
+work?<o:p></o:p></p></div><div><p =
+class=3DMsoNormal><o:p>&nbsp;</o:p></p></div><div><div><p =
+class=3DMsoNormal>Conference Dial-In Number:<o:p></o:p></p></div><div><p =
+class=3DMsoNormal>+1 424-203-8405<o:p></o:p></p></div><div><p =
+class=3DMsoNormal>Host Access Code:<o:p></o:p></p></div><div><p =
+class=3DMsoNormal>206166#<o:p></o:p></p></div><div><p =
+class=3DMsoNormal>Participant Access Code:<o:p></o:p></p></div><div><p =
+class=3DMsoNormal>550058<o:p></o:p></p></div></div><div><p =
+class=3DMsoNormal><o:p>&nbsp;</o:p></p></div><div><p =
+class=3DMsoNormal>Etay, have you had a chance to review the agreements? =
+If so, please send them back executed or red-lined so I can process =
+them, and get our partnership underway.<o:p></o:p></p></div><div><p =
+class=3DMsoNormal><o:p>&nbsp;</o:p></p></div><div><p =
+class=3DMsoNormal><o:p>&nbsp;</o:p></p></div><div><p =
+class=3DMsoNormal>All the best<o:p></o:p></p></div></div><div><p =
+class=3DMsoNormal><br clear=3Dall><o:p></o:p></p><div><div><p =
+style=3D'margin-bottom:0cm;margin-bottom:.0001pt'><span =
+style=3D'font-family:"Arial","sans-serif"'>Jonah =
+Balakhaneh</span><o:p></o:p></p><div><p class=3DMsoNormal><span =
+style=3D'font-family:"Arial","sans-serif"'>BookingPal, =
+Inc<o:p></o:p></span></p></div><div><p class=3DMsoNormal><span =
+style=3D'font-family:"Arial","sans-serif"'>Regional Relationship =
+Manager<o:p></o:p></span></p></div><div><p class=3DMsoNormal><span =
+style=3D'font-family:"Arial","sans-serif"'><o:p>&nbsp;</o:p></span></p></=
+div><div><p class=3DMsoNormal><span =
+style=3D'font-family:"Arial","sans-serif"'>Offlice Line: =
+949.216.3169<o:p></o:p></span></p></div><div><p class=3DMsoNormal><span =
+style=3D'font-family:"Arial","sans-serif"'>Email: <a =
+href=3D"mailto:Jonah@mybookingpal.com" =
+target=3D"_blank">Jonah@mybookingpal.com</a><o:p></o:p></span></p></div><=
+div><p class=3DMsoNormal><span =
+style=3D'font-family:"Arial","sans-serif"'>Site: <a =
+href=3D"http://www.mybookingpal.com" =
+target=3D"_blank">www.mybookingpal.com</a><o:p></o:p></span></p></div><di=
+v><p class=3DMsoNormal><span =
+style=3D'font-family:"Arial","sans-serif"'>Address: 101 Pacifica, Suite =
+250, Irvine CA<o:p></o:p></span></p></div></div></div><p =
+class=3DMsoNormal =
+style=3D'margin-bottom:12.0pt'><o:p>&nbsp;</o:p></p><div><p =
+class=3DMsoNormal>On Wed, Feb 12, 2014 at 5:07 PM, Isaac Mahgrefteh =
+&lt;<a href=3D"mailto:isaac@mybookingpal.com" =
+target=3D"_blank">isaac@mybookingpal.com</a>&gt; =
+wrote:<o:p></o:p></p><div><p class=3DMsoNormal>Hi Raanan, <br>Sure I =
+would be happy to: <br><br>1.Bookingpal will pull the property =
+information from your system. <br>2. I am not sure I understand your =
+question. We can talk about this on the call. <br>3. Yes.<br>4. Yes, =
+iCal will work. If you have pure xml of the booked dates that will also =
+work. <br>5. Yes, I would like to talk to you. Do you have skype? If you =
+do can you please add <a href=3D"mailto:isaac@mybookingpal.com" =
+target=3D"_blank">&quot;isaac@mybookingpal.com&quot;</a>.&nbsp; I will =
+speak to Jonah about setting up a time. <br><br>Please let me know if =
+you have any more questions. <o:p></o:p></p><div><p =
+class=3DMsoNormal><br>Thank you for your time. <br>Isaac =
+Mahgrefteh<o:p></o:p></p></div><div><div><div><p class=3DMsoNormal>On =
+2/12/2014 1:10 PM, Raanan - EZgo wrote:<o:p></o:p></p></div><blockquote =
+style=3D'margin-top:5.0pt;margin-bottom:5.0pt'><div><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span =
+style=3D'font-size:11.0pt;font-family:"Calibri","sans-serif";color:#1F497=
+D'>Hi Isaac Mahgrefteh</span><o:p></o:p></p><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span =
+style=3D'font-size:11.0pt;font-family:"Calibri","sans-serif";color:#1F497=
+D'>&nbsp;</span><o:p></o:p></p><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span =
+style=3D'font-size:11.0pt;font-family:"Calibri","sans-serif";color:#1F497=
+D'>I am sorry, lately my hands are full.</span><o:p></o:p></p><p =
+class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span =
+style=3D'font-size:11.0pt;font-family:"Calibri","sans-serif";color:#1F497=
+D'>&nbsp;</span><o:p></o:p></p><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span =
+style=3D'font-size:11.0pt;font-family:"Calibri","sans-serif";color:#1F497=
+D'>Can you please describe in a few words in which way you want to get =
+the data, by pulling it from us, or by push,</span><o:p></o:p></p><p =
+class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span =
+style=3D'font-size:11.0pt;font-family:"Calibri","sans-serif";color:#1F497=
+D'>Do you support getting rates?</span><o:p></o:p></p><p =
+class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span =
+style=3D'font-size:11.0pt;font-family:"Calibri","sans-serif";color:#1F497=
+D'>Are you going to update us on reservation made on your =
+website?</span><o:p></o:p></p><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span =
+style=3D'font-size:11.0pt;font-family:"Calibri","sans-serif";color:#1F497=
+D'>Is iCal file is good enough?</span><o:p></o:p></p><p =
+class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span =
+style=3D'font-size:11.0pt;font-family:"Calibri","sans-serif";color:#1F497=
+D'>&nbsp;</span><o:p></o:p></p><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span =
+style=3D'font-size:11.0pt;font-family:"Calibri","sans-serif";color:#1F497=
+D'>It is possible to speak with me over the phone. =
+</span><o:p></o:p></p><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span =
+style=3D'font-size:11.0pt;font-family:"Calibri","sans-serif";color:#1F497=
+D'>the mornings, and around 23:00 Israel time it is good for =
+me.</span><o:p></o:p></p><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span =
+style=3D'font-size:11.0pt;font-family:"Calibri","sans-serif";color:#1F497=
+D'>&nbsp;</span><o:p></o:p></p><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span =
+style=3D'font-size:11.0pt;font-family:"Calibri","sans-serif";color:#1F497=
+D'>&nbsp;</span><o:p></o:p></p><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span =
+style=3D'font-size:11.0pt;font-family:"Calibri","sans-serif";color:#1F497=
+D'>&nbsp;</span><o:p></o:p></p><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><b><i><span =
+style=3D'font-size:11.0pt;font-family:"Calibri","sans-serif";color:#675C5=
+3'>Best Regards</span></i></b><o:p></o:p></p><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><b><i><span =
+style=3D'font-size:11.0pt;font-family:"Calibri","sans-serif";color:#675C5=
+3'>&nbsp;</span></i></b><o:p></o:p></p><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span =
+dir=3DRTL></span><span dir=3DRTL></span><b><i><span lang=3DHE dir=3DRTL =
+style=3D'font-size:11.0pt;font-family:"Arial","sans-serif";color:#675C53'=
+><span dir=3DRTL></span><span =
+dir=3DRTL></span>........................................................=
+..</span></i></b><o:p></o:p></p><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><b><i><span =
+style=3D'font-size:11.0pt;font-family:"Calibri","sans-serif";color:#675C5=
+3'>Raanan MOR</span></i></b><o:p></o:p></p><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span =
+lang=3DFR =
+style=3D'font-size:9.0pt;font-family:"Calibri","sans-serif";color:#675C53=
+'>office</span><span =
+style=3D'font-size:9.0pt;font-family:"Calibri","sans-serif";color:#675C53=
+'>: 972-9-8850248</span><o:p></o:p></p><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span =
+style=3D'font-size:9.0pt;font-family:"Calibri","sans-serif";color:#675C53=
+'>mobile: 972-54-4402880</span><o:p></o:p></p><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><u><span =
+style=3D'font-size:11.0pt;font-family:"Calibri","sans-serif";color:#FF790=
+0'><a href=3D"http://www.ezgo.co.il" =
+target=3D"_blank">www.ezgo.co.il</a></span></u><o:p></o:p></p><p =
+class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span =
+style=3D'font-size:11.0pt;font-family:"Calibri","sans-serif";color:#FF790=
+0'><img border=3D0 width=3D140 height=3D61 id=3D"_x0000_i1025" =
+src=3D"cid:image001.png@01CF2E22.8F69B8F0" =
+alt=3D"EZgoLogo_140"></span><o:p></o:p></p><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span =
+style=3D'font-size:11.0pt;font-family:"Calibri","sans-serif";color:#1F497=
+D'>&nbsp;</span><o:p></o:p></p><div =
+style=3D'border:none;border-top:solid #B5C4DF 1.0pt;padding:3.0pt 0cm =
+0cm 0cm'><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><b><span =
+style=3D'font-size:10.0pt;font-family:"Tahoma","sans-serif"'>From:</span>=
+</b><span style=3D'font-size:10.0pt;font-family:"Tahoma","sans-serif"'> =
+Jonah Balakhaneh [<a href=3D"mailto:jonah1707@gmail.com" =
+target=3D"_blank">mailto:jonah1707@gmail.com</a>] <br><b>Sent:</b> =
+Wednesday, February 12, 2014 10:39 PM<br><b>To:</b> Isaac Mahgrefteh; =
+Holiday Rentals; <a href=3D"mailto:raananm@ezgo.co.il" =
+target=3D"_blank">raananm@ezgo.co.il</a><br><b>Subject:</b> Re: =
+Conference Call</span><o:p></o:p></p></div><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>&nbsp;<o:p><=
+/o:p></p><div><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>Hi =
+Etay,<o:p></o:p></p><div><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>&nbsp;<o:p><=
+/o:p></p></div><div><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>I would =
+like to make sure we get the integration process underway. As a quick =
+reminder, what PMS platform do you use? Have you had a chance to review =
+the agreements I sent you?<o:p></o:p></p></div><div><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>&nbsp;<o:p><=
+/o:p></p></div><div><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>Raanan has =
+not connected with Isaac yet. Is there another way of contacting =
+him?<o:p></o:p></p></div><div><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>&nbsp;<o:p><=
+/o:p></p></div><div><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>&nbsp;<o:p><=
+/o:p></p></div><div><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>All the =
+best<o:p></o:p></p></div></div><div><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><br =
+clear=3Dall><o:p></o:p></p><div><div><p =
+style=3D'margin-bottom:0cm;margin-bottom:.0001pt'><span =
+style=3D'font-family:"Arial","sans-serif"'>Jonah =
+Balakhaneh</span><o:p></o:p></p><div><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span =
+style=3D'font-family:"Arial","sans-serif"'>BookingPal, =
+Inc</span><o:p></o:p></p></div><div><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span =
+style=3D'font-family:"Arial","sans-serif"'>Regional Relationship =
+Manager</span><o:p></o:p></p></div><div><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span =
+style=3D'font-family:"Arial","sans-serif"'>&nbsp;</span><o:p></o:p></p></=
+div><div><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span =
+style=3D'font-family:"Arial","sans-serif"'>Offlice Line: <a =
+href=3D"tel:949.216.3169" =
+target=3D"_blank">949.216.3169</a></span><o:p></o:p></p></div><div><p =
+class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span =
+style=3D'font-family:"Arial","sans-serif"'>Email: <a =
+href=3D"mailto:Jonah@mybookingpal.com" =
+target=3D"_blank">Jonah@mybookingpal.com</a></span><o:p></o:p></p></div><=
+div><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span =
+style=3D'font-family:"Arial","sans-serif"'>Site: <a =
+href=3D"http://www.mybookingpal.com" =
+target=3D"_blank">www.mybookingpal.com</a></span><o:p></o:p></p></div><di=
+v><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span =
+style=3D'font-family:"Arial","sans-serif"'>Address: 101 Pacifica, Suite =
+250, Irvine CA</span><o:p></o:p></p></div></div></div><p =
+class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;margin-bottom:12.0pt'>&nbsp;<o:p></o:p><=
+/p><div><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>On Wed, Feb =
+5, 2014 at 3:38 PM, Isaac Mahgrefteh &lt;<a =
+href=3D"mailto:isaac@mybookingpal.com" =
+target=3D"_blank">isaac@mybookingpal.com</a>&gt; =
+wrote:<o:p></o:p></p><div><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>Hi Raanan, =
+<br><br>It is great to connect with you. From my understanding <a =
+href=3D"http://holiday-rentals.co.il" =
+target=3D"_blank">holiday-rentals.co.il</a> would like to distribute and =
+display properties. Can we please set up a time to have a conference =
+call&nbsp; to discuss the technical aspects of doing this? <br>I am =
+located in Los Angeles, California so their is a 10 hour time =
+difference.&nbsp; Please let me know what time works for you. =
+<br><br>Thank you for your time. <br>Isaac Mahgrefteh =
+<o:p></o:p></p><div><div><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>&nbsp;<o:p><=
+/o:p></p><div><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>On 2/5/2014 =
+8:56 AM, Jonah Balakhaneh wrote:<o:p></o:p></p></div><blockquote =
+style=3D'margin-top:5.0pt;margin-bottom:5.0pt'><div><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>Hi Etay, =
+<o:p></o:p></p><div><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>&nbsp;<o:p><=
+/o:p></p></div><div><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>It was a =
+pleasure speaking with you. I will oversee that the process runs smooth =
+from here on out. Attached are 2 simple contracts, a supplier and =
+channel agreement, they are pretty straight forward, if you have any =
+questions please feel free contacting me.<o:p></o:p></p></div><div><p =
+class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>&nbsp;<o:p><=
+/o:p></p></div><div><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>Hi Raanan, =
+I would like to introduce our integration engineer Isaac. He will =
+oversee the integration process with you. He will be in touch =
+shortly.&nbsp;<o:p></o:p></p></div><div><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>&nbsp;<o:p><=
+/o:p></p></div><div><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>Looking =
+forward to our partnership!<o:p></o:p></p></div><div><p =
+class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>&nbsp;<o:p><=
+/o:p></p></div><div><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>&nbsp;<o:p><=
+/o:p></p></div><div><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>All the =
+best<o:p></o:p></p></div></div><div><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><br =
+clear=3Dall><o:p></o:p></p><div><div><p =
+style=3D'margin-bottom:0cm;margin-bottom:.0001pt'><span =
+style=3D'font-family:"Arial","sans-serif"'>Jonah =
+Balakhaneh</span><o:p></o:p></p><div><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span =
+style=3D'font-family:"Arial","sans-serif"'>BookingPal, =
+Inc</span><o:p></o:p></p></div><div><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span =
+style=3D'font-family:"Arial","sans-serif"'>Regional Relationship =
+Manager</span><o:p></o:p></p></div><div><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span =
+style=3D'font-family:"Arial","sans-serif"'>&nbsp;</span><o:p></o:p></p></=
+div><div><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span =
+style=3D'font-family:"Arial","sans-serif"'>Offlice Line: <a =
+href=3D"tel:949.216.3169" =
+target=3D"_blank">949.216.3169</a></span><o:p></o:p></p></div><div><p =
+class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span =
+style=3D'font-family:"Arial","sans-serif"'>Email: <a =
+href=3D"mailto:Jonah@mybookingpal.com" =
+target=3D"_blank">Jonah@mybookingpal.com</a></span><o:p></o:p></p></div><=
+div><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span =
+style=3D'font-family:"Arial","sans-serif"'>Site: <a =
+href=3D"http://www.mybookingpal.com" =
+target=3D"_blank">www.mybookingpal.com</a></span><o:p></o:p></p></div><di=
+v><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span =
+style=3D'font-family:"Arial","sans-serif"'>Address: 101 Pacifica, Suite =
+250, Irvine CA</span><o:p></o:p></p></div></div></div><p =
+class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;margin-bottom:12.0pt'>&nbsp;<o:p></o:p><=
+/p><div><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>On Wed, Feb =
+5, 2014 at 8:37 AM, Holiday Rentals &lt;<a =
+href=3D"mailto:office@holiday-rentals.co.il" =
+target=3D"_blank">office@holiday-rentals.co.il</a>&gt; =
+wrote:<o:p></o:p></p><div><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span =
+style=3D'font-size:9.5pt;font-family:"Arial","sans-serif";color:#555555'>=
+<a href=3D"mailto:raananm@ezgo.co.il" =
+target=3D"_blank">raananm@ezgo.co.il</a></span><o:p></o:p></p></div><div>=
+<div><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><br =
+clear=3Dall><o:p></o:p></p><div><div><div><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span =
+style=3D'color:#3366FF'>Many thanks!</span><o:p></o:p></p></div><div><p =
+class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>&nbsp;<o:p><=
+/o:p></p></div><div><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>&nbsp;<o:p><=
+/o:p></p></div><div><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><b><span =
+style=3D'color:#3366FF'>Etay =
+Rapaport</span></b><o:p></o:p></p></div><div><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span =
+style=3D'color:#3366FF'>Marketing =
+Manager</span><o:p></o:p></p></div><div><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>&nbsp;<o:p><=
+/o:p></p></div><div><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><b><span =
+style=3D'color:#3366FF'>Holiday =
+Rentals</span></b><o:p></o:p></p></div><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span =
+style=3D'color:#3366FF'>Main office</span> <o:p></o:p></p><div><p =
+class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span =
+style=3D'color:#3366FF'><a href=3D"tel:%2B972-3-9513964" =
+target=3D"_blank">+972-3-9513964</a></span><o:p></o:p></p></div><div><p =
+class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span =
+style=3D'color:#3366FF'><a href=3D"http://www.holiday-rentals.co.il" =
+target=3D"_blank">www.holiday-rentals.co.il</a></span><o:p></o:p></p></di=
+v><div><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>&nbsp;<o:p><=
+/o:p></p></div><div><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span =
+style=3D'color:#3366FF'><img border=3D0 width=3D200 height=3D66 =
+id=3D"_x0000_i1026" =
+src=3D"http://holiday-rentals.co.il/images/Logo.png"></span><o:p></o:p></=
+p></div><div><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><a =
+href=3D"http://www.facebook.com/pages/Holiday-Rentals-Israel-Luxury-Apart=
+ments-for-Business-and-Vacations/175853342449119" =
+target=3D"_blank"><span style=3D'text-decoration:none'><img border=3D0 =
+id=3D"_x0000_i1027" =
+src=3D"http://www.holiday-rentals.co.il/images/fb.png"></span></a>&nbsp;<=
+o:p></o:p></p></div><div><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>&nbsp;<o:p><=
+/o:p></p></div></div></div><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;margin-bottom:12.0pt'>&nbsp;<o:p></o:p><=
+/p></div><div><div><div><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>On Wed, Feb =
+5, 2014 at 6:31 PM, Jonah Balakhaneh &lt;<a =
+href=3D"mailto:jonah1707@gmail.com" =
+target=3D"_blank">jonah1707@gmail.com</a>&gt; =
+wrote:<o:p></o:p></p><div><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>See the =
+attachments<o:p></o:p></p></div><div><div><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><br =
+clear=3Dall><o:p></o:p></p><div><div><p =
+style=3D'margin-bottom:0cm;margin-bottom:.0001pt'><span =
+style=3D'font-family:"Arial","sans-serif"'>Jonah =
+Balakhaneh</span><o:p></o:p></p><div><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span =
+style=3D'font-family:"Arial","sans-serif"'>BookingPal, =
+Inc</span><o:p></o:p></p></div><div><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span =
+style=3D'font-family:"Arial","sans-serif"'>Regional Relationship =
+Manager</span><o:p></o:p></p></div><div><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span =
+style=3D'font-family:"Arial","sans-serif"'>&nbsp;</span><o:p></o:p></p></=
+div><div><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span =
+style=3D'font-family:"Arial","sans-serif"'>Offlice Line: <a =
+href=3D"tel:949.216.3169" =
+target=3D"_blank">949.216.3169</a></span><o:p></o:p></p></div><div><p =
+class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span =
+style=3D'font-family:"Arial","sans-serif"'>Email: <a =
+href=3D"mailto:Jonah@mybookingpal.com" =
+target=3D"_blank">Jonah@mybookingpal.com</a></span><o:p></o:p></p></div><=
+div><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span =
+style=3D'font-family:"Arial","sans-serif"'>Site: <a =
+href=3D"http://www.mybookingpal.com" =
+target=3D"_blank">www.mybookingpal.com</a></span><o:p></o:p></p></div><di=
+v><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span =
+style=3D'font-family:"Arial","sans-serif"'>Address: 101 Pacifica, Suite =
+250, Irvine CA</span><o:p></o:p></p></div></div></div><p =
+class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;margin-bottom:12.0pt'>&nbsp;<o:p></o:p><=
+/p></div><div><div><div><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>On Wed, Feb =
+5, 2014 at 8:18 AM, Jonah Balakhaneh &lt;<a =
+href=3D"mailto:jonah1707@gmail.com" =
+target=3D"_blank">jonah1707@gmail.com</a>&gt; =
+wrote:<o:p></o:p></p><div><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>Hi Etay, =
+<o:p></o:p></p><div><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>&nbsp;<o:p><=
+/o:p></p></div><div><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>We got =
+disconnected somehow. Send me your number and I can call you right back, =
+or call me back<o:p></o:p></p></div></div><div><div><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><br =
+clear=3Dall><o:p></o:p></p><div><div><p =
+style=3D'margin-bottom:0cm;margin-bottom:.0001pt'><span =
+style=3D'font-family:"Arial","sans-serif"'>Jonah =
+Balakhaneh</span><o:p></o:p></p><div><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span =
+style=3D'font-family:"Arial","sans-serif"'>BookingPal, =
+Inc</span><o:p></o:p></p></div><div><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span =
+style=3D'font-family:"Arial","sans-serif"'>Regional Relationship =
+Manager</span><o:p></o:p></p></div><div><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span =
+style=3D'font-family:"Arial","sans-serif"'>&nbsp;</span><o:p></o:p></p></=
+div><div><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span =
+style=3D'font-family:"Arial","sans-serif"'>Offlice Line: <a =
+href=3D"tel:949.216.3169" =
+target=3D"_blank">949.216.3169</a></span><o:p></o:p></p></div><div><p =
+class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span =
+style=3D'font-family:"Arial","sans-serif"'>Email: <a =
+href=3D"mailto:Jonah@mybookingpal.com" =
+target=3D"_blank">Jonah@mybookingpal.com</a></span><o:p></o:p></p></div><=
+div><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span =
+style=3D'font-family:"Arial","sans-serif"'>Site: <a =
+href=3D"http://www.mybookingpal.com" =
+target=3D"_blank">www.mybookingpal.com</a></span><o:p></o:p></p></div><di=
+v><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span =
+style=3D'font-family:"Arial","sans-serif"'>Address: 101 Pacifica, Suite =
+250, Irvine CA</span><o:p></o:p></p></div></div></div><p =
+class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;margin-bottom:12.0pt'>&nbsp;<o:p></o:p><=
+/p></div><div><div><div><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>On Wed, Feb =
+5, 2014 at 8:09 AM, Jonah Balakhaneh &lt;<a =
+href=3D"mailto:jonah1707@gmail.com" =
+target=3D"_blank">jonah1707@gmail.com</a>&gt; =
+wrote:<o:p></o:p></p><div><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>Just spoke =
+with Lilach, she told me she will check with you and get back to me. You =
+can call me at my number below<o:p></o:p></p></div><div><div><p =
+class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><br =
+clear=3Dall><o:p></o:p></p><div><div><p =
+style=3D'margin-bottom:0cm;margin-bottom:.0001pt'><span =
+style=3D'font-family:"Arial","sans-serif"'>Jonah =
+Balakhaneh</span><o:p></o:p></p><div><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span =
+style=3D'font-family:"Arial","sans-serif"'>BookingPal, =
+Inc</span><o:p></o:p></p></div><div><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span =
+style=3D'font-family:"Arial","sans-serif"'>Regional Relationship =
+Manager</span><o:p></o:p></p></div><div><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span =
+style=3D'font-family:"Arial","sans-serif"'>&nbsp;</span><o:p></o:p></p></=
+div><div><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span =
+style=3D'font-family:"Arial","sans-serif"'>Offlice Line: <a =
+href=3D"tel:949.216.3169" =
+target=3D"_blank">949.216.3169</a></span><o:p></o:p></p></div><div><p =
+class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span =
+style=3D'font-family:"Arial","sans-serif"'>Email: <a =
+href=3D"mailto:Jonah@mybookingpal.com" =
+target=3D"_blank">Jonah@mybookingpal.com</a></span><o:p></o:p></p></div><=
+div><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span =
+style=3D'font-family:"Arial","sans-serif"'>Site: <a =
+href=3D"http://www.mybookingpal.com" =
+target=3D"_blank">www.mybookingpal.com</a></span><o:p></o:p></p></div><di=
+v><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span =
+style=3D'font-family:"Arial","sans-serif"'>Address: 101 Pacifica, Suite =
+250, Irvine CA</span><o:p></o:p></p></div></div></div><p =
+class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;margin-bottom:12.0pt'>&nbsp;<o:p></o:p><=
+/p></div><div><div><div><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>On Wed, Feb =
+5, 2014 at 8:07 AM, Holiday Rentals &lt;<a =
+href=3D"mailto:office@holiday-rentals.co.il" =
+target=3D"_blank">office@holiday-rentals.co.il</a>&gt; =
+wrote:<o:p></o:p></p><div><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>I thought =
+you gonna call me via phone. one sec<o:p></o:p></p></div><div><p =
+class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><br =
+clear=3Dall><o:p></o:p></p><div><div><div><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span =
+style=3D'color:#3366FF'>Many thanks!</span><o:p></o:p></p></div><div><p =
+class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>&nbsp;<o:p><=
+/o:p></p></div><div><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>&nbsp;<o:p><=
+/o:p></p></div><div><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><b><span =
+style=3D'color:#3366FF'>Etay =
+Rapaport</span></b><o:p></o:p></p></div><div><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span =
+style=3D'color:#3366FF'>Marketing =
+Manager</span><o:p></o:p></p></div><div><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>&nbsp;<o:p><=
+/o:p></p></div><div><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><b><span =
+style=3D'color:#3366FF'>Holiday =
+Rentals</span></b><o:p></o:p></p></div><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span =
+style=3D'color:#3366FF'>Main office</span> <o:p></o:p></p><div><p =
+class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span =
+style=3D'color:#3366FF'><a href=3D"tel:%2B972-3-9513964" =
+target=3D"_blank">+972-3-9513964</a></span><o:p></o:p></p></div><div><p =
+class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span =
+style=3D'color:#3366FF'><a href=3D"http://www.holiday-rentals.co.il" =
+target=3D"_blank">www.holiday-rentals.co.il</a></span><o:p></o:p></p></di=
+v><div><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>&nbsp;<o:p><=
+/o:p></p></div><div><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span =
+style=3D'color:#3366FF'><img border=3D0 width=3D200 height=3D66 =
+id=3D"_x0000_i1028" =
+src=3D"http://holiday-rentals.co.il/images/Logo.png"></span><o:p></o:p></=
+p></div><div><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><a =
+href=3D"http://www.facebook.com/pages/Holiday-Rentals-Israel-Luxury-Apart=
+ments-for-Business-and-Vacations/175853342449119" =
+target=3D"_blank"><span style=3D'text-decoration:none'><img border=3D0 =
+id=3D"_x0000_i1029" =
+src=3D"http://www.holiday-rentals.co.il/images/fb.png"></span></a>&nbsp;<=
+o:p></o:p></p></div><div><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>&nbsp;<o:p><=
+/o:p></p></div></div></div><div><div><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;margin-bottom:12.0pt'>&nbsp;<o:p></o:p><=
+/p><div><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>On Wed, Feb =
+5, 2014 at 6:06 PM, Jonah Balakhaneh &lt;<a =
+href=3D"mailto:jonah1707@gmail.com" =
+target=3D"_blank">jonah1707@gmail.com</a>&gt; =
+wrote:<o:p></o:p></p><div><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>Hi Etay, =
+<o:p></o:p></p><div><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>&nbsp;<o:p><=
+/o:p></p></div><div><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>I am =
+currently on your line waiting to get thru to speak with you.<br =
+clear=3Dall><o:p></o:p></p><div><div><p =
+style=3D'margin-bottom:0cm;margin-bottom:.0001pt'><span =
+style=3D'font-family:"Arial","sans-serif"'>Jonah =
+Balakhaneh</span><o:p></o:p></p><div><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span =
+style=3D'font-family:"Arial","sans-serif"'>BookingPal, =
+Inc</span><o:p></o:p></p></div><div><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span =
+style=3D'font-family:"Arial","sans-serif"'>Regional Relationship =
+Manager</span><o:p></o:p></p></div><div><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span =
+style=3D'font-family:"Arial","sans-serif"'>&nbsp;</span><o:p></o:p></p></=
+div><div><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span =
+style=3D'font-family:"Arial","sans-serif"'>Offlice Line: <a =
+href=3D"tel:949.216.3169" =
+target=3D"_blank">949.216.3169</a></span><o:p></o:p></p></div><div><p =
+class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span =
+style=3D'font-family:"Arial","sans-serif"'>Email: <a =
+href=3D"mailto:Jonah@mybookingpal.com" =
+target=3D"_blank">Jonah@mybookingpal.com</a></span><o:p></o:p></p></div><=
+div><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span =
+style=3D'font-family:"Arial","sans-serif"'>Site: <a =
+href=3D"http://www.mybookingpal.com" =
+target=3D"_blank">www.mybookingpal.com</a></span><o:p></o:p></p></div><di=
+v><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span =
+style=3D'font-family:"Arial","sans-serif"'>Address: 101 Pacifica, Suite =
+250, Irvine =
+CA</span><o:p></o:p></p></div></div></div></div></div></div><p =
+class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>&nbsp;<o:p><=
+/o:p></p></div></div></div></div><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>&nbsp;<o:p><=
+/o:p></p></div></div></div></div><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>&nbsp;<o:p><=
+/o:p></p></div></div></div></div><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>&nbsp;<o:p><=
+/o:p></p></div></div></div></div><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>&nbsp;<o:p><=
+/o:p></p></div></div></div></div><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>&nbsp;<o:p><=
+/o:p></p></div></blockquote><p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>&nbsp;<o:p><=
+/o:p></p></div></div><pre><span style=3D'color:#888888'>-- =
+</span><o:p></o:p></pre><pre><span style=3D'color:#888888'>Isaac =
+Mahgrefteh | BookingPal, Inc.</span><o:p></o:p></pre><pre><span =
+style=3D'color:#888888'>O: <a href=3D"tel:949%20%20379%208363" =
+target=3D"_blank">949&nbsp; 379 8363</a> | W: <a =
+href=3D"http://www.mybookingpal.com" =
+target=3D"_blank">www.mybookingpal.com</a></span><o:p></o:p></pre><pre><s=
+pan style=3D'color:#888888'>API: <a =
+href=3D"http://www.razor-cloud.com/cloud/#tabs-pms" =
+target=3D"_blank">http://www.razor-cloud.com/cloud/#tabs-pms</a></span><o=
+:p></o:p></pre><pre><span style=3D'color:#888888'>Skype ID: <a =
+href=3D"mailto:isaac@mybookingpal.com" =
+target=3D"_blank">isaac@mybookingpal.com</a> =
+</span><o:p></o:p></pre><pre><span style=3D'color:#888888'>101 Pacifica, =
+Suite 250, Irvine, CA 92618</span><o:p></o:p></pre></div></div><p =
+class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>&nbsp;<o:p><=
+/o:p></p></div></div></blockquote><p =
+class=3DMsoNormal><br><br><o:p></o:p></p><pre>-- =
+<o:p></o:p></pre><pre>Isaac Mahgrefteh | BookingPal, =
+Inc.<o:p></o:p></pre><pre>O: <a href=3D"tel:949%20%20379%208363" =
+target=3D"_blank">949&nbsp; 379 8363</a> | W: <a =
+href=3D"http://www.mybookingpal.com" =
+target=3D"_blank">www.mybookingpal.com</a><o:p></o:p></pre><pre>API: <a =
+href=3D"http://www.razor-cloud.com/cloud/#tabs-pms" =
+target=3D"_blank">http://www.razor-cloud.com/cloud/#tabs-pms</a><o:p></o:=
+p></pre><pre>Skype ID: <a href=3D"mailto:isaac@mybookingpal.com" =
+target=3D"_blank">isaac@mybookingpal.com</a> <o:p></o:p></pre><pre>101 =
+Pacifica, Suite 250, Irvine, CA =
+92618<o:p></o:p></pre></div></div></div></div><p =
+class=3DMsoNormal><o:p>&nbsp;</o:p></p></div></div></body></html>
+------=_NextPart_002_004C_01CF2E39.AADB8340--
+
+------=_NextPart_001_004B_01CF2E39.AADB8340
+Content-Type: image/png;
+	name="image001.png"
+Content-Transfer-Encoding: base64
+Content-ID: <image001.png@01CF2E22.8F69B8F0>
+
+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
+
+------=_NextPart_001_004B_01CF2E39.AADB8340--
+
+------=_NextPart_000_004A_01CF2E39.AADB8340
+Content-Type: text/plain;
+	name="HR-iCalLinks.txt"
+Content-Transfer-Encoding: quoted-printable
+Content-Disposition: attachment;
+	filename="HR-iCalLinks.txt"
+
+Old jaffa - 2655
+-------------------------------------------------------------------------=
+---------- =
+-------------------------------------------------------------------------=
+-------------------------------------------------------
+Ben Yehuda 84-2BR - 1                                                    =
+           =
+http://www.onlineres.ezgo.co.il/flipkey.aspx?iItemId=3D2655&FeedType=3Dge=
+tavailability&property_id=3D90141922&iCal=3D1
+Dizengoff 26/6-3BR - 1                                                   =
+           =
+http://www.onlineres.ezgo.co.il/flipkey.aspx?iItemId=3D2655&FeedType=3Dge=
+tavailability&property_id=3D90171923&iCal=3D1
+Mapu 23-1BR - 1                                                          =
+           =
+http://www.onlineres.ezgo.co.il/flipkey.aspx?iItemId=3D2655&FeedType=3Dge=
+tavailability&property_id=3D90272097&iCal=3D1
+Sderot Yehudit 25/12-1BR - 1                                             =
+           =
+http://www.onlineres.ezgo.co.il/flipkey.aspx?iItemId=3D2655&FeedType=3Dge=
+tavailability&property_id=3D90282098&iCal=3D1
+Frishman 33-2BR - 1                                                      =
+           =
+http://www.onlineres.ezgo.co.il/flipkey.aspx?iItemId=3D2655&FeedType=3Dge=
+tavailability&property_id=3D90292099&iCal=3D1
+ Dizengoff 26/03 -2BR - 1                                                =
+           =
+http://www.onlineres.ezgo.co.il/flipkey.aspx?iItemId=3D2655&FeedType=3Dge=
+tavailability&property_id=3D90302100&iCal=3D1
+Dizengoff 26/04-2.5BR - 1                                                =
+           =
+http://www.onlineres.ezgo.co.il/flipkey.aspx?iItemId=3D2655&FeedType=3Dge=
+tavailability&property_id=3D90312101&iCal=3D1
+Shlomo HaMelech 12-2BR - 1                                               =
+           =
+http://www.onlineres.ezgo.co.il/flipkey.aspx?iItemId=3D2655&FeedType=3Dge=
+tavailability&property_id=3D90322102&iCal=3D1
+Sderot Yehudit 25/11-2BR - 1                                             =
+           =
+http://www.onlineres.ezgo.co.il/flipkey.aspx?iItemId=3D2655&FeedType=3Dge=
+tavailability&property_id=3D90332103&iCal=3D1
+Nissim Aloni - 207A-2BR - 1                                              =
+           =
+http://www.onlineres.ezgo.co.il/flipkey.aspx?iItemId=3D2655&FeedType=3Dge=
+tavailability&property_id=3D90352105&iCal=3D1
+Nissim Aloni - 207B-2BR - 1                                              =
+           =
+http://www.onlineres.ezgo.co.il/flipkey.aspx?iItemId=3D2655&FeedType=3Dge=
+tavailability&property_id=3D90362106&iCal=3D1
+Sirkin 4-2BR - 1                                                         =
+           =
+http://www.onlineres.ezgo.co.il/flipkey.aspx?iItemId=3D2655&FeedType=3Dge=
+tavailability&property_id=3D90382280&iCal=3D1
+Jabotinsky 152-2BR - 1                                                   =
+           =
+http://www.onlineres.ezgo.co.il/flipkey.aspx?iItemId=3D2655&FeedType=3Dge=
+tavailability&property_id=3D90392299&iCal=3D1
+Israelis 13-2BR - 1                                                      =
+           =
+http://www.onlineres.ezgo.co.il/flipkey.aspx?iItemId=3D2655&FeedType=3Dge=
+tavailability&property_id=3D90402387&iCal=3D1
+Dizingoff 50-1BR - 1                                                     =
+           =
+http://www.onlineres.ezgo.co.il/flipkey.aspx?iItemId=3D2655&FeedType=3Dge=
+tavailability&property_id=3D90422453&iCal=3D1
+Masarik 2-2BR - 1                                                        =
+           =
+http://www.onlineres.ezgo.co.il/flipkey.aspx?iItemId=3D2655&FeedType=3Dge=
+tavailability&property_id=3D90432454&iCal=3D1
+Perets Hayut 2-2BR - 1                                                   =
+           =
+http://www.onlineres.ezgo.co.il/flipkey.aspx?iItemId=3D2655&FeedType=3Dge=
+tavailability&property_id=3D90442455&iCal=3D1
+David Hamelech 9-Studio - 1                                              =
+           =
+http://www.onlineres.ezgo.co.il/flipkey.aspx?iItemId=3D2655&FeedType=3Dge=
+tavailability&property_id=3D90452568&iCal=3D1
+Hakerem 3-1BR - 1                                                        =
+           =
+http://www.onlineres.ezgo.co.il/flipkey.aspx?iItemId=3D2655&FeedType=3Dge=
+tavailability&property_id=3D90542635&iCal=3D1
+Tunhum 6-1BR - 1                                                         =
+           =
+http://www.onlineres.ezgo.co.il/flipkey.aspx?iItemId=3D2655&FeedType=3Dge=
+tavailability&property_id=3D90562837&iCal=3D1
+Shlomo Hameleh 68-1BR - 1                                                =
+           =
+http://www.onlineres.ezgo.co.il/flipkey.aspx?iItemId=3D2655&FeedType=3Dge=
+tavailability&property_id=3D90673096&iCal=3D1
+Pinsker 54-2BR - 1                                                       =
+           =
+http://www.onlineres.ezgo.co.il/flipkey.aspx?iItemId=3D2655&FeedType=3Dge=
+tavailability&property_id=3D90723143&iCal=3D1
+George Elliot 1BR - 1                                                    =
+           =
+http://www.onlineres.ezgo.co.il/flipkey.aspx?iItemId=3D2655&FeedType=3Dge=
+tavailability&property_id=3D90733209&iCal=3D1
+Hakovshim 14 sml duplex - 1                                              =
+           =
+http://www.onlineres.ezgo.co.il/flipkey.aspx?iItemId=3D2655&FeedType=3Dge=
+tavailability&property_id=3D90753389&iCal=3D1
+Hakovshim 15 lrg duplex - 1                                              =
+           =
+http://www.onlineres.ezgo.co.il/flipkey.aspx?iItemId=3D2655&FeedType=3Dge=
+tavailability&property_id=3D90763390&iCal=3D1
+Jaffa Studio - 17                                                        =
+           =
+http://www.onlineres.ezgo.co.il/flipkey.aspx?iItemId=3D2655&FeedType=3Dge=
+tavailability&property_id=3D90773393&iCal=3D1
+Jaffa 1BR - 1                                                            =
+           =
+http://www.onlineres.ezgo.co.il/flipkey.aspx?iItemId=3D2655&FeedType=3Dge=
+tavailability&property_id=3D90783394&iCal=3D1
+Jaffa 1BR - 3                                                            =
+           =
+http://www.onlineres.ezgo.co.il/flipkey.aspx?iItemId=3D2655&FeedType=3Dge=
+tavailability&property_id=3D90793394&iCal=3D1
+Jaffa 1BR - 6                                                            =
+           =
+http://www.onlineres.ezgo.co.il/flipkey.aspx?iItemId=3D2655&FeedType=3Dge=
+tavailability&property_id=3D90803394&iCal=3D1
+Jaffa 1BR - 9                                                            =
+           =
+http://www.onlineres.ezgo.co.il/flipkey.aspx?iItemId=3D2655&FeedType=3Dge=
+tavailability&property_id=3D90813394&iCal=3D1
+Jaffa 1BR - 2                                                            =
+           =
+http://www.onlineres.ezgo.co.il/flipkey.aspx?iItemId=3D2655&FeedType=3Dge=
+tavailability&property_id=3D90823394&iCal=3D1
+Jaffa 2 BR duplex - 15                                                   =
+           =
+http://www.onlineres.ezgo.co.il/flipkey.aspx?iItemId=3D2655&FeedType=3Dge=
+tavailability&property_id=3D90833395&iCal=3D1
+Jaffa 2 BR duplex - 11                                                   =
+           =
+http://www.onlineres.ezgo.co.il/flipkey.aspx?iItemId=3D2655&FeedType=3Dge=
+tavailability&property_id=3D90843395&iCal=3D1
+Jaffa 2BR luxury duplex - 18                                             =
+           =
+http://www.onlineres.ezgo.co.il/flipkey.aspx?iItemId=3D2655&FeedType=3Dge=
+tavailability&property_id=3D90853396&iCal=3D1
+ Jean Jaures - 1                                                         =
+           =
+http://www.onlineres.ezgo.co.il/flipkey.aspx?iItemId=3D2655&FeedType=3Dge=
+tavailability&property_id=3D90863402&iCal=3D1
+Ranak 15- Studio - 1                                                     =
+           =
+http://www.onlineres.ezgo.co.il/flipkey.aspx?iItemId=3D2655&FeedType=3Dge=
+tavailability&property_id=3D90873451&iCal=3D1
+HAOGEN 07/104 - 1                                                        =
+           =
+http://www.onlineres.ezgo.co.il/flipkey.aspx?iItemId=3D2655&FeedType=3Dge=
+tavailability&property_id=3D90883468&iCal=3D1
+HAOGEN 08/303 - 1                                                        =
+           =
+http://www.onlineres.ezgo.co.il/flipkey.aspx?iItemId=3D2655&FeedType=3Dge=
+tavailability&property_id=3D90893469&iCal=3D1
+Trumpeldor 2 - 2BR - 1                                                   =
+           =
+http://www.onlineres.ezgo.co.il/flipkey.aspx?iItemId=3D2655&FeedType=3Dge=
+tavailability&property_id=3D90903537&iCal=3D1
+Frishman 15 - 2.5BR - 1                                                  =
+           =
+http://www.onlineres.ezgo.co.il/flipkey.aspx?iItemId=3D2655&FeedType=3Dge=
+tavailability&property_id=3D90913569&iCal=3D1
+Bugrashov 44 - 4BR - 1                                                   =
+           =
+http://www.onlineres.ezgo.co.il/flipkey.aspx?iItemId=3D2655&FeedType=3Dge=
+tavailability&property_id=3D90923570&iCal=3D1
+Ben-Yehuda 110 - 1BR - 1                                                 =
+           =
+http://www.onlineres.ezgo.co.il/flipkey.aspx?iItemId=3D2655&FeedType=3Dge=
+tavailability&property_id=3D90933584&iCal=3D1
+HAOGEN 06/116 - 1                                                        =
+           =
+http://www.onlineres.ezgo.co.il/flipkey.aspx?iItemId=3D2655&FeedType=3Dge=
+tavailability&property_id=3D90943585&iCal=3D1
+
+(43 row(s) affected)
+
+4446:
+                                                                         =
+          =20
+-------------------------------------------------------------------------=
+---------- =
+-------------------------------------------------------------------------=
+-------------------------------------------------------
+Studio - Ranak 15                                                        =
+           =
+http://www.onlineres.ezgo.co.il/flipkey.aspx?iItemId=3D4446&FeedType=3Dge=
+tavailability&property_id=3D90013675&iCal=3D1
+Studio - Ben-Yehuda 84                                                   =
+           =
+http://www.onlineres.ezgo.co.il/flipkey.aspx?iItemId=3D4446&FeedType=3Dge=
+tavailability&property_id=3D90453675&iCal=3D1
+1BR - Dizingoff 50                                                       =
+           =
+http://www.onlineres.ezgo.co.il/flipkey.aspx?iItemId=3D4446&FeedType=3Dge=
+tavailability&property_id=3D90033676&iCal=3D1
+1BR - Ben-Yehuda 110                                                     =
+           =
+http://www.onlineres.ezgo.co.il/flipkey.aspx?iItemId=3D4446&FeedType=3Dge=
+tavailability&property_id=3D90073676&iCal=3D1
+1BR - Allenby 20/02                                                      =
+           =
+http://www.onlineres.ezgo.co.il/flipkey.aspx?iItemId=3D4446&FeedType=3Dge=
+tavailability&property_id=3D90273676&iCal=3D1
+1BR - Saped 3                                                            =
+           =
+http://www.onlineres.ezgo.co.il/flipkey.aspx?iItemId=3D4446&FeedType=3Dge=
+tavailability&property_id=3D90313676&iCal=3D1
+1BR - Nechemia 18                                                        =
+           =
+http://www.onlineres.ezgo.co.il/flipkey.aspx?iItemId=3D4446&FeedType=3Dge=
+tavailability&property_id=3D90463676&iCal=3D1
+1BR - Allenby 20/13                                                      =
+           =
+http://www.onlineres.ezgo.co.il/flipkey.aspx?iItemId=3D4446&FeedType=3Dge=
+tavailability&property_id=3D90593676&iCal=3D1
+1BR - Hakovshim 15/12                                                    =
+           =
+http://www.onlineres.ezgo.co.il/flipkey.aspx?iItemId=3D4446&FeedType=3Dge=
+tavailability&property_id=3D90633676&iCal=3D1
+1BR - Ben Yehuda 51/13                                                   =
+           =
+http://www.onlineres.ezgo.co.il/flipkey.aspx?iItemId=3D4446&FeedType=3Dge=
+tavailability&property_id=3D90653676&iCal=3D1
+2BR - Ben Yehuda 84                                                      =
+           =
+http://www.onlineres.ezgo.co.il/flipkey.aspx?iItemId=3D4446&FeedType=3Dge=
+tavailability&property_id=3D90103677&iCal=3D1
+2BR - Frishman 33                                                        =
+           =
+http://www.onlineres.ezgo.co.il/flipkey.aspx?iItemId=3D4446&FeedType=3Dge=
+tavailability&property_id=3D90113677&iCal=3D1
+2BR - Shlomo HaMelech 12                                                 =
+           =
+http://www.onlineres.ezgo.co.il/flipkey.aspx?iItemId=3D4446&FeedType=3Dge=
+tavailability&property_id=3D90133677&iCal=3D1
+2BR - Jabotinsky 152                                                     =
+           =
+http://www.onlineres.ezgo.co.il/flipkey.aspx?iItemId=3D4446&FeedType=3Dge=
+tavailability&property_id=3D90153677&iCal=3D1
+2BR - Israelis 13                                                        =
+           =
+http://www.onlineres.ezgo.co.il/flipkey.aspx?iItemId=3D4446&FeedType=3Dge=
+tavailability&property_id=3D90163677&iCal=3D1
+2BR - Perets Hayut 2                                                     =
+           =
+http://www.onlineres.ezgo.co.il/flipkey.aspx?iItemId=3D4446&FeedType=3Dge=
+tavailability&property_id=3D90183677&iCal=3D1
+2BR - Pinsker 54                                                         =
+           =
+http://www.onlineres.ezgo.co.il/flipkey.aspx?iItemId=3D4446&FeedType=3Dge=
+tavailability&property_id=3D90193677&iCal=3D1
+2BR - Jean Jaures 3                                                      =
+           =
+http://www.onlineres.ezgo.co.il/flipkey.aspx?iItemId=3D4446&FeedType=3Dge=
+tavailability&property_id=3D90223677&iCal=3D1
+2BR - H`e Be`iyar 2                                                      =
+           =
+http://www.onlineres.ezgo.co.il/flipkey.aspx?iItemId=3D4446&FeedType=3Dge=
+tavailability&property_id=3D90293677&iCal=3D1
+2BR - Frishman 18/10                                                     =
+           =
+http://www.onlineres.ezgo.co.il/flipkey.aspx?iItemId=3D4446&FeedType=3Dge=
+tavailability&property_id=3D90353677&iCal=3D1
+2BR - Bugrashov 71                                                       =
+           =
+http://www.onlineres.ezgo.co.il/flipkey.aspx?iItemId=3D4446&FeedType=3Dge=
+tavailability&property_id=3D90493677&iCal=3D1
+2BR - Simtat Nes Tsiyona 4                                               =
+           =
+http://www.onlineres.ezgo.co.il/flipkey.aspx?iItemId=3D4446&FeedType=3Dge=
+tavailability&property_id=3D90563677&iCal=3D1
+2BR - Hakovshim 15/10                                                    =
+           =
+http://www.onlineres.ezgo.co.il/flipkey.aspx?iItemId=3D4446&FeedType=3Dge=
+tavailability&property_id=3D90643677&iCal=3D1
+3BR - Pinsker 61                                                         =
+           =
+http://www.onlineres.ezgo.co.il/flipkey.aspx?iItemId=3D4446&FeedType=3Dge=
+tavailability&property_id=3D90333678&iCal=3D1
+3BR - Ruppin 28                                                          =
+           =
+http://www.onlineres.ezgo.co.il/flipkey.aspx?iItemId=3D4446&FeedType=3Dge=
+tavailability&property_id=3D90373678&iCal=3D1
+3BR - Yona HaNavi 19/01                                                  =
+           =
+http://www.onlineres.ezgo.co.il/flipkey.aspx?iItemId=3D4446&FeedType=3Dge=
+tavailability&property_id=3D90603678&iCal=3D1
+3BR - Sup - Bugrashov 44                                                 =
+           =
+http://www.onlineres.ezgo.co.il/flipkey.aspx?iItemId=3D4446&FeedType=3Dge=
+tavailability&property_id=3D90264054&iCal=3D1
+2BR - Budget - Dizengoff 26/03                                           =
+           =
+http://www.onlineres.ezgo.co.il/flipkey.aspx?iItemId=3D4446&FeedType=3Dge=
+tavailability&property_id=3D90124055&iCal=3D1
+3BR - Budget - Dizengoff 26/06                                           =
+           =
+http://www.onlineres.ezgo.co.il/flipkey.aspx?iItemId=3D4446&FeedType=3Dge=
+tavailability&property_id=3D90244056&iCal=3D1
+3BR - Budget - Dizengoff 26/04                                           =
+           =
+http://www.onlineres.ezgo.co.il/flipkey.aspx?iItemId=3D4446&FeedType=3Dge=
+tavailability&property_id=3D90254056&iCal=3D1
+1BR - Sup - Hakerem 3                                                    =
+           =
+http://www.onlineres.ezgo.co.il/flipkey.aspx?iItemId=3D4446&FeedType=3Dge=
+tavailability&property_id=3D90044057&iCal=3D1
+1BR - Sup - Frishman 15                                                  =
+           =
+http://www.onlineres.ezgo.co.il/flipkey.aspx?iItemId=3D4446&FeedType=3Dge=
+tavailability&property_id=3D90094057&iCal=3D1
+1BR - Sup - Arnon 14                                                     =
+           =
+http://www.onlineres.ezgo.co.il/flipkey.aspx?iItemId=3D4446&FeedType=3Dge=
+tavailability&property_id=3D90484057&iCal=3D1
+1BR - Sup - Hayarkon 13                                                  =
+           =
+http://www.onlineres.ezgo.co.il/flipkey.aspx?iItemId=3D4446&FeedType=3Dge=
+tavailability&property_id=3D90524057&iCal=3D1
+1BR - Sup - Ben Yehuda 4                                                 =
+           =
+http://www.onlineres.ezgo.co.il/flipkey.aspx?iItemId=3D4446&FeedType=3Dge=
+tavailability&property_id=3D90674057&iCal=3D1
+2BR - Sup - Sirkin 4                                                     =
+           =
+http://www.onlineres.ezgo.co.il/flipkey.aspx?iItemId=3D4446&FeedType=3Dge=
+tavailability&property_id=3D90144058&iCal=3D1
+2BR - Sup - Hakerem 4                                                    =
+           =
+http://www.onlineres.ezgo.co.il/flipkey.aspx?iItemId=3D4446&FeedType=3Dge=
+tavailability&property_id=3D90284058&iCal=3D1
+2BR - Sup - Hayarkon 124                                                 =
+           =
+http://www.onlineres.ezgo.co.il/flipkey.aspx?iItemId=3D4446&FeedType=3Dge=
+tavailability&property_id=3D90504058&iCal=3D1
+2BR - Sup - Luria 09/03                                                  =
+           =
+http://www.onlineres.ezgo.co.il/flipkey.aspx?iItemId=3D4446&FeedType=3Dge=
+tavailability&property_id=3D90614058&iCal=3D1
+2BR - Sup - Natan Hahaham 16                                             =
+           =
+http://www.onlineres.ezgo.co.il/flipkey.aspx?iItemId=3D4446&FeedType=3Dge=
+tavailability&property_id=3D90624058&iCal=3D1
+3BR Rooftop - Ben Yehuda 141                                             =
+           =
+http://www.onlineres.ezgo.co.il/flipkey.aspx?iItemId=3D4446&FeedType=3Dge=
+tavailability&property_id=3D90344059&iCal=3D1
+2BR - Beach Front - Trumpeldor 2                                         =
+           =
+http://www.onlineres.ezgo.co.il/flipkey.aspx?iItemId=3D4446&FeedType=3Dge=
+tavailability&property_id=3D90234060&iCal=3D1
+2BR - Private residence - Frishman 46                                    =
+           =
+http://www.onlineres.ezgo.co.il/flipkey.aspx?iItemId=3D4446&FeedType=3Dge=
+tavailability&property_id=3D90364198&iCal=3D1
+1BR - Private residence - Hayarkon 78 - 20/202                           =
+           =
+http://www.onlineres.ezgo.co.il/flipkey.aspx?iItemId=3D4446&FeedType=3Dge=
+tavailability&property_id=3D90664451&iCal=3D1
+
+(44 row(s) affected)
+
+5181:
+                                                                         =
+          =20
+-------------------------------------------------------------------------=
+---------- =
+-------------------------------------------------------------------------=
+-------------------------------------------------------
+2BR - Jaffa Court -A3/404                                                =
+           =
+http://www.onlineres.ezgo.co.il/flipkey.aspx?iItemId=3D5181&FeedType=3Dge=
+tavailability&property_id=3D90014324&iCal=3D1
+2BR - Jaffa Court -A3/304                                                =
+           =
+http://www.onlineres.ezgo.co.il/flipkey.aspx?iItemId=3D5181&FeedType=3Dge=
+tavailability&property_id=3D90054324&iCal=3D1
+1BR - Jaffa Court -B3/409                                                =
+           =
+http://www.onlineres.ezgo.co.il/flipkey.aspx?iItemId=3D5181&FeedType=3Dge=
+tavailability&property_id=3D90024325&iCal=3D1
+1BR - Jaffa Court -B3/407                                                =
+           =
+http://www.onlineres.ezgo.co.il/flipkey.aspx?iItemId=3D5181&FeedType=3Dge=
+tavailability&property_id=3D90034325&iCal=3D1
+1BR - Jaffa Court -B3/208                                                =
+           =
+http://www.onlineres.ezgo.co.il/flipkey.aspx?iItemId=3D5181&FeedType=3Dge=
+tavailability&property_id=3D90044325&iCal=3D1
+
+(5 row(s) affected)
+
+
+
+------=_NextPart_000_004A_01CF2E39.AADB8340--
+
+
+
