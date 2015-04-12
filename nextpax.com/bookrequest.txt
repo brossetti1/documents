@@ -1,0 +1,74 @@
+<?xml version="1.0" ?>
+<TravelMessage VersionID="1.8N">
+  <Control Language="NL" Test="ja">
+    <SenderSessionID>mySession01</SenderSessionID>
+    <ReceiverSessionID>hisSessionID</ReceiverSessionID>
+    <Date>2013-12-06</Date>
+    <Time Reliability="zeker">03:02:54</Time>
+    <MessageSequence>1</MessageSequence>
+    <SenderID>MYB112</SenderID>
+    <ReceiverID>NPS001</ReceiverID>
+    <RequestID>BookRequest</RequestID>
+    <ResponseID>BookResponse</ResponseID>
+  </Control>
+  <TRequest>
+    <BookRequest>
+      <PaxDetails>
+        <PaxDescription>
+          <PaxID>P01</PaxID>
+          <Initials>H</Initials>
+          <Infix>de</Infix>
+          <Name>Man</Name>
+          <Gender>m</Gender>
+        </PaxDescription>
+        <PaxDescription>
+          <PaxID>P02</PaxID>
+          <Initials>I</Initials>
+          <Infix>de</Infix>
+          <Name>Man</Name>
+          <Gender>v</Gender>
+        </PaxDescription>
+        <Contact>
+          <Initials>V</Initials>
+          <Name>de Vrouw</Name>
+          <Gender>m</Gender>
+          <Address>Straat 1A</Address>
+          <Zipcode>1234 AB</Zipcode>
+          <Place>Grote stad</Place>
+          <Country>NL</Country>
+          <TelHome>0123-987654</TelHome>
+          <TelWork>0321-987654</TelWork>
+          <TelMobile>06-12345678</TelMobile>
+          <Email>test@test.com</Email>
+          <BankAccount>1234567</BankAccount>
+        </Contact>
+        <HomeStay>
+          <Name>J Jansen</Name>
+          <TelHome>0123-456789</TelHome>
+        </HomeStay>
+      </PaxDetails>
+      <PaxAssignment>
+        <TransportAssignment>
+          <TransportID>T01</TransportID>
+          <ClassID>C01</ClassID>
+          <PaxID>P01</PaxID>
+          <PaxID>P02</PaxID>
+        </TransportAssignment>
+        <AccoAssignment>
+          <AccommodationID>A71289</AccommodationID>
+          <ArrivalDate>2015-08-24</ArrivalDate>
+          <Duration DurationType="dagen">7</Duration>
+          <UnitAssignment>
+            <UnitID>U01</UnitID>
+            <Quantity>1</Quantity>
+            <RoomAssignment>
+              <Sequence>1</Sequence>
+              <PaxID>P01</PaxID>
+              <PaxID>P02</PaxID>
+            </RoomAssignment>
+          </UnitAssignment>
+        </AccoAssignment>
+      </PaxAssignment>
+    </BookRequest>
+  </TRequest>
+</TravelMessage>

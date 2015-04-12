@@ -1,0 +1,1081 @@
+X-Account-Key: account1
+X-UIDL: 1383946223.815146.p3plgemini02-05.prod.phx.3851569472
+X-Mozilla-Status: 0011
+X-Mozilla-Status2: 00000000
+X-Mozilla-Keys:                                                                                 
+Received: (qmail 27964 invoked by uid 30297); 8 Nov 2013 21:30:23 -0000
+Received: from unknown (HELO m1pismtp01-038.prod.mesa1.secureserver.net) ([10.8.12.60])
+          (envelope-sender <dberroa@realtimerental.com>)
+          by p3plsmtp02-01.prod.phx3.secureserver.net (qmail-1.03) with SMTP
+          for <isaac@mybookingpal.com>; 8 Nov 2013 21:30:23 -0000
+X-IronPort-Anti-Spam-Result: ArYCAN9UfVKtywaAnGdsb2JhbABWA4JDfK1EiWOIQoExFg4BAQEBAQYNCQkUKIIlAQEBBAgCBQEKDgUEGB8JCAwBAwIJEQQBASEBBgcZCCUJCAIEEwsFCodVAw8NqW8BAYMYgkmDWw2Ja4x1gSkQgRMWCwEBAwYBBguEHwOJQoV2giqEQoMaiySDToUuHoEsBAUX
+Received: from smtp128.ord.emailsrvr.com ([173.203.6.128])
+  by m1pismtp01-038.prod.mesa1.secureserver.net with ESMTP; 08 Nov 2013 14:30:20 -0700
+Received: from localhost (localhost.localdomain [127.0.0.1])
+	by smtp29.relay.ord1a.emailsrvr.com (SMTP Server) with ESMTP id D9D6B1087D7;
+	Fri,  8 Nov 2013 16:30:10 -0500 (EST)
+X-Virus-Scanned: OK
+Received: by smtp29.relay.ord1a.emailsrvr.com (Authenticated sender: dberroa-AT-realtimerental.com) with ESMTPSA id 5A739108755;
+	Fri,  8 Nov 2013 16:30:10 -0500 (EST)
+From: "David" <dberroa@realtimerental.com>
+To: "'Isaac Mahgrefteh'" <isaac@mybookingpal.com>
+Cc: "'Joe Testa'" <joe@realtimerental.com>,
+	<mattr@realtimerental.com>
+References: <527A8656.7050609@mybookingpal.com> <009b01cedb1c$1cf468f0$56dd3ad0$@realtimerental.com> <527A8BAE.9040504@mybookingpal.com> <000d01cedb38$47a63710$d6f2a530$@realtimerental.com> <527AF0F9.5030805@mybookingpal.com> <003101cedbeb$96e7bc50$c4b734f0$@realtimerental.com> <527C4B4B.5010500@mybookingpal.com>
+In-Reply-To: <527C4B4B.5010500@mybookingpal.com>
+Subject: RE: Real Time Rental technical contact.
+Date: Fri, 8 Nov 2013 16:30:03 -0500
+Message-ID: <000001cedcc9$b045ba60$10d12f20$@realtimerental.com>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+	boundary="----=_NextPart_000_0001_01CEDC9F.C7750990"
+X-Mailer: Microsoft Outlook 14.0
+Thread-Index: AQGF5KEUObjGSs3Hu2/+8n4fBRo9cQHOWZwIAo3gyaQCFKKR6QGMnNNkAYratRYAjYxs/5pdGpcQ
+Content-Language: en-us
+X-Nonspam: None
+
+This is a multipart message in MIME format.
+
+------=_NextPart_000_0001_01CEDC9F.C7750990
+Content-Type: text/plain;
+	charset="us-ascii"
+Content-Transfer-Encoding: 7bit
+
+Isaac,
+
+ 
+
+I've copied and pasted your questionnaire with the responses in bold.
+
+ 
+
+ 
+
+ 
+
+Can  you please fill out a short questionnaire that the PMS integration team
+has developed.   As for the meeting let us see how the questionnaire  goes
+and we can take it from there. 
+
+1. Your properties will appear in searches that are performed by consumers
+on various sites. To insure that we are giving the consumers the correct
+information please answer the following questions :
+    a. Can we load availability calendar of the property at the same time we
+load the properties?
+
+ 
+
+When you pull your inventories information, you also pull the rates. What
+you do with that data once you get it is up to you.
+
+
+    b. If the answer is yes to "a" then can we get delta changes from the
+last time we did the upload, if no then how can we determine what has
+changed from our last update?
+
+ 
+
+No, you will not be able to pull delta changes. Each catalog pull is a full
+pull of inventory.
+
+
+    c. If the availability calendar is not available then how can we get the
+availability for each property?
+
+ 
+
+Either of the catalog or specific pulls should bring back property rate
+information.
+
+
+    d. How can we determine which property is capable of being booked online
+via credit card?
+
+ 
+
+Our API does not support online booking.
+
+
+    e. In the property upload do you provide an specials pricing, pricing
+windows, additional fees or any other pricing that we would use to adjust
+from the standard rack rate?
+
+
+The rates would be determining the pricing window. Other than that, we don't
+support the other features.
+
+
+2. When a consumer selects a property from the search and wishes to book the
+property we will request confirmation from the PMS. To insure that we are
+booking the property correctly please answer the following questions:
+    a. How do we confirm the availability of a specific property?
+
+ 
+
+When the user selects a single property, you have the ability to pull back
+property specific rates information and availability information. 
+
+
+    b. Which API call do we use to reserve or book the property?
+
+ 
+
+Our API does not support online booking.
+
+
+    c. Can we include our reservation ID in the confirmation to you?
+
+ 
+
+Our API does not support online booking.
+
+
+3. When a consumer books a property a confirmation email will be sent to
+them with the propety booking information. This will include the property
+managers contact information. Can you answer the following questions If the
+consumer were to call the PM and cancel the booking:
+    a. If the PM canceled the booking on your PMS and it is one of our
+bookings, can you call our API to cancel the booking?
+
+ 
+
+No, this would have to be discovered by your system when you pull the latest
+property information back.
+
+
+    b. If you cannot call our API then how would we know that the our
+booking was canceled on your PMS?
+
+ 
+
+By doing a catalog pull and pulling back the information on your property.
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+Check out our  <http://www.youtube.com/watch?v=kFVSjnAyKC8&feature=youtu.be>
+Mobile App!
+
+ 
+
+Follow our
+<http://rentalnews.realtimerental.com/vacation-rental-software-news-events/>
+BLOG!
+
+ 
+
+Like us on  <https://www.facebook.com/RealTimeRental#!/> Facebook    
+
+ 
+
+Check out our Preferred Insurance Partner
+<http://realtimerental.rentalguardian.com/> Rental Guardian!
+
+ 
+
+ 
+
+This e-mail message and any documents accompanying this e-mail transmission
+may be confidential and/or privileged. Unless you are the intended
+recipient, one of the addressees, or authorized to receive this e-mail
+message by one of the addressees, you may not use, copy, print or disclose
+the contents of this e-mail transmission (including the message or any
+information contained in the message) to anyone. If you are not the intended
+recipient of this e-mail message, you are hereby notified that any
+disclosure, copying, distribution and/or the taking of or refraining from
+taking of any action in reliance on the contents of this e-mail information
+is strictly prohibited; and may result in legal action being instituted
+against you. If you have received this e-mail in error, please immediately
+advise the sender by reply, and delete the message and any accompanying
+documents from your system.  All e-mails sent to or from this address will
+be received or otherwise recorded in the Strategic Planning and Management,
+LLC's e-mail system, and are subject to archival, monitoring or review by,
+and/or disclosure to any third party as required by state or federal law.
+Thank you.
+
+ 
+
+From: Isaac Mahgrefteh [mailto:isaac@mybookingpal.com] 
+Sent: Thursday, November 07, 2013 9:24 PM
+To: David
+Subject: Re: Real Time Rental technical contact.
+
+ 
+
+Hi David, 
+Great, I look forward to hearing from you. 
+Thank you, 
+Isaac 
+
+On 11/7/2013 11:00 AM, David wrote:
+
+Isaac,
+
+ 
+
+We have received the questions. We will be clarifying some points with the
+programmer who designed the API and will get back to you soon.
+
+ 
+
+ 
+
+ 
+
+Check out our  <http://www.youtube.com/watch?v=kFVSjnAyKC8&feature=youtu.be>
+Mobile App!
+
+ 
+
+Follow our
+<http://rentalnews.realtimerental.com/vacation-rental-software-news-events/>
+BLOG!
+
+ 
+
+Like us on  <https://www.facebook.com/RealTimeRental#%21/> Facebook    
+
+ 
+
+Check out our Preferred Insurance Partner
+<http://realtimerental.rentalguardian.com/> Rental Guardian!
+
+ 
+
+ 
+
+This e-mail message and any documents accompanying this e-mail transmission
+may be confidential and/or privileged. Unless you are the intended
+recipient, one of the addressees, or authorized to receive this e-mail
+message by one of the addressees, you may not use, copy, print or disclose
+the contents of this e-mail transmission (including the message or any
+information contained in the message) to anyone. If you are not the intended
+recipient of this e-mail message, you are hereby notified that any
+disclosure, copying, distribution and/or the taking of or refraining from
+taking of any action in reliance on the contents of this e-mail information
+is strictly prohibited; and may result in legal action being instituted
+against you. If you have received this e-mail in error, please immediately
+advise the sender by reply, and delete the message and any accompanying
+documents from your system.  All e-mails sent to or from this address will
+be received or otherwise recorded in the Strategic Planning and Management,
+LLC's e-mail system, and are subject to archival, monitoring or review by,
+and/or disclosure to any third party as required by state or federal law.
+Thank you.
+
+ 
+
+From: Isaac Mahgrefteh [mailto:isaac@mybookingpal.com] 
+Sent: Wednesday, November 06, 2013 8:47 PM
+To: David; mattr@realtimerental.com; jay.hatho@gmail.com
+Cc: 'Joe'
+Subject: Re: Real Time Rental technical contact.
+
+ 
+
+Hi David, Matt 
+
+Can  you please fill out a short questionnaire that the PMS intergration
+team has developed.   As for the meeting let us see how the questionnaire
+goes and we can take if from there. 
+
+1. Your properties will appear in searches that are performed by consumers
+on various sites. To insure that we are giving the consumers the correct
+information please answer the following questions :
+    a. Can we load availability calendar of the property at the same time we
+load the properties?
+    b. If the answer is yes to "a" then can we get delta changes from the
+last time we did the upload, if no then how can we determine what has
+changed from our last update?
+    c. If the availability calendar is not available then how can we get the
+availability for each property?
+    d. How can we determine which property is capable of being booked online
+via credit card?
+    e. In the property upload do you provide an specials pricing, pricing
+windows, additional fees or any other pricing that we would use to adjust
+from the standard rack rate?
+
+2. When a consumer selects a property from the search and wishes to book the
+property we will request confirmation from the PMS. To insure that we are
+booking the property correctly please answer the following questions:
+    a. How do we confirm the availability of a specific property?
+    b. Which API call do we use to reserve or book the property?
+    c. Can we include our reservation ID in the confirmation to you?
+
+
+3. When a consumer books a property a confirmation email will be sent to
+them with the propety booking information. This will include the property
+managers contact information. Can you answer the following questions If the
+consumer were to call the PM and cancel the booking:
+    a. If the PM canceled the booking on your PMS and it is one of our
+bookings, can you call our API to cancel the booking?
+    b. If you cannot call our API then how would we know that the our
+booking was canceled on your PMS? 
+
+Thank you for your time and help.  If there is anything I can do for you,
+please, don't hesitate to let me know
+
+-Isaac 
+
+On 11/6/2013 1:36 PM, David wrote:
+
+Isaac,
+ 
+Hello. Matt and I are happy to help you with the API. Do you have any
+questions already?
+ 
+If you want, we can have a conference phone call tomorrow (Thursday) at 1 pm
+EST to discuss the API.
+ 
+Let us know and feel free to email us at any time.
+ 
+-David
+ 
+ 
+Check out our Mobile App!
+ 
+Follow our BLOG!
+ 
+Like us on Facebook    
+ 
+Check out our Preferred Insurance Partner Rental Guardian!
+ 
+ 
+This e-mail message and any documents accompanying this e-mail transmission
+may be confidential and/or privileged. Unless you are the intended
+recipient, one of the addressees, or authorized to receive this e-mail
+message by one of the addressees, you may not use, copy, print or disclose
+the contents of this e-mail transmission (including the message or any
+information contained in the message) to anyone. If you are not the intended
+recipient of this e-mail message, you are hereby notified that any
+disclosure, copying, distribution and/or the taking of or refraining from
+taking of any action in reliance on the contents of this e-mail information
+is strictly prohibited; and may result in legal action being instituted
+against you. If you have received this e-mail in error, please immediately
+advise the sender by reply, and delete the message and any accompanying
+documents from your system.  All e-mails sent to or from this address will
+be received or otherwise recorded in the Strategic Planning and Management,
+LLC's e-mail system, and are subject to archival, monitoring or review by,
+and/or disclosure to any third party as required by state or federal law. 
+Thank you.
+ 
+-----Original Message-----
+From: Isaac Mahgrefteh [mailto:isaac@mybookingpal.com] 
+Sent: Wednesday, November 06, 2013 1:34 PM
+To: Joe
+Cc: mattr@realtimerental.com; 'David Berroa'
+Subject: Re: Real Time Rental technical contact.
+ 
+Hi Joe,
+Thank you for the information.  I look forward to working with everyone.
+Please let me know if there is anything I can do to help.
+-Isaac
+On 11/6/2013 10:15 AM, Joe wrote:
+
+Isaac
+I forwarded this to both Matt and David. I asked them to reach back to
+
+you.
+
+ 
+Their email address is above if you would like to communicate directly
+ 
+Thanks
+ 
+Joe
+ 
+Joseph Testa Co-Founder
+     RealTimeRental
+      RealTimeRental.Com
+      Joe@realtimerental.com
+      609-399-4800 ext 401
+      www.realtimerental.com
+ 
+Check out our Mobile App!
+ 
+       Find us on Facebook
+ 
+      Follow our   BLOG
+ 
+ 
+This e-mail message and any documents accompanying this e-mail 
+transmission may be confidential and/or privileged. Unless you are the 
+intended recipient, one of the addressees, or authorized to receive 
+this e-mail message by one of the addressees, you may not use, copy, 
+print or disclose the contents of this e-mail transmission (including 
+the message or any information contained in the message) to anyone. If 
+you are not the intended recipient of this e-mail message, you are 
+hereby notified that any disclosure, copying, distribution and/or the 
+taking of or refraining from taking of any action in reliance on the 
+contents of this e-mail information is strictly prohibited; and may 
+result in legal action being instituted against you. If you have 
+received this e-mail in error, please immediately advise the sender by 
+reply, and delete the message and any accompanying documents from your 
+system.  All e-mails sent to or from this address will be received or 
+otherwise recorded in the Strategic Planning and Management, LLC's 
+e-mail system, and are subject to archival, monitoring or review by, 
+and/or disclosure to any third party as required by state or federal 
+law.  Thank you.
+ 
+-----Original Message-----
+From: Isaac Mahgrefteh [mailto:isaac@mybookingpal.com]
+Sent: Wednesday, November 06, 2013 1:12 PM
+To: joe@realtimerental.com
+Subject: Real Time Rental technical contact.
+ 
+Hi Joe,
+ 
+I am working with our CEO, Alex Aydin to follow up regarding the 
+integration of Real Time Rental's vacation rental listings.
+ 
+I would very much appreciate if you could direct me to the best person 
+to speak with about Real Time Rental's Application Programming 
+Interface or "API" so we can begin working together.
+ 
+Please feel free to forward my email and copy me if that would be 
+easier for you.
+ 
+All the best,
+ 
+Isaac
+ 
+Isaac Mahgrefteh | BookingPal, Inc.
+O: 949-333-0724
+Fax: 949-272-5553
+E: isaac@mybookingpal.com | Website: www.mybookingpal.com
+101 Pacifica, Suite 250, Irvine, CA 92618
+ 
+Confidentiality Note:  This e-mail, and any attachment to it, contains 
+privileged and confidential information intended only for the use of 
+the
+individual(s) or entity named on the e-mail.  If the reader of this 
+e-mail is not the intended recipient, or the employee or agent 
+responsible for delivering it to the intended recipient, you are 
+hereby notified that reading it is strictly prohibited.  If you have 
+received this e-mail in error, please immediately return it to the 
+sender and delete it from your system.  Thank you.
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+
+ 
+
+ 
+
+
+------=_NextPart_000_0001_01CEDC9F.C7750990
+Content-Type: text/html;
+	charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+
+<html xmlns:v=3D"urn:schemas-microsoft-com:vml" =
+xmlns:o=3D"urn:schemas-microsoft-com:office:office" =
+xmlns:w=3D"urn:schemas-microsoft-com:office:word" =
+xmlns:m=3D"http://schemas.microsoft.com/office/2004/12/omml" =
+xmlns=3D"http://www.w3.org/TR/REC-html40"><head><META =
+HTTP-EQUIV=3D"Content-Type" CONTENT=3D"text/html; =
+charset=3Dus-ascii"><meta name=3DGenerator content=3D"Microsoft Word 14 =
+(filtered medium)"><style><!--
+/* Font Definitions */
+@font-face
+	{font-family:Cambria;
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+@font-face
+	{font-family:Consolas;
+	panose-1:2 11 6 9 2 2 4 3 2 4;}
+/* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";
+	color:black;}
+a:link, span.MsoHyperlink
+	{mso-style-priority:99;
+	color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{mso-style-priority:99;
+	color:purple;
+	text-decoration:underline;}
+p
+	{mso-style-priority:99;
+	mso-margin-top-alt:auto;
+	margin-right:0in;
+	margin-bottom:5.75pt;
+	margin-left:0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";
+	color:black;}
+pre
+	{mso-style-priority:99;
+	mso-style-link:"HTML Preformatted Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Courier New";
+	color:black;}
+p.MsoAcetate, li.MsoAcetate, div.MsoAcetate
+	{mso-style-priority:99;
+	mso-style-link:"Balloon Text Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	font-size:8.0pt;
+	font-family:"Tahoma","sans-serif";
+	color:black;}
+span.HTMLPreformattedChar
+	{mso-style-name:"HTML Preformatted Char";
+	mso-style-priority:99;
+	mso-style-link:"HTML Preformatted";
+	font-family:Consolas;
+	color:black;}
+span.BalloonTextChar
+	{mso-style-name:"Balloon Text Char";
+	mso-style-priority:99;
+	mso-style-link:"Balloon Text";
+	font-family:"Tahoma","sans-serif";
+	color:black;}
+span.EmailStyle22
+	{mso-style-type:personal;
+	font-family:"Calibri","sans-serif";
+	color:#1F497D;}
+span.EmailStyle24
+	{mso-style-type:personal-reply;
+	font-family:"Calibri","sans-serif";
+	color:#1F497D;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	font-size:10.0pt;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection1
+	{page:WordSection1;}
+--></style><!--[if gte mso 9]><xml>
+<o:shapedefaults v:ext=3D"edit" spidmax=3D"1026" />
+</xml><![endif]--><!--[if gte mso 9]><xml>
+<o:shapelayout v:ext=3D"edit">
+<o:idmap v:ext=3D"edit" data=3D"1" />
+</o:shapelayout></xml><![endif]--></head><body bgcolor=3Dwhite =
+lang=3DEN-US link=3Dblue vlink=3Dpurple><div class=3DWordSection1><p =
+class=3DMsoNormal><span =
+style=3D'font-size:11.0pt;font-family:"Calibri","sans-serif";color:#1F497=
+D'>Isaac,<o:p></o:p></span></p><p class=3DMsoNormal><span =
+style=3D'font-size:11.0pt;font-family:"Calibri","sans-serif";color:#1F497=
+D'><o:p>&nbsp;</o:p></span></p><p class=3DMsoNormal><span =
+style=3D'font-size:11.0pt;font-family:"Calibri","sans-serif";color:#1F497=
+D'>I&#8217;ve copied and pasted your questionnaire with the responses in =
+bold.<o:p></o:p></span></p><p class=3DMsoNormal><span =
+style=3D'font-size:11.0pt;font-family:"Calibri","sans-serif";color:#1F497=
+D'><o:p>&nbsp;</o:p></span></p><p class=3DMsoNormal><span =
+style=3D'font-size:11.0pt;font-family:"Calibri","sans-serif";color:#1F497=
+D'><o:p>&nbsp;</o:p></span></p><p class=3DMsoNormal><span =
+style=3D'font-size:11.0pt;font-family:"Calibri","sans-serif";color:#1F497=
+D'><o:p>&nbsp;</o:p></span></p><p class=3DMsoNormal>Can&nbsp; you please =
+fill out a short questionnaire that the PMS integration team has =
+developed.&nbsp;&nbsp; As for the meeting let us see how the =
+questionnaire&nbsp; goes and we can take it from there. <br><br><span =
+style=3D'font-size:10.0pt;font-family:"Arial","sans-serif";color:#222222'=
+>1. Your properties will appear in searches that are performed by =
+consumers on various sites. To insure that we are giving the consumers =
+the correct information please answer the following questions =
+:<br>&nbsp;&nbsp;&nbsp; a. Can we load availability calendar of the =
+property at the same time we load the =
+properties?<o:p></o:p></span></p><p class=3DMsoNormal><span =
+style=3D'font-size:10.0pt;font-family:"Arial","sans-serif";color:#222222'=
+><o:p>&nbsp;</o:p></span></p><p class=3DMsoNormal><b><span =
+style=3D'font-size:10.0pt;font-family:"Arial","sans-serif";color:#222222'=
+>When you pull your inventories information, you also pull the rates. =
+What you do with that data once you get it is up to =
+you.<o:p></o:p></span></b></p><p class=3DMsoNormal><span =
+style=3D'font-size:10.0pt;font-family:"Arial","sans-serif";color:#222222'=
+><br>&nbsp;&nbsp;&nbsp; b. If the answer is yes to &quot;a&quot; then =
+can we get delta changes from the last time we did the upload, if no =
+then how can we determine what has changed from our last =
+update?<o:p></o:p></span></p><p class=3DMsoNormal><span =
+style=3D'font-size:10.0pt;font-family:"Arial","sans-serif";color:#222222'=
+><o:p>&nbsp;</o:p></span></p><p class=3DMsoNormal><b><span =
+style=3D'font-size:10.0pt;font-family:"Arial","sans-serif";color:#222222'=
+>No, you will not be able to pull delta changes. Each catalog pull is a =
+full pull of inventory.<o:p></o:p></span></b></p><p =
+class=3DMsoNormal><span =
+style=3D'font-size:10.0pt;font-family:"Arial","sans-serif";color:#222222'=
+><br>&nbsp;&nbsp;&nbsp; c. If the availability calendar is not available =
+then how can we get the availability for each =
+property?<o:p></o:p></span></p><p class=3DMsoNormal><span =
+style=3D'font-size:10.0pt;font-family:"Arial","sans-serif";color:#222222'=
+><o:p>&nbsp;</o:p></span></p><p class=3DMsoNormal><b><span =
+style=3D'font-size:10.0pt;font-family:"Arial","sans-serif";color:#222222'=
+>Either of the catalog or specific pulls should bring back property rate =
+information.<o:p></o:p></span></b></p><p class=3DMsoNormal><span =
+style=3D'font-size:10.0pt;font-family:"Arial","sans-serif";color:#222222'=
+><br>&nbsp;&nbsp;&nbsp; d. How can we determine which property is =
+capable of being booked online via credit card?<o:p></o:p></span></p><p =
+class=3DMsoNormal><span =
+style=3D'font-size:10.0pt;font-family:"Arial","sans-serif";color:#222222'=
+><o:p>&nbsp;</o:p></span></p><p class=3DMsoNormal><b><span =
+style=3D'font-size:10.0pt;font-family:"Arial","sans-serif";color:#222222'=
+>Our API does not support online booking.<o:p></o:p></span></b></p><p =
+class=3DMsoNormal><span =
+style=3D'font-size:10.0pt;font-family:"Arial","sans-serif";color:#222222'=
+><br>&nbsp;&nbsp;&nbsp; e. In the property upload do you provide an =
+specials pricing, pricing windows, additional fees or any other pricing =
+that we would use to adjust from the standard rack =
+rate?<o:p></o:p></span></p><p class=3DMsoNormal><span =
+style=3D'font-size:10.0pt;font-family:"Arial","sans-serif";color:#222222'=
+><br><b>The rates would be determining the pricing window. Other than =
+that, we don&#8217;t support the other =
+features.<o:p></o:p></b></span></p><p class=3DMsoNormal><span =
+style=3D'font-size:10.0pt;font-family:"Arial","sans-serif";color:#222222'=
+><br>2. When a consumer selects a property from the search and wishes to =
+book the property we will request confirmation from the PMS. To insure =
+that we are booking the property correctly please answer the following =
+questions:<br>&nbsp;&nbsp;&nbsp; a. How do we confirm the availability =
+of a specific property?<o:p></o:p></span></p><p =
+class=3DMsoNormal><b><span =
+style=3D'font-size:10.0pt;font-family:"Arial","sans-serif";color:#222222'=
+><o:p>&nbsp;</o:p></span></b></p><p class=3DMsoNormal><b><span =
+style=3D'font-size:10.0pt;font-family:"Arial","sans-serif";color:#222222'=
+>When the user selects a single property, you have the ability to pull =
+back property specific rates information</span></b><b><span =
+style=3D'font-size:10.0pt;font-family:"Arial","sans-serif";color:#1F497D'=
+> </span></b><b><span =
+style=3D'font-size:10.0pt;font-family:"Arial","sans-serif";color:windowte=
+xt'>and availability information</span></b><b><span =
+style=3D'font-size:10.0pt;font-family:"Arial","sans-serif";color:#222222'=
+>. <o:p></o:p></span></b></p><p class=3DMsoNormal><span =
+style=3D'font-size:10.0pt;font-family:"Arial","sans-serif";color:#222222'=
+><br>&nbsp;&nbsp;&nbsp; b. Which API call do we use to reserve or book =
+the property?<o:p></o:p></span></p><p class=3DMsoNormal><span =
+style=3D'font-size:10.0pt;font-family:"Arial","sans-serif";color:#222222'=
+><o:p>&nbsp;</o:p></span></p><p class=3DMsoNormal><b><span =
+style=3D'font-size:10.0pt;font-family:"Arial","sans-serif";color:#222222'=
+>Our API does not support online booking.<o:p></o:p></span></b></p><p =
+class=3DMsoNormal><span =
+style=3D'font-size:10.0pt;font-family:"Arial","sans-serif";color:#222222'=
+><br>&nbsp;&nbsp;&nbsp; c. Can we include our reservation ID in the =
+confirmation to you?<o:p></o:p></span></p><p class=3DMsoNormal><span =
+style=3D'font-size:10.0pt;font-family:"Arial","sans-serif";color:#222222'=
+><o:p>&nbsp;</o:p></span></p><p class=3DMsoNormal><b><span =
+style=3D'font-size:10.0pt;font-family:"Arial","sans-serif";color:#222222'=
+>Our API does not support online booking.<o:p></o:p></span></b></p><p =
+class=3DMsoNormal><span =
+style=3D'font-size:10.0pt;font-family:"Arial","sans-serif";color:#222222'=
+><br>3. When a consumer books a property a confirmation email will be =
+sent to them with the propety booking information. This will include the =
+property managers contact information. Can you answer the following =
+questions If the consumer were to call the PM and cancel the =
+booking:<br>&nbsp;&nbsp;&nbsp; a. If the PM canceled the booking on your =
+PMS and it is one of our bookings, can you call our API to cancel the =
+booking?<o:p></o:p></span></p><p class=3DMsoNormal><span =
+style=3D'font-size:10.0pt;font-family:"Arial","sans-serif";color:#222222'=
+><o:p>&nbsp;</o:p></span></p><p class=3DMsoNormal><b><span =
+style=3D'font-size:10.0pt;font-family:"Arial","sans-serif";color:#222222'=
+>No, this would have to be discovered by your system when you pull the =
+latest property information back.<o:p></o:p></span></b></p><p =
+class=3DMsoNormal><span =
+style=3D'font-size:10.0pt;font-family:"Arial","sans-serif";color:#222222'=
+><br>&nbsp;&nbsp;&nbsp; b. If you cannot call our API then how would we =
+know that the our booking was canceled on your =
+PMS?<o:p></o:p></span></p><p class=3DMsoNormal><span =
+style=3D'font-size:10.0pt;font-family:"Arial","sans-serif";color:#222222'=
+><o:p>&nbsp;</o:p></span></p><p class=3DMsoNormal =
+style=3D'margin-bottom:12.0pt'><b><span =
+style=3D'font-size:10.0pt;font-family:"Arial","sans-serif";color:#222222'=
+>By doing a catalog pull and pulling back the information on your =
+property.</span></b><span =
+style=3D'font-size:11.0pt;font-family:"Calibri","sans-serif";color:window=
+text'><o:p></o:p></span></p><p class=3DMsoNormal><span =
+style=3D'font-size:11.0pt;font-family:"Calibri","sans-serif";color:#1F497=
+D'><o:p>&nbsp;</o:p></span></p><p class=3DMsoNormal><span =
+style=3D'font-size:11.0pt;font-family:"Calibri","sans-serif";color:#1F497=
+D'><o:p>&nbsp;</o:p></span></p><p class=3DMsoNormal><span =
+style=3D'font-size:11.0pt;font-family:"Calibri","sans-serif";color:#1F497=
+D'><o:p>&nbsp;</o:p></span></p><p class=3DMsoNormal><span =
+style=3D'font-size:11.0pt;font-family:"Calibri","sans-serif";color:#1F497=
+D'><o:p>&nbsp;</o:p></span></p><p class=3DMsoNormal><span =
+style=3D'font-size:11.0pt;font-family:"Calibri","sans-serif";color:#1F497=
+D'><o:p>&nbsp;</o:p></span></p><p class=3DMsoNormal><span =
+style=3D'font-size:11.0pt;font-family:"Calibri","sans-serif";color:#1F497=
+D'><o:p>&nbsp;</o:p></span></p><div><p class=3DMsoNormal><span =
+style=3D'font-size:11.0pt;font-family:"Cambria","serif"'>Check out our =
+</span><b><span =
+style=3D'font-size:11.0pt;font-family:"Cambria","serif";color:#7030A0'><a=
+ =
+href=3D"http://www.youtube.com/watch?v=3DkFVSjnAyKC8&amp;feature=3Dyoutu.=
+be"><span style=3D'color:#7030A0'>Mobile App!</span></a></span></b><span =
+style=3D'font-size:11.0pt;font-family:"Cambria","serif"'><o:p></o:p></spa=
+n></p><p class=3DMsoNormal><span =
+style=3D'font-size:11.0pt;font-family:"Cambria","serif"'><o:p>&nbsp;</o:p=
+></span></p><p class=3DMsoNormal><span =
+style=3D'font-size:11.0pt;font-family:"Cambria","serif"'>Follow our =
+</span><b><span =
+style=3D'font-size:11.0pt;font-family:"Cambria","serif";color:#7030A0'><a=
+ =
+href=3D"http://rentalnews.realtimerental.com/vacation-rental-software-new=
+s-events/"><span style=3D'color:#7030A0'>BLOG</span></a></span></b><span =
+style=3D'font-size:11.0pt;font-family:"Cambria","serif"'>!<o:p></o:p></sp=
+an></p><p class=3DMsoNormal><span =
+style=3D'font-size:11.0pt;font-family:"Cambria","serif"'><o:p>&nbsp;</o:p=
+></span></p><p class=3DMsoNormal><span =
+style=3D'font-size:11.0pt;font-family:"Cambria","serif"'>Like us on =
+</span><b><span =
+style=3D'font-size:11.0pt;font-family:"Cambria","serif";color:#7030A0'><a=
+ href=3D"https://www.facebook.com/RealTimeRental#!/"><span =
+style=3D'color:#7030A0'>Facebook</span></a> </span></b><span =
+style=3D'font-size:11.0pt;font-family:"Cambria","serif"'>&nbsp;&nbsp;&nbs=
+p;<o:p></o:p></span></p><p class=3DMsoNormal><span =
+style=3D'font-size:11.0pt;font-family:"Cambria","serif"'><o:p>&nbsp;</o:p=
+></span></p><p class=3DMsoNormal><span =
+style=3D'font-size:11.0pt;font-family:"Cambria","serif"'>Check out our =
+Preferred Insurance Partner <b><a =
+href=3D"http://realtimerental.rentalguardian.com/"><span =
+style=3D'color:black'>Rental =
+Guardian</span></a></b>!<o:p></o:p></span></p><p =
+class=3DMsoNormal><i><span =
+style=3D'font-size:9.0pt;font-family:"Calibri","sans-serif";color:#1F497D=
+;background:white'><o:p>&nbsp;</o:p></span></i></p><p =
+class=3DMsoNormal><i><span =
+style=3D'font-size:9.0pt;font-family:"Cambria","serif";background:white'>=
+<o:p>&nbsp;</o:p></span></i></p><p class=3DMsoNormal><i><span =
+style=3D'font-size:9.0pt;font-family:"Cambria","serif";background:white'>=
+This e-mail message and any documents accompanying this e-mail =
+transmission may be confidential and/or privileged. Unless you are the =
+intended recipient, one of the addressees, or authorized to receive this =
+e-mail message by one of the addressees, you may not use, copy, print or =
+disclose the contents of this e-mail transmission (including the message =
+or any information&nbsp;contained in the message) to anyone. If you are =
+not the intended recipient of this e-mail message, you are hereby =
+notified that any disclosure, copying, distribution and/or the taking of =
+or refraining from taking of any action in reliance on the contents of =
+this e-mail information is strictly prohibited; and may result in legal =
+action being instituted against you. If you have&nbsp;received this =
+e-mail in error, please immediately advise the sender by reply, and =
+delete the message and any accompanying documents from your =
+system.&nbsp; All e-mails sent to or from this address will be received =
+or otherwise recorded in the Strategic Planning and Management, LLC's =
+e-mail system, and are subject to archival, monitoring or review by, =
+and/or disclosure to any third party as required by state or federal =
+law.&nbsp; Thank you.</span></i><span =
+style=3D'font-size:11.0pt;font-family:"Calibri","sans-serif";color:#1F497=
+D'><o:p></o:p></span></p></div><p class=3DMsoNormal><span =
+style=3D'font-size:11.0pt;font-family:"Calibri","sans-serif";color:#1F497=
+D'><o:p>&nbsp;</o:p></span></p><div><div =
+style=3D'border:none;border-top:solid #B5C4DF 1.0pt;padding:3.0pt 0in =
+0in 0in'><p class=3DMsoNormal><b><span =
+style=3D'font-size:10.0pt;font-family:"Tahoma","sans-serif";color:windowt=
+ext'>From:</span></b><span =
+style=3D'font-size:10.0pt;font-family:"Tahoma","sans-serif";color:windowt=
+ext'> Isaac Mahgrefteh [mailto:isaac@mybookingpal.com] <br><b>Sent:</b> =
+Thursday, November 07, 2013 9:24 PM<br><b>To:</b> =
+David<br><b>Subject:</b> Re: Real Time Rental technical =
+contact.<o:p></o:p></span></p></div></div><p =
+class=3DMsoNormal><o:p>&nbsp;</o:p></p><p class=3DMsoNormal =
+style=3D'margin-bottom:12.0pt'>Hi David, <br>Great, I look forward to =
+hearing from you. <br>Thank you, <br>Isaac <o:p></o:p></p><div><p =
+class=3DMsoNormal>On 11/7/2013 11:00 AM, David =
+wrote:<o:p></o:p></p></div><blockquote =
+style=3D'margin-top:5.0pt;margin-bottom:5.0pt'><p =
+class=3DMsoNormal><span =
+style=3D'font-size:11.0pt;font-family:"Calibri","sans-serif";color:#1F497=
+D'>Isaac,</span><o:p></o:p></p><p class=3DMsoNormal><span =
+style=3D'font-size:11.0pt;font-family:"Calibri","sans-serif";color:#1F497=
+D'>&nbsp;</span><o:p></o:p></p><p class=3DMsoNormal><span =
+style=3D'font-size:11.0pt;font-family:"Calibri","sans-serif";color:#1F497=
+D'>We have received the questions. We will be clarifying some points =
+with the programmer who designed the API and will get back to you =
+soon.</span><o:p></o:p></p><p class=3DMsoNormal><span =
+style=3D'font-size:11.0pt;font-family:"Calibri","sans-serif";color:#1F497=
+D'>&nbsp;</span><o:p></o:p></p><p class=3DMsoNormal><span =
+style=3D'font-size:11.0pt;font-family:"Calibri","sans-serif";color:#1F497=
+D'>&nbsp;</span><o:p></o:p></p><p class=3DMsoNormal><span =
+style=3D'font-size:11.0pt;font-family:"Calibri","sans-serif";color:#1F497=
+D'>&nbsp;</span><o:p></o:p></p><div><p class=3DMsoNormal><span =
+style=3D'font-size:11.0pt;font-family:"Cambria","serif"'>Check out our =
+</span><b><span =
+style=3D'font-size:11.0pt;font-family:"Cambria","serif";color:#7030A0'><a=
+ =
+href=3D"http://www.youtube.com/watch?v=3DkFVSjnAyKC8&amp;feature=3Dyoutu.=
+be"><span style=3D'color:#7030A0'>Mobile =
+App!</span></a></span></b><o:p></o:p></p><p class=3DMsoNormal><span =
+style=3D'font-size:11.0pt;font-family:"Cambria","serif"'>&nbsp;</span><o:=
+p></o:p></p><p class=3DMsoNormal><span =
+style=3D'font-size:11.0pt;font-family:"Cambria","serif"'>Follow our =
+</span><b><span =
+style=3D'font-size:11.0pt;font-family:"Cambria","serif";color:#7030A0'><a=
+ =
+href=3D"http://rentalnews.realtimerental.com/vacation-rental-software-new=
+s-events/"><span style=3D'color:#7030A0'>BLOG</span></a></span></b><span =
+style=3D'font-size:11.0pt;font-family:"Cambria","serif"'>!</span><o:p></o=
+:p></p><p class=3DMsoNormal><span =
+style=3D'font-size:11.0pt;font-family:"Cambria","serif"'>&nbsp;</span><o:=
+p></o:p></p><p class=3DMsoNormal><span =
+style=3D'font-size:11.0pt;font-family:"Cambria","serif"'>Like us on =
+</span><b><span =
+style=3D'font-size:11.0pt;font-family:"Cambria","serif";color:#7030A0'><a=
+ href=3D"https://www.facebook.com/RealTimeRental#%21/"><span =
+style=3D'color:#7030A0'>Facebook</span></a> </span></b><span =
+style=3D'font-size:11.0pt;font-family:"Cambria","serif"'>&nbsp;&nbsp;&nbs=
+p;</span><o:p></o:p></p><p class=3DMsoNormal><span =
+style=3D'font-size:11.0pt;font-family:"Cambria","serif"'>&nbsp;</span><o:=
+p></o:p></p><p class=3DMsoNormal><span =
+style=3D'font-size:11.0pt;font-family:"Cambria","serif"'>Check out our =
+Preferred Insurance Partner <b><a =
+href=3D"http://realtimerental.rentalguardian.com/"><span =
+style=3D'color:black'>Rental =
+Guardian</span></a></b>!</span><o:p></o:p></p><p =
+class=3DMsoNormal><i><span =
+style=3D'font-size:9.0pt;font-family:"Calibri","sans-serif";color:#1F497D=
+;background:white'>&nbsp;</span></i><o:p></o:p></p><p =
+class=3DMsoNormal><i><span =
+style=3D'font-size:9.0pt;font-family:"Cambria","serif";background:white'>=
+&nbsp;</span></i><o:p></o:p></p><p class=3DMsoNormal><i><span =
+style=3D'font-size:9.0pt;font-family:"Cambria","serif";background:white'>=
+This e-mail message and any documents accompanying this e-mail =
+transmission may be confidential and/or privileged. Unless you are the =
+intended recipient, one of the addressees, or authorized to receive this =
+e-mail message by one of the addressees, you may not use, copy, print or =
+disclose the contents of this e-mail transmission (including the message =
+or any information&nbsp;contained in the message) to anyone. If you are =
+not the intended recipient of this e-mail message, you are hereby =
+notified that any disclosure, copying, distribution and/or the taking of =
+or refraining from taking of any action in reliance on the contents of =
+this e-mail information is strictly prohibited; and may result in legal =
+action being instituted against you. If you have&nbsp;received this =
+e-mail in error, please immediately advise the sender by reply, and =
+delete the message and any accompanying documents from your =
+system.&nbsp; All e-mails sent to or from this address will be received =
+or otherwise recorded in the Strategic Planning and Management, LLC's =
+e-mail system, and are subject to archival, monitoring or review by, =
+and/or disclosure to any third party as required by state or federal =
+law.&nbsp; Thank you.</span></i><o:p></o:p></p></div><p =
+class=3DMsoNormal><span =
+style=3D'font-size:11.0pt;font-family:"Calibri","sans-serif";color:#1F497=
+D'>&nbsp;</span><o:p></o:p></p><div><div =
+style=3D'border:none;border-top:solid #B5C4DF 1.0pt;padding:3.0pt 0in =
+0in 0in'><p class=3DMsoNormal><b><span =
+style=3D'font-size:10.0pt;font-family:"Tahoma","sans-serif";color:windowt=
+ext'>From:</span></b><span =
+style=3D'font-size:10.0pt;font-family:"Tahoma","sans-serif";color:windowt=
+ext'> Isaac Mahgrefteh [<a =
+href=3D"mailto:isaac@mybookingpal.com">mailto:isaac@mybookingpal.com</a>]=
+ <br><b>Sent:</b> Wednesday, November 06, 2013 8:47 PM<br><b>To:</b> =
+David; <a =
+href=3D"mailto:mattr@realtimerental.com">mattr@realtimerental.com</a>; =
+<a =
+href=3D"mailto:jay.hatho@gmail.com">jay.hatho@gmail.com</a><br><b>Cc:</b>=
+ 'Joe'<br><b>Subject:</b> Re: Real Time Rental technical =
+contact.</span><o:p></o:p></p></div></div><p =
+class=3DMsoNormal>&nbsp;<o:p></o:p></p><p class=3DMsoNormal =
+style=3D'margin-bottom:12.0pt'>Hi David, Matt <br><br>Can&nbsp; you =
+please fill out a short questionnaire that the PMS intergration team has =
+developed.&nbsp;&nbsp; As for the meeting let us see how the =
+questionnaire&nbsp; goes and we can take if from there. <br><br><span =
+style=3D'font-size:10.0pt;font-family:"Arial","sans-serif";color:#222222'=
+>1. Your properties will appear in searches that are performed by =
+consumers on various sites. To insure that we are giving the consumers =
+the correct information please answer the following questions =
+:<br>&nbsp;&nbsp;&nbsp; a. Can we load availability calendar of the =
+property at the same time we load the properties?<br>&nbsp;&nbsp;&nbsp; =
+b. If the answer is yes to &quot;a&quot; then can we get delta changes =
+from the last time we did the upload, if no then how can we determine =
+what has changed from our last update?<br>&nbsp;&nbsp;&nbsp; c. If the =
+availability calendar is not available then how can we get the =
+availability for each property?<br>&nbsp;&nbsp;&nbsp; d. How can we =
+determine which property is capable of being booked online via credit =
+card?<br>&nbsp;&nbsp;&nbsp; e. In the property upload do you provide an =
+specials pricing, pricing windows, additional fees or any other pricing =
+that we would use to adjust from the standard rack rate?<br><br>2. When =
+a consumer selects a property from the search and wishes to book the =
+property we will request confirmation from the PMS. To insure that we =
+are booking the property correctly please answer the following =
+questions:<br>&nbsp;&nbsp;&nbsp; a. How do we confirm the availability =
+of a specific property?<br>&nbsp;&nbsp;&nbsp; b. Which API call do we =
+use to reserve or book the property?<br>&nbsp;&nbsp;&nbsp; c. Can we =
+include our reservation ID in the confirmation to you?<br><br><br>3. =
+When a consumer books a property a confirmation email will be sent to =
+them with the propety booking information. This will include the =
+property managers contact information. Can you answer the following =
+questions If the consumer were to call the PM and cancel the =
+booking:<br>&nbsp;&nbsp;&nbsp; a. If the PM canceled the booking on your =
+PMS and it is one of our bookings, can you call our API to cancel the =
+booking?<br>&nbsp;&nbsp;&nbsp; b. If you cannot call our API then how =
+would we know that the our booking was canceled on your PMS?</span> =
+<br><br>Thank you for your time and help.<em><b><span =
+style=3D'font-family:"Arial","sans-serif";color:#444444;font-style:normal=
+'>&nbsp; </span></b></em>If there is anything I can do for you, please, =
+don't hesitate to let me know<br><br>-Isaac <o:p></o:p></p><div><p =
+class=3DMsoNormal>On 11/6/2013 1:36 PM, David =
+wrote:<o:p></o:p></p></div><blockquote =
+style=3D'margin-top:5.0pt;margin-bottom:5.0pt'><pre>Isaac,<o:p></o:p></pr=
+e><pre>&nbsp;<o:p></o:p></pre><pre>Hello. Matt and I are happy to help =
+you with the API. Do you have any<o:p></o:p></pre><pre>questions =
+already?<o:p></o:p></pre><pre>&nbsp;<o:p></o:p></pre><pre>If you want, =
+we can have a conference phone call tomorrow (Thursday) at 1 =
+pm<o:p></o:p></pre><pre>EST to discuss the =
+API.<o:p></o:p></pre><pre>&nbsp;<o:p></o:p></pre><pre>Let us know and =
+feel free to email us at any =
+time.<o:p></o:p></pre><pre>&nbsp;<o:p></o:p></pre><pre>-David<o:p></o:p><=
+/pre><pre>&nbsp;<o:p></o:p></pre><pre>&nbsp;<o:p></o:p></pre><pre>Check =
+out our Mobile =
+App!<o:p></o:p></pre><pre>&nbsp;<o:p></o:p></pre><pre>Follow our =
+BLOG!<o:p></o:p></pre><pre>&nbsp;<o:p></o:p></pre><pre>Like us on =
+Facebook =
+&nbsp;&nbsp;&nbsp;<o:p></o:p></pre><pre>&nbsp;<o:p></o:p></pre><pre>Check=
+ out our Preferred Insurance Partner Rental =
+Guardian!<o:p></o:p></pre><pre>&nbsp;<o:p></o:p></pre><pre>&nbsp;<o:p></o=
+:p></pre><pre>This e-mail message and any documents accompanying this =
+e-mail transmission<o:p></o:p></pre><pre>may be confidential and/or =
+privileged. Unless you are the intended<o:p></o:p></pre><pre>recipient, =
+one of the addressees, or authorized to receive this =
+e-mail<o:p></o:p></pre><pre>message by one of the addressees, you may =
+not use, copy, print or disclose<o:p></o:p></pre><pre>the contents of =
+this e-mail transmission (including the message or =
+any<o:p></o:p></pre><pre>information&nbsp;contained in the message) to =
+anyone. If you are not the intended<o:p></o:p></pre><pre>recipient of =
+this e-mail message, you are hereby notified that =
+any<o:p></o:p></pre><pre>disclosure, copying, distribution and/or the =
+taking of or refraining from<o:p></o:p></pre><pre>taking of any action =
+in reliance on the contents of this e-mail =
+information<o:p></o:p></pre><pre>is strictly prohibited; and may result =
+in legal action being instituted<o:p></o:p></pre><pre>against you. If =
+you have&nbsp;received this e-mail in error, please =
+immediately<o:p></o:p></pre><pre>advise the sender by reply, and delete =
+the message and any accompanying<o:p></o:p></pre><pre>documents from =
+your system.&nbsp; All e-mails sent to or from this address =
+will<o:p></o:p></pre><pre>be received or otherwise recorded in the =
+Strategic Planning and Management,<o:p></o:p></pre><pre>LLC's e-mail =
+system, and are subject to archival, monitoring or review =
+by,<o:p></o:p></pre><pre>and/or disclosure to any third party as =
+required by state or federal law.&nbsp;<o:p></o:p></pre><pre>Thank =
+you.<o:p></o:p></pre><pre>&nbsp;<o:p></o:p></pre><pre>-----Original =
+Message-----<o:p></o:p></pre><pre>From: Isaac Mahgrefteh [<a =
+href=3D"mailto:isaac@mybookingpal.com">mailto:isaac@mybookingpal.com</a>]=
+ <o:p></o:p></pre><pre>Sent: Wednesday, November 06, 2013 1:34 =
+PM<o:p></o:p></pre><pre>To: Joe<o:p></o:p></pre><pre>Cc: <a =
+href=3D"mailto:mattr@realtimerental.com">mattr@realtimerental.com</a>; =
+'David Berroa'<o:p></o:p></pre><pre>Subject: Re: Real Time Rental =
+technical contact.<o:p></o:p></pre><pre>&nbsp;<o:p></o:p></pre><pre>Hi =
+Joe,<o:p></o:p></pre><pre>Thank you for the information.&nbsp; I look =
+forward to working with everyone.<o:p></o:p></pre><pre>Please let me =
+know if there is anything I can do to =
+help.<o:p></o:p></pre><pre>-Isaac<o:p></o:p></pre><pre>On 11/6/2013 =
+10:15 AM, Joe wrote:<o:p></o:p></pre><blockquote =
+style=3D'margin-top:5.0pt;margin-bottom:5.0pt'><pre>Isaac<o:p></o:p></pre=
+><pre>I forwarded this to both Matt and David. I asked them to reach =
+back =
+to<o:p></o:p></pre></blockquote><pre>you.<o:p></o:p></pre><blockquote =
+style=3D'margin-top:5.0pt;margin-bottom:5.0pt'><pre>&nbsp;<o:p></o:p></pr=
+e><pre>Their email address is above if you would like to communicate =
+directly<o:p></o:p></pre><pre>&nbsp;<o:p></o:p></pre><pre>Thanks<o:p></o:=
+p></pre><pre>&nbsp;<o:p></o:p></pre><pre>Joe<o:p></o:p></pre><pre>&nbsp;<=
+o:p></o:p></pre><pre>Joseph Testa =
+Co-Founder<o:p></o:p></pre><pre>&nbsp;&nbsp;&nbsp;&nbsp; =
+RealTimeRental<o:p></o:p></pre><pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+RealTimeRental.Com<o:p></o:p></pre><pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+<a =
+href=3D"mailto:Joe@realtimerental.com">Joe@realtimerental.com</a><o:p></o=
+:p></pre><pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 609-399-4800 ext =
+401<o:p></o:p></pre><pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a =
+href=3D"http://www.realtimerental.com">www.realtimerental.com</a><o:p></o=
+:p></pre><pre>&nbsp;<o:p></o:p></pre><pre>Check out our Mobile =
+App!<o:p></o:p></pre><pre>&nbsp;<o:p></o:p></pre><pre>&nbsp;&nbsp;&nbsp;&=
+nbsp;&nbsp;&nbsp; Find us on =
+Facebook<o:p></o:p></pre><pre>&nbsp;<o:p></o:p></pre><pre>&nbsp;&nbsp;&nb=
+sp;&nbsp;&nbsp; Follow our&nbsp;&nbsp; =
+BLOG<o:p></o:p></pre><pre>&nbsp;<o:p></o:p></pre><pre>&nbsp;<o:p></o:p></=
+pre><pre>This e-mail message and any documents accompanying this e-mail =
+<o:p></o:p></pre><pre>transmission may be confidential and/or =
+privileged. Unless you are the <o:p></o:p></pre><pre>intended recipient, =
+one of the addressees, or authorized to receive =
+<o:p></o:p></pre><pre>this e-mail message by one of the addressees, you =
+may not use, copy, <o:p></o:p></pre><pre>print or disclose the contents =
+of this e-mail transmission (including <o:p></o:p></pre><pre>the message =
+or any information contained in the message) to anyone. If =
+<o:p></o:p></pre><pre>you are not the intended recipient of this e-mail =
+message, you are <o:p></o:p></pre><pre>hereby notified that any =
+disclosure, copying, distribution and/or the =
+<o:p></o:p></pre><pre>taking of or refraining from taking of any action =
+in reliance on the <o:p></o:p></pre><pre>contents of this e-mail =
+information is strictly prohibited; and may <o:p></o:p></pre><pre>result =
+in legal action being instituted against you. If you have =
+<o:p></o:p></pre><pre>received this e-mail in error, please immediately =
+advise the sender by <o:p></o:p></pre><pre>reply, and delete the message =
+and any accompanying documents from your =
+<o:p></o:p></pre><pre>system.&nbsp; All e-mails sent to or from this =
+address will be received or <o:p></o:p></pre><pre>otherwise recorded in =
+the Strategic Planning and Management, LLC's =
+<o:p></o:p></pre><pre>e-mail system, and are subject to archival, =
+monitoring or review by, <o:p></o:p></pre><pre>and/or disclosure to any =
+third party as required by state or federal =
+<o:p></o:p></pre><pre>law.&nbsp; Thank =
+you.<o:p></o:p></pre><pre>&nbsp;<o:p></o:p></pre><pre>-----Original =
+Message-----<o:p></o:p></pre><pre>From: Isaac Mahgrefteh [<a =
+href=3D"mailto:isaac@mybookingpal.com">mailto:isaac@mybookingpal.com</a>]=
+<o:p></o:p></pre><pre>Sent: Wednesday, November 06, 2013 1:12 =
+PM<o:p></o:p></pre><pre>To: <a =
+href=3D"mailto:joe@realtimerental.com">joe@realtimerental.com</a><o:p></o=
+:p></pre><pre>Subject: Real Time Rental technical =
+contact.<o:p></o:p></pre><pre>&nbsp;<o:p></o:p></pre><pre>Hi =
+Joe,<o:p></o:p></pre><pre>&nbsp;<o:p></o:p></pre><pre>I am working with =
+our CEO, Alex Aydin to follow up regarding the =
+<o:p></o:p></pre><pre>integration of Real Time Rental's vacation rental =
+listings.<o:p></o:p></pre><pre>&nbsp;<o:p></o:p></pre><pre>I would very =
+much appreciate if you could direct me to the best person =
+<o:p></o:p></pre><pre>to speak with about Real Time Rental's Application =
+Programming <o:p></o:p></pre><pre>Interface or &quot;API&quot; so we can =
+begin working =
+together.<o:p></o:p></pre><pre>&nbsp;<o:p></o:p></pre><pre>Please feel =
+free to forward my email and copy me if that would be =
+<o:p></o:p></pre><pre>easier for =
+you.<o:p></o:p></pre><pre>&nbsp;<o:p></o:p></pre><pre>All the =
+best,<o:p></o:p></pre><pre>&nbsp;<o:p></o:p></pre><pre>Isaac<o:p></o:p></=
+pre><pre>&nbsp;<o:p></o:p></pre><pre>Isaac Mahgrefteh | BookingPal, =
+Inc.<o:p></o:p></pre><pre>O: 949-333-0724<o:p></o:p></pre><pre>Fax: =
+949-272-5553<o:p></o:p></pre><pre>E: <a =
+href=3D"mailto:isaac@mybookingpal.com">isaac@mybookingpal.com</a> | =
+Website: <a =
+href=3D"http://www.mybookingpal.com">www.mybookingpal.com</a><o:p></o:p><=
+/pre><pre>101 Pacifica, Suite 250, Irvine, CA =
+92618<o:p></o:p></pre><pre>&nbsp;<o:p></o:p></pre><pre>Confidentiality =
+Note:&nbsp; This e-mail, and any attachment to it, contains =
+<o:p></o:p></pre><pre>privileged and confidential information intended =
+only for the use of =
+<o:p></o:p></pre><pre>the<o:p></o:p></pre><pre>individual(s) or entity =
+named on the e-mail.&nbsp; If the reader of this =
+<o:p></o:p></pre><pre>e-mail is not the intended recipient, or the =
+employee or agent <o:p></o:p></pre><pre>responsible for delivering it to =
+the intended recipient, you are <o:p></o:p></pre><pre>hereby notified =
+that reading it is strictly prohibited.&nbsp; If you have =
+<o:p></o:p></pre><pre>received this e-mail in error, please immediately =
+return it to the <o:p></o:p></pre><pre>sender and delete it from your =
+system.&nbsp; Thank =
+you.<o:p></o:p></pre><pre>&nbsp;<o:p></o:p></pre><pre>&nbsp;<o:p></o:p></=
+pre><pre>&nbsp;<o:p></o:p></pre></blockquote><pre>&nbsp;<o:p></o:p></pre>=
+<pre>&nbsp;<o:p></o:p></pre><pre>&nbsp;<o:p></o:p></pre><pre>&nbsp;<o:p><=
+/o:p></pre></blockquote><p =
+class=3DMsoNormal>&nbsp;<o:p></o:p></p></blockquote><p =
+class=3DMsoNormal><o:p>&nbsp;</o:p></p></div></body></html>
+------=_NextPart_000_0001_01CEDC9F.C7750990--
+
+
+

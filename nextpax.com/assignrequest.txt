@@ -1,0 +1,60 @@
+<?xml version="1.0" ?>
+<TravelMessage VersionID="1.8N">
+  <Control Language="NL" Test="ja">
+    <SenderSessionID>mySession01</SenderSessionID>
+    <ReceiverSessionID>hisSessionID</ReceiverSessionID>
+    <Date>2013-12-06</Date>
+    <Time Reliability="zeker">02:57:25</Time>
+    <MessageSequence>1</MessageSequence>
+    <SenderID>MYB112</SenderID>
+    <ReceiverID>NPS001</ReceiverID>
+    <RequestID>AssignRequest</RequestID>
+    <ResponseID>AssignResponse</ResponseID>
+  </Control>
+  <TRequest>
+    <AssignRequest>
+      <PaxDetails>
+        <PaxDescription>
+          <PaxID>P01</PaxID>
+          <Initials>H</Initials>
+          <Infix>de</Infix>
+          <Name>Man</Name>
+          <Gender>m</Gender>
+        </PaxDescription>
+        <PaxDescription>
+          <PaxID>P02</PaxID>
+          <Initials>V</Initials>
+          <Infix>de</Infix>
+          <Name>Man</Name>
+          <Gender>v</Gender>
+        </PaxDescription>
+        <HomeStay>
+          <Name>J. Jansen</Name>
+          <TelHome>0123-234567</TelHome>
+        </HomeStay>
+      </PaxDetails>
+      <PaxAssignment>
+        <TransportAssignment>
+          <TransportID>T01</TransportID>
+          <ClassID>C01</ClassID>
+          <PaxID>P01</PaxID>
+          <PaxID>P02</PaxID>
+        </TransportAssignment>
+        <AccoAssignment>
+          <AccommodationID>A71289</AccommodationID>
+          <ArrivalDate>2015-08-24</ArrivalDate>
+          <Duration DurationType="nachten">6</Duration>
+          <UnitAssignment>
+            <UnitID>U01</UnitID>
+            <Quantity>1</Quantity>
+            <RoomAssignment>
+              <Sequence>1</Sequence>
+              <PaxID>P01</PaxID>
+              <PaxID>P02</PaxID>
+            </RoomAssignment>
+          </UnitAssignment>
+        </AccoAssignment>
+      </PaxAssignment>
+    </AssignRequest>
+  </TRequest>
+</TravelMessage>

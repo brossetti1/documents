@@ -1,0 +1,424 @@
+<definitions name='searchProperty' targetNamespace='http://action.org/' xmlns='http://schemas.xmlsoap.org/wsdl/' xmlns:soap='http://schemas.xmlsoap.org/wsdl/soap/' xmlns:tns='http://action.org/' xmlns:xsd='http://www.w3.org/2001/XMLSchema'>
+ <types>
+  <xs:schema targetNamespace='http://action.org/' version='1.0' xmlns:tns='http://action.org/' xmlns:xs='http://www.w3.org/2001/XMLSchema'>
+   <xs:element name='Exception' type='tns:Exception'/>
+   <xs:element name='checkAvailability' type='tns:checkAvailability'/>
+   <xs:element name='checkAvailabilityAndRates' type='tns:checkAvailabilityAndRates'/>
+   <xs:element name='checkAvailabilityAndRatesResponse' type='tns:checkAvailabilityAndRatesResponse'/>
+   <xs:element name='checkAvailabilityResponse' type='tns:checkAvailabilityResponse'/>
+   <xs:element name='checkAvailabilityV2' type='tns:checkAvailabilityV2'/>
+   <xs:element name='checkAvailabilityV2Response' type='tns:checkAvailabilityV2Response'/>
+   <xs:element name='justMakeReservation' type='tns:justMakeReservation'/>
+   <xs:element name='justMakeReservationResponse' type='tns:justMakeReservationResponse'/>
+   <xs:element name='login' type='tns:login'/>
+   <xs:element name='loginResponse' type='tns:loginResponse'/>
+   <xs:element name='logout' type='tns:logout'/>
+   <xs:element name='logoutResponse' type='tns:logoutResponse'/>
+   <xs:element name='makeReservation' type='tns:makeReservation'/>
+   <xs:element name='makeReservationResponse' type='tns:makeReservationResponse'/>
+   <xs:element name='recoverPassword' type='tns:recoverPassword'/>
+   <xs:element name='recoverPasswordResponse' type='tns:recoverPasswordResponse'/>
+   <xs:element name='retrieveCustomerPercentageDiscount' type='tns:retrieveCustomerPercentageDiscount'/>
+   <xs:element name='retrieveCustomerPercentageDiscountResponse' type='tns:retrieveCustomerPercentageDiscountResponse'/>
+   <xs:element name='retrieveRates' type='tns:retrieveRates'/>
+   <xs:element name='retrieveRatesResponse' type='tns:retrieveRatesResponse'/>
+   <xs:element name='searchProperty' type='tns:searchProperty'/>
+   <xs:element name='searchPropertyResponse' type='tns:searchPropertyResponse'/>
+   <xs:complexType name='login'>
+    <xs:sequence>
+     <xs:element minOccurs='0' name='username' type='xs:string'/>
+     <xs:element minOccurs='0' name='password' type='xs:string'/>
+     <xs:element minOccurs='0' name='type' type='xs:string'/>
+    </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name='loginResponse'>
+    <xs:sequence>
+     <xs:element minOccurs='0' name='return' type='xs:string'/>
+    </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name='logout'>
+    <xs:sequence/>
+   </xs:complexType>
+   <xs:complexType name='logoutResponse'>
+    <xs:sequence>
+     <xs:element name='return' type='xs:boolean'/>
+    </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name='recoverPassword'>
+    <xs:sequence>
+     <xs:element minOccurs='0' name='customerNumber' type='xs:string'/>
+     <xs:element minOccurs='0' name='email' type='xs:string'/>
+    </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name='recoverPasswordResponse'>
+    <xs:sequence>
+     <xs:element minOccurs='0' name='return' type='xs:string'/>
+    </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name='retrieveRates'>
+    <xs:sequence>
+     <xs:element minOccurs='0' name='unitId' type='xs:long'/>
+    </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name='retrieveRatesResponse'>
+    <xs:sequence>
+     <xs:element minOccurs='0' name='return' type='xs:string'/>
+    </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name='searchProperty'>
+    <xs:sequence>
+     <xs:element minOccurs='0' name='countryName' type='xs:string'/>
+     <xs:element minOccurs='0' name='cityName' type='xs:string'/>
+     <xs:element minOccurs='0' name='propertyType' type='xs:string'/>
+     <xs:element minOccurs='0' name='sleeps' type='xs:int'/>
+     <xs:element minOccurs='0' name='propertyName' type='xs:string'/>
+     <xs:element minOccurs='0' name='propertyId' type='xs:int'/>
+     <xs:element minOccurs='0' name='longitude' type='xs:string'/>
+     <xs:element minOccurs='0' name='latitude' type='xs:string'/>
+     <xs:element minOccurs='0' name='excludePropertyId' type='xs:string'/>
+    </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name='searchPropertyResponse'>
+    <xs:sequence>
+     <xs:element minOccurs='0' name='return' type='xs:string'/>
+    </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name='Exception'>
+    <xs:sequence>
+     <xs:element minOccurs='0' name='message' type='xs:string'/>
+    </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name='retrieveCustomerPercentageDiscount'>
+    <xs:sequence>
+     <xs:element minOccurs='0' name='customerId' type='xs:long'/>
+    </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name='retrieveCustomerPercentageDiscountResponse'>
+    <xs:sequence>
+     <xs:element name='return' type='xs:double'/>
+    </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name='checkAvailabilityAndRates'>
+    <xs:sequence>
+     <xs:element minOccurs='0' name='checkinDate' type='xs:string'/>
+     <xs:element minOccurs='0' name='checkoutDate' type='xs:string'/>
+     <xs:element minOccurs='0' name='sleeps' type='xs:int'/>
+     <xs:element minOccurs='0' name='propertyId' type='xs:long'/>
+     <xs:element minOccurs='0' name='rates' type='xs:string'/>
+    </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name='checkAvailabilityAndRatesResponse'>
+    <xs:sequence>
+     <xs:element minOccurs='0' name='return' type='xs:string'/>
+    </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name='checkAvailabilityV2'>
+    <xs:sequence>
+     <xs:element minOccurs='0' name='checkinDate' type='xs:string'/>
+     <xs:element minOccurs='0' name='checkoutDate' type='xs:string'/>
+     <xs:element minOccurs='0' name='sleeps' type='xs:int'/>
+     <xs:element minOccurs='0' name='propertyId' type='xs:long'/>
+     <xs:element minOccurs='0' name='source' type='xs:string'/>
+    </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name='checkAvailabilityV2Response'>
+    <xs:sequence>
+     <xs:element minOccurs='0' name='return' type='xs:string'/>
+    </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name='justMakeReservation'>
+    <xs:sequence>
+     <xs:element name='unitId' type='xs:long'/>
+     <xs:element minOccurs='0' name='unitName' type='xs:string'/>
+     <xs:element minOccurs='0' name='propertyName' type='xs:string'/>
+     <xs:element name='adults' type='xs:int'/>
+     <xs:element name='children' type='xs:int'/>
+     <xs:element minOccurs='0' name='unitRate' type='xs:string'/>
+     <xs:element minOccurs='0' name='discount' type='xs:string'/>
+     <xs:element minOccurs='0' name='meetAndGreet' type='xs:string'/>
+     <xs:element minOccurs='0' name='checkinDate' type='xs:string'/>
+     <xs:element minOccurs='0' name='checkoutDate' type='xs:string'/>
+     <xs:element name='noOfNights' type='xs:long'/>
+     <xs:element name='customerId' type='xs:long'/>
+    </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name='justMakeReservationResponse'>
+    <xs:sequence>
+     <xs:element minOccurs='0' name='return' type='xs:string'/>
+    </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name='checkAvailability'>
+    <xs:sequence>
+     <xs:element minOccurs='0' name='checkinDate' type='xs:string'/>
+     <xs:element minOccurs='0' name='checkoutDate' type='xs:string'/>
+     <xs:element minOccurs='0' name='sleeps' type='xs:int'/>
+     <xs:element minOccurs='0' name='propertyId' type='xs:long'/>
+    </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name='checkAvailabilityResponse'>
+    <xs:sequence>
+     <xs:element minOccurs='0' name='return' type='xs:string'/>
+    </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name='makeReservation'>
+    <xs:sequence>
+     <xs:element name='unitId' type='xs:long'/>
+     <xs:element minOccurs='0' name='unitName' type='xs:string'/>
+     <xs:element minOccurs='0' name='propertyName' type='xs:string'/>
+     <xs:element name='adults' type='xs:int'/>
+     <xs:element name='children' type='xs:int'/>
+     <xs:element minOccurs='0' name='unitRate' type='xs:string'/>
+     <xs:element minOccurs='0' name='checkinDate' type='xs:string'/>
+     <xs:element minOccurs='0' name='checkoutDate' type='xs:string'/>
+     <xs:element name='noOfNights' type='xs:long'/>
+     <xs:element name='customerId' type='xs:long'/>
+     <xs:element minOccurs='0' name='firstName' type='xs:string'/>
+     <xs:element minOccurs='0' name='lastName' type='xs:string'/>
+     <xs:element minOccurs='0' name='email' type='xs:string'/>
+     <xs:element minOccurs='0' name='countryName' type='xs:string'/>
+     <xs:element minOccurs='0' name='cityName' type='xs:string'/>
+     <xs:element minOccurs='0' name='telephoneNumber1' type='xs:string'/>
+     <xs:element minOccurs='0' name='telephoneNumber2' type='xs:string'/>
+     <xs:element minOccurs='0' name='street' type='xs:string'/>
+     <xs:element minOccurs='0' name='state' type='xs:string'/>
+     <xs:element minOccurs='0' name='postalCode' type='xs:string'/>
+     <xs:element minOccurs='0' name='accountNumber' type='xs:string'/>
+     <xs:element minOccurs='0' name='cardType' type='xs:string'/>
+     <xs:element minOccurs='0' name='expireMonth' type='xs:string'/>
+     <xs:element minOccurs='0' name='expireYear' type='xs:string'/>
+    </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name='makeReservationResponse'>
+    <xs:sequence>
+     <xs:element minOccurs='0' name='return' type='xs:string'/>
+    </xs:sequence>
+   </xs:complexType>
+  </xs:schema>
+ </types>
+ <message name='searchProperty_retrieveCustomerPercentageDiscountResponse'>
+  <part element='tns:retrieveCustomerPercentageDiscountResponse' name='retrieveCustomerPercentageDiscountResponse'></part>
+ </message>
+ <message name='searchProperty_retrieveRatesResponse'>
+  <part element='tns:retrieveRatesResponse' name='retrieveRatesResponse'></part>
+ </message>
+ <message name='searchProperty_logout'>
+  <part element='tns:logout' name='logout'></part>
+ </message>
+ <message name='searchProperty_login'>
+  <part element='tns:login' name='login'></part>
+ </message>
+ <message name='searchProperty_loginResponse'>
+  <part element='tns:loginResponse' name='loginResponse'></part>
+ </message>
+ <message name='searchProperty_justMakeReservationResponse'>
+  <part element='tns:justMakeReservationResponse' name='justMakeReservationResponse'></part>
+ </message>
+ <message name='searchProperty_recoverPassword'>
+  <part element='tns:recoverPassword' name='recoverPassword'></part>
+ </message>
+ <message name='searchProperty_justMakeReservation'>
+  <part element='tns:justMakeReservation' name='justMakeReservation'></part>
+ </message>
+ <message name='searchProperty_makeReservation'>
+  <part element='tns:makeReservation' name='makeReservation'></part>
+ </message>
+ <message name='searchProperty_searchPropertyResponse'>
+  <part element='tns:searchPropertyResponse' name='searchPropertyResponse'></part>
+ </message>
+ <message name='searchProperty_checkAvailability'>
+  <part element='tns:checkAvailability' name='checkAvailability'></part>
+ </message>
+ <message name='searchProperty_checkAvailabilityV2Response'>
+  <part element='tns:checkAvailabilityV2Response' name='checkAvailabilityV2Response'></part>
+ </message>
+ <message name='Exception'>
+  <part element='tns:Exception' name='Exception'></part>
+ </message>
+ <message name='searchProperty_checkAvailabilityAndRatesResponse'>
+  <part element='tns:checkAvailabilityAndRatesResponse' name='checkAvailabilityAndRatesResponse'></part>
+ </message>
+ <message name='searchProperty_checkAvailabilityAndRates'>
+  <part element='tns:checkAvailabilityAndRates' name='checkAvailabilityAndRates'></part>
+ </message>
+ <message name='searchProperty_searchProperty'>
+  <part element='tns:searchProperty' name='searchProperty'></part>
+ </message>
+ <message name='searchProperty_retrieveRates'>
+  <part element='tns:retrieveRates' name='retrieveRates'></part>
+ </message>
+ <message name='searchProperty_makeReservationResponse'>
+  <part element='tns:makeReservationResponse' name='makeReservationResponse'></part>
+ </message>
+ <message name='searchProperty_logoutResponse'>
+  <part element='tns:logoutResponse' name='logoutResponse'></part>
+ </message>
+ <message name='searchProperty_retrieveCustomerPercentageDiscount'>
+  <part element='tns:retrieveCustomerPercentageDiscount' name='retrieveCustomerPercentageDiscount'></part>
+ </message>
+ <message name='searchProperty_recoverPasswordResponse'>
+  <part element='tns:recoverPasswordResponse' name='recoverPasswordResponse'></part>
+ </message>
+ <message name='searchProperty_checkAvailabilityResponse'>
+  <part element='tns:checkAvailabilityResponse' name='checkAvailabilityResponse'></part>
+ </message>
+ <message name='searchProperty_checkAvailabilityV2'>
+  <part element='tns:checkAvailabilityV2' name='checkAvailabilityV2'></part>
+ </message>
+ <portType name='searchProperty'>
+  <operation name='checkAvailability' parameterOrder='checkAvailability'>
+   <input message='tns:searchProperty_checkAvailability'></input>
+   <output message='tns:searchProperty_checkAvailabilityResponse'></output>
+  </operation>
+  <operation name='checkAvailabilityAndRates' parameterOrder='checkAvailabilityAndRates'>
+   <input message='tns:searchProperty_checkAvailabilityAndRates'></input>
+   <output message='tns:searchProperty_checkAvailabilityAndRatesResponse'></output>
+  </operation>
+  <operation name='checkAvailabilityV2' parameterOrder='checkAvailabilityV2'>
+   <input message='tns:searchProperty_checkAvailabilityV2'></input>
+   <output message='tns:searchProperty_checkAvailabilityV2Response'></output>
+  </operation>
+  <operation name='justMakeReservation' parameterOrder='justMakeReservation'>
+   <input message='tns:searchProperty_justMakeReservation'></input>
+   <output message='tns:searchProperty_justMakeReservationResponse'></output>
+  </operation>
+  <operation name='login' parameterOrder='login'>
+   <input message='tns:searchProperty_login'></input>
+   <output message='tns:searchProperty_loginResponse'></output>
+  </operation>
+  <operation name='logout' parameterOrder='logout'>
+   <input message='tns:searchProperty_logout'></input>
+   <output message='tns:searchProperty_logoutResponse'></output>
+  </operation>
+  <operation name='makeReservation' parameterOrder='makeReservation'>
+   <input message='tns:searchProperty_makeReservation'></input>
+   <output message='tns:searchProperty_makeReservationResponse'></output>
+  </operation>
+  <operation name='recoverPassword' parameterOrder='recoverPassword'>
+   <input message='tns:searchProperty_recoverPassword'></input>
+   <output message='tns:searchProperty_recoverPasswordResponse'></output>
+  </operation>
+  <operation name='retrieveCustomerPercentageDiscount' parameterOrder='retrieveCustomerPercentageDiscount'>
+   <input message='tns:searchProperty_retrieveCustomerPercentageDiscount'></input>
+   <output message='tns:searchProperty_retrieveCustomerPercentageDiscountResponse'></output>
+  </operation>
+  <operation name='retrieveRates' parameterOrder='retrieveRates'>
+   <input message='tns:searchProperty_retrieveRates'></input>
+   <output message='tns:searchProperty_retrieveRatesResponse'></output>
+  </operation>
+  <operation name='searchProperty' parameterOrder='searchProperty'>
+   <input message='tns:searchProperty_searchProperty'></input>
+   <output message='tns:searchProperty_searchPropertyResponse'></output>
+   <fault message='tns:Exception' name='Exception'></fault>
+  </operation>
+ </portType>
+ <binding name='searchPropertyBinding' type='tns:searchProperty'>
+  <soap:binding style='document' transport='http://schemas.xmlsoap.org/soap/http'/>
+  <operation name='checkAvailability'>
+   <soap:operation soapAction=''/>
+   <input>
+    <soap:body use='literal'/>
+   </input>
+   <output>
+    <soap:body use='literal'/>
+   </output>
+  </operation>
+  <operation name='checkAvailabilityAndRates'>
+   <soap:operation soapAction=''/>
+   <input>
+    <soap:body use='literal'/>
+   </input>
+   <output>
+    <soap:body use='literal'/>
+   </output>
+  </operation>
+  <operation name='checkAvailabilityV2'>
+   <soap:operation soapAction=''/>
+   <input>
+    <soap:body use='literal'/>
+   </input>
+   <output>
+    <soap:body use='literal'/>
+   </output>
+  </operation>
+  <operation name='justMakeReservation'>
+   <soap:operation soapAction=''/>
+   <input>
+    <soap:body use='literal'/>
+   </input>
+   <output>
+    <soap:body use='literal'/>
+   </output>
+  </operation>
+  <operation name='login'>
+   <soap:operation soapAction=''/>
+   <input>
+    <soap:body use='literal'/>
+   </input>
+   <output>
+    <soap:body use='literal'/>
+   </output>
+  </operation>
+  <operation name='logout'>
+   <soap:operation soapAction=''/>
+   <input>
+    <soap:body use='literal'/>
+   </input>
+   <output>
+    <soap:body use='literal'/>
+   </output>
+  </operation>
+  <operation name='makeReservation'>
+   <soap:operation soapAction=''/>
+   <input>
+    <soap:body use='literal'/>
+   </input>
+   <output>
+    <soap:body use='literal'/>
+   </output>
+  </operation>
+  <operation name='recoverPassword'>
+   <soap:operation soapAction=''/>
+   <input>
+    <soap:body use='literal'/>
+   </input>
+   <output>
+    <soap:body use='literal'/>
+   </output>
+  </operation>
+  <operation name='retrieveCustomerPercentageDiscount'>
+   <soap:operation soapAction=''/>
+   <input>
+    <soap:body use='literal'/>
+   </input>
+   <output>
+    <soap:body use='literal'/>
+   </output>
+  </operation>
+  <operation name='retrieveRates'>
+   <soap:operation soapAction=''/>
+   <input>
+    <soap:body use='literal'/>
+   </input>
+   <output>
+    <soap:body use='literal'/>
+   </output>
+  </operation>
+  <operation name='searchProperty'>
+   <soap:operation soapAction=''/>
+   <input>
+    <soap:body use='literal'/>
+   </input>
+   <output>
+    <soap:body use='literal'/>
+   </output>
+   <fault name='Exception'>
+    <soap:fault name='Exception' use='literal'/>
+   </fault>
+  </operation>
+ </binding>
+ <service name='searchProperty'>
+  <port binding='tns:searchPropertyBinding' name='searchPropertyPort'>
+   <soap:address location='${bind-address}/PMSWebservices-PMSWebservices/SearchService'/>
+  </port>
+ </service>
+</definitions>

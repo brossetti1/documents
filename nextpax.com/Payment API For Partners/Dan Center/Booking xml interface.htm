@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<!-- saved from url=(0049)https://www.dancenter.com/pubweb/booking/xml/docs -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Booking xml interface</title>
+<style type="text/css">
+body{font-family:Arial,Sans-serif;font-size:10pt}h1,h2,h3{font-size:100%;font-style:normal;font-weight:bold;padding:0;margin:0}h1{font-size:125%;margin-top:1em}h2{font-size:125%;margin-top:2em}h3{margin-top:1em}div.body{margin-left:1cm}p,pre{margin:0 0 1em 0;padding:0}tt{white-space:nowrap}dt{font-style:italic;margin-top:1em}hr.Example{margin:1em 0}h2.Example{margin-top:0}pre.Example{white-space:pre-wrap;margin-left:1cm}p.ExampleComment{margin-left:1cm}#news{float:right;padding:4px;border:1px solid green;border-radius:6px;-moz-border-radius:6px;-webkit-border-radius:6px;background-color:#efe;margin-left:10px;margin-bottom:5px;max-width:250px}#news div.news-item{margin-top:0.5em}
+</style>
+</head>
+<body>
+<div id="news">
+<div style="font-weight: bold;">Latest changes:</div>
+<div class="news-item">
+2010-01-27: Hostname is changed from www.dancenter.com to b2b.dancenter.com
+</div>
+<div class="news-item">
+2009-02-26: product key is extended with <i>seq</i>, so the 4 attributes
+<i>group</i>, <i>type</i>, <i>id</i> and <i>seq</i>
+specifies the product.
+</div>
+</div>
+<h1>URL and authentication</h1>
+<div class="body">
+<p>
+The URL is <tt>https://b2b.dancenter.com/pubweb/booking/xml/partner/5</tt><br>
+All requests must be sent using https. Requests received using http are rejected.
+</p>
+<p>
+You must supply username and password using the "basic authentication" method.
+The username is your partner number and is the same as the number in the URL.
+</p>
+<p>
+All requests must supply an xml query. The root element of the xml document determines the action.
+The content-type of the request must be application/xml or text/xml. The http method must be "POST".
+</p>
+<p>
+Low-level errors such as authentication failure are reported using http status responses.
+All other errors (such as invalid xml) are reported using an xml response.
+</p>
+<h3>curl example:</h3>
+<p>To send a request using the 'curl' unix utility, use the command below.
+The request xml is assumed to be stored in a file named "request.xml", the partner-number to be
+5 and the password to be "qwerty":<br>
+<tt>curl --silent --basic --user 5:qwerty \<br>
+&nbsp;&nbsp; --data-binary @request.xml --header "Content-type: application/xml" \<br>
+&nbsp;&nbsp; https://b2b.dancenter.com/pubweb/booking/xml/partner/5</tt>
+</p>
+</div>
+<h1>The request document</h1>
+<div class="body">
+<p>
+The xml request document must be well-formed (i.e. no syntax errors) and <i>it must be valid</i>
+(i.e. it must be correct when validated using the xml schema).
+If it fails validation, the request is rejected. All xml documents use xml schemas instead of DTDs as schemas
+provides a much more powerful grammar.
+A usable introduction to xml schemas is the book by
+<a href="http://www.amazon.co.uk/dp/0596002521">Eric van der Vlist</a>.
+</p>
+<p>
+All requests must use the xml schema:<br>
+&nbsp;&nbsp;
+<tt>https://b2b.dancenter.com/pubweb/booking/xml/schema/Request.xsd</tt>
+&nbsp;&nbsp;
+(<a href="https://b2b.dancenter.com/pubweb/booking/xml/schema/Request.xsd?forceTextPlain=1">show in browser</a>)
+<br>
+All responses use the xml schema:<br>
+&nbsp;&nbsp;
+<tt>https://b2b.dancenter.com/pubweb/booking/xml/schema/Response.xsd</tt>
+&nbsp;&nbsp;
+(<a href="https://b2b.dancenter.com/pubweb/booking/xml/schema/Response.xsd?forceTextPlain=1">show in browser</a>)
+<br>
+Both schemas include a
+<a href="https://b2b.dancenter.com/pubweb/booking/xml/schema/Response.xsd?forceTextPlain=1">sub-schema</a>
+with definition of basic types.<br>
+The links have a parameter to enable most browsers to display the contents. The parameter must not be included
+in the xml request.
+</p>
+<p>
+All requests must supply these two attributes in the root element as specification of the
+xml schema:
+<tt>xsi:noNamespaceSchemaLocation='https://b2b.dancenter.com/pubweb/booking/xml/schema/Request.xsd'<br>
+xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'</tt><br>
+Request documents must not use namespaces.
+</p>
+<p>
+Using xml schemas enables you to perform a check of the requests before you send them to DanCenter
+and to catch a lot of errors before DanCenter process the requests. Assuming you have the java version of
+<a href="http://xerces.apache.org/">Xerces</a> installed, the documents can manually be checked using:&nbsp;
+<tt>java -cp xercesImpl.jar:xercesSamples.jar dom.Counter -v -n -s -f -va -dv request.xml</tt><br>
+Inside a java application you can check them by using a validating xml parser.
+</p>
+<p>Country codes are 2 letter <a href="http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO 3166</a>
+(e.g. NO for Norway),
+currency codes are 3 letter <a href="http://en.wikipedia.org/wiki/ISO_4217">ISO 4217</a>
+(e.g. NOK for Norwegian krone),
+and language codes 2 letter <a href="http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes">ISO 639-1</a>
+(e.g. DA for Danish).
+All codes must be specified using <i>uppercase letters.</i>
+</p>
+<h3>Character set</h3>
+<p>All requests must be sent using the UTF-8 character set.
+Only a subset (32-127 and 192-255) is allowed as the booking information is stored using EBCDIC (ccsid 277).
+Note that the subset does not include the Windows non-standard characters (128-159) nor a euro-sign.
+If the request contains characters outside these ranges, the xml request fails validation.
+</p>
+<p>Most php installations use Iso-Latin-1 and since php doesn't support multiple character sets very well,
+the best method to avoid problems when creating the xml request manually
+(using e.g. print statements) is to encode all 8-bit characters:<br>
+<tt>
+$a = "Köln, &lt;&amp;&gt;";<br>
+$b = preg_replace("/([^\x20-\x7e])/e", '"&amp;#".ord("\\1").";"', htmlspecialchars($a));<br>
+print $b; // prints "K&amp;#246;ln, &amp;lt;&amp;amp;&amp;gt;"
+</tt>
+</p>
+</div>
+<h3>Obscure errors</h3>
+<div class="body">
+<p>Some error messages are obscure because the submitted xml is validated using a standard xml parser.</p>
+<dl>
+<dt>The processing instruction target matching "[xX][mM][lL]" is not allowed.</dt>
+<dd>The submitted document contains spaces/newlines before the &lt;?xml...&gt; tag.
+The xml standard forbids such whitespace.
+</dd>
+<dt>cvc-complex-type.2.4.d: Invalid content was found starting with element '{rental-period}'.
+No child element is expected at this point.
+</dt>
+<dd>You have specified too many &lt;rental-period&gt; elements.</dd>
+</dl>
+</div>
+<h1>Example requests</h1>
+<div class="body">
+<p>
+The examples below are included as illustrative material only.
+It is the xml schemas which defines which requests/responses are valid.
+</p>
+
+
+<hr class="Example">
+
+
+<h2 class="Example">Searching for available houses, customer country = 'DE'</h2>
+<pre class="Example">&lt;?xml version='1.0' encoding='UTF-8' ?&gt;
+&lt;house-search xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:noNamespaceSchemaLocation="https://b2b.dancenter.com/pubweb/booking/xml/schema/Request.xsd"&gt;
+   &lt;customer-info country="DE" max-persons="6"/&gt;
+   &lt;rental-period from="2009-12-05" to="2009-12-12"/&gt;
+   &lt;house-list&gt;
+      &lt;!-- OBS: max 50 house-info entries --&gt;
+      &lt;house-ref number="30032"/&gt;
+      &lt;house-ref number="80667"/&gt;
+      &lt;house-ref number="30725"/&gt;
+      &lt;house-ref number="33611"/&gt;
+      &lt;house-ref number="23787"/&gt;
+   &lt;/house-list&gt;
+&lt;/house-search&gt;</pre>
+<h3>response:</h3>
+<pre class="Example">&lt;?xml version='1.0' encoding='UTF-8' ?&gt;
+&lt;house-search xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:noNamespaceSchemaLocation="https://b2b.dancenter.com/pubweb/booking/xml/schema/Response.xsd"&gt;
+   &lt;rental-period from="2008-12-05" to="2008-12-12"/&gt;
+   &lt;house-list currency="EUR"&gt;
+      &lt;house-info number="30032" price="460.00"/&gt;
+      &lt;house-info number="80667" price="765.00"/&gt;
+      &lt;house-info number="30725" price="580.00"/&gt;
+      &lt;house-info number="33611" price="1199.00"/&gt;
+      &lt;house-info number="23787" price="605.00"/&gt;
+   &lt;/house-list&gt;
+&lt;/house-search&gt;</pre>
+
+
+<hr class="Example">
+
+
+<h2 class="Example">Searching for available houses, different country</h2>
+<pre class="Example">&lt;?xml version='1.0' encoding='UTF-8' ?&gt;
+&lt;house-search xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:noNamespaceSchemaLocation="https://b2b.dancenter.com/pubweb/booking/xml/schema/Request.xsd"&gt;
+   &lt;customer-info country="DK" max-persons="6"/&gt;
+   &lt;rental-period from="2009-12-05" to="2009-12-12"/&gt;
+   &lt;house-list&gt;
+      &lt;house-ref number="30032"/&gt;
+      &lt;house-ref number="80667"/&gt;
+      &lt;house-ref number="30725"/&gt;
+      &lt;house-ref number="33611"/&gt;
+      &lt;house-ref number="23787"/&gt;
+      &lt;!-- OBS: max 50 house-info entries --&gt;
+   &lt;/house-list&gt;
+&lt;/house-search&gt;</pre>
+<h3>response:</h3>
+<pre class="Example">&lt;?xml version='1.0' encoding='UTF-8' ?&gt;
+&lt;house-search xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:noNamespaceSchemaLocation="https://b2b.dancenter.com/pubweb/booking/xml/schema/Response.xsd"&gt;
+   &lt;rental-period from="2009-12-05" to="2009-12-12"/&gt;
+   &lt;house-list currency="DKK"&gt;
+      &lt;house-info number="30032" price="2980.00"/&gt;
+      &lt;house-info number="80667" price="4750.00"/&gt;
+      &lt;house-info number="30725" price="3949.00"/&gt;
+      &lt;house-info number="33611" price="8170.00"/&gt;
+      &lt;house-info number="23787" price="3830.00"/&gt;
+   &lt;/house-list&gt;
+&lt;/house-search&gt;</pre>
+
+
+<hr class="Example">
+
+
+<h2 class="Example">House availability</h2>
+<pre class="Example">&lt;?xml version='1.0' encoding='UTF-8' ?&gt;
+&lt;house-availability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                    xsi:noNamespaceSchemaLocation="https://b2b.dancenter.com/pubweb/booking/xml/schema/Request.xsd"&gt;
+   &lt;customer-info country="DE" max-persons="4"/&gt;
+   &lt;house-ref number="23787"/&gt;
+   &lt;rental-period-list&gt;
+      &lt;rental-period from="2009-12-05" to="2009-12-12"/&gt;
+      &lt;rental-period from="2009-12-19" to="2009-12-26"/&gt;
+      &lt;rental-period from="2009-12-19" to="2010-01-02"/&gt;
+      &lt;rental-period from="2009-12-26" to="2010-01-02"/&gt;
+      &lt;!-- OBS: max 12 rental-period entries --&gt;
+   &lt;/rental-period-list&gt;
+&lt;/house-availability&gt;</pre>
+<h3>response:</h3>
+<pre class="Example">&lt;?xml version='1.0' encoding='UTF-8' ?&gt;
+&lt;house-availability xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                    xsi:noNamespaceSchemaLocation="https://b2b.dancenter.com/pubweb/booking/xml/schema/Response.xsd"&gt;
+   &lt;house-ref number="23787"/&gt;
+   &lt;rental-period-list currency="EUR"&gt;
+      &lt;rental-period from="2009-12-05" price="605.00" to="2009-12-12"/&gt;
+      &lt;rental-period from="2009-12-19" price="1199.00" to="2009-12-26"/&gt;
+      &lt;rental-period from="2009-12-19" price="3114.00" to="2010-01-02"/&gt;
+      &lt;rental-period from="2009-12-26" price="1915.00" to="2010-01-02"/&gt;
+   &lt;/rental-period-list&gt;
+&lt;/house-availability&gt;</pre>
+
+
+<hr class="Example">
+
+
+<h2 class="Example">House info 1: available add-on products for this house</h2>
+<pre class="Example">&lt;?xml version='1.0' encoding='UTF-8' ?&gt;
+&lt;house-info-1 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:noNamespaceSchemaLocation="https://b2b.dancenter.com/pubweb/booking/xml/schema/Request.xsd"&gt;
+   &lt;customer-info country="DE" max-persons="4"/&gt;
+   &lt;house-ref number="23787"/&gt;
+   &lt;rental-period from="2009-12-05" to="2009-12-12"/&gt;
+&lt;/house-info-1&gt;</pre>
+<h3>response:</h3>
+<pre class="Example">&lt;?xml version='1.0' encoding='UTF-8' ?&gt;
+&lt;house-info-1 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:noNamespaceSchemaLocation="https://b2b.dancenter.com/pubweb/booking/xml/schema/Response.xsd"&gt;
+   &lt;rental-period from="2009-12-05" to="2009-12-12"/&gt;
+   &lt;product-info-list&gt;
+      &lt;product-info group="0" id="2" is-default-for-group="true" is-service="false"
+                    max-quantity="1" min-quantity="0" modifyable="true"
+                    name="Urlaubs-Vollschutz-Paket" price="40.00" quantity="0" seq="1"
+                    type="22" type-name="Versicherung wählen:"/&gt;
+      &lt;product-info group="0" id="1" is-default-for-group="false" is-service="false"
+                    max-quantity="1" min-quantity="0" modifyable="true"
+                    name="Reiserücktrittskostenversicherung" price="32.00" quantity="0"
+                    seq="2" type="22" type-name="Versicherung wählen:"/&gt;
+      &lt;product-info group="0" id="999999999" is-default-for-group="false" is-service="false"
+                    max-quantity="1" min-quantity="0" modifyable="true"
+                    name="Keine Versicherung" price="0.00" quantity="0" seq="3" type="22"
+                    type-name="Versicherung wählen:"/&gt;
+   &lt;/product-info-list&gt;
+&lt;/house-info-1&gt;</pre>
+
+
+<hr class="Example">
+
+
+<h2 class="Example">House info 2: total price including products</h2>
+<pre class="Example">&lt;?xml version='1.0' encoding='UTF-8' ?&gt;
+&lt;house-info-2 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:noNamespaceSchemaLocation="https://b2b.dancenter.com/pubweb/booking/xml/schema/Request.xsd"&gt;
+   &lt;customer-info country="DE" max-persons="4"/&gt;
+   &lt;house-ref number="23787"/&gt;
+   &lt;rental-period from="2009-12-05" to="2009-12-12"/&gt;
+   &lt;product-order-list&gt;
+      &lt;product-order group="0" id="1" quantity="1" type="22"/&gt;
+   &lt;/product-order-list&gt;
+&lt;/house-info-2&gt;</pre>
+<h3>response:</h3>
+<pre class="Example">&lt;?xml version='1.0' encoding='UTF-8' ?&gt;
+&lt;house-info-2 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:noNamespaceSchemaLocation="https://b2b.dancenter.com/pubweb/booking/xml/schema/Response.xsd"&gt;
+   &lt;rental-period from="2009-12-05" to="2009-12-12"/&gt;
+   &lt;payment bookingfee="0.00" cleaning="0.00" currency="EUR" insurance="0.00"
+            total-price="637.00"&gt;
+      &lt;rate amount="183.25" due-date="2008-12-08" number="1"/&gt;
+      &lt;rate amount="453.75" due-date="2009-10-31" number="2"/&gt;
+   &lt;/payment&gt;
+&lt;/house-info-2&gt;</pre>
+
+
+<hr class="Example">
+
+
+<h2 class="Example">Performing a booking</h2>
+<pre class="Example">&lt;?xml version='1.0' encoding='UTF-8' ?&gt;
+&lt;booking-create xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                xsi:noNamespaceSchemaLocation="https://b2b.dancenter.com/pubweb/booking/xml/schema/Request.xsd"&gt;
+   &lt;type agency-id="1234567" option="false"
+         partner-ref="Anything you like, e.g. your own reference" test-mode="true"/&gt;
+   &lt;!--
+	OBS: test-mode="true" automatically cancels the booking within 24 hours.
+	     Use "false" for production mode when the bookings shouldn't be cancelled automatically.
+
+	     "agency-id" is optional and not used by most partners.
+	--&gt;
+   &lt;house-ref number="23787"/&gt;
+   &lt;rental-period from="2009-12-05" to="2009-12-12"/&gt;
+   &lt;customer-info addr1="Rathausplatz 1" city="K&amp;#246;ln" country="DE" email="johndoe@example.com"
+                  email-newsletter="false" max-persons="4" name1="G&amp;#252;nter &amp;#214;stlind"
+                  phone="12345678" zip="24937"/&gt;
+   &lt;product-order-list&gt;
+      &lt;product-order group="0" id="1" quantity="1" type="22"/&gt;
+   &lt;/product-order-list&gt;
+&lt;/booking-create&gt;</pre>
+<h3>response:</h3>
+<pre class="Example">&lt;?xml version='1.0' encoding='UTF-8' ?&gt;
+&lt;booking-create xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                xsi:noNamespaceSchemaLocation="https://b2b.dancenter.com/pubweb/booking/xml/schema/Response.xsd"&gt;
+   &lt;booking-ref number="17998" season="2009"/&gt;
+&lt;/booking-create&gt;</pre>
+<p class="ExampleComment">You must specify option='false' as you're not permitted to create options.</p>
+
+
+<hr class="Example">
+
+
+<h2 class="Example">Getting formation for existing booking</h2>
+<pre class="Example">&lt;?xml version='1.0' encoding='UTF-8' ?&gt;
+&lt;booking-info xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:noNamespaceSchemaLocation="https://b2b.dancenter.com/pubweb/booking/xml/schema/Request.xsd"&gt;
+   &lt;booking-ref number="17998" season="2009"/&gt;
+&lt;/booking-info&gt;</pre>
+<h3>response:</h3>
+<pre class="Example">&lt;?xml version='1.0' encoding='UTF-8' ?&gt;
+&lt;booking-info xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:noNamespaceSchemaLocation="https://b2b.dancenter.com/pubweb/booking/xml/schema/Response.xsd"&gt;
+   &lt;type agency-id="1234567" cancelled="false" option="false"
+         partner-ref="Anything you like, e.g. your own reference"/&gt;
+   &lt;payment bookingfee="0.00" cleaning="0.00" currency="EUR" insurance="0.00"
+            partner-price="523.32" total-price="605.00"&gt;
+      &lt;rate amount="151.25" due-date="2008-12-08" number="1"/&gt;
+      &lt;rate amount="453.75" due-date="2009-10-31" number="2"/&gt;
+   &lt;/payment&gt;
+   &lt;house-info number="23787"&gt;
+      &lt;address addr1="Kapelvej 1" city="Thisted" country="DK" place="Vorupør" zip="7700"/&gt;
+      &lt;driving-directions&gt;
+         &lt;line&gt;Für unsere Gäste aus dem Süden: Autobahn 45 bis Randers. Danach die Hauptstr. (hovedvej) 16 nach Viborg nehmen und dann &lt;/line&gt;
+         &lt;line&gt;auf der Haupstr. 26 über Skive, Nykøbing Mors und weiter Richtung Thisted fahren. Im Ort Vildsund weiter geradeausin Ric &lt;/line&gt;
+         &lt;line&gt;htung Stenbjerg, Str. 571. In Stenbjerg dann rechts ab auf die Str. 181 nach Vorupør, ca. 5 km. In Vorupør linksin die V &lt;/line&gt;
+         &lt;line&gt;esterhavsgade abbiegen. Hier finden Sie das DanCenter Büro nach etwa 400m auf der rechten Seite. Anschrift: Vesterhavsga &lt;/line&gt;
+         &lt;line&gt;de 20. Ausserhalb der Öffnungszeiten bekommen Sie Ihren Schlüssel durch die Safetybox. Der Kode für die Box lautet 0678 &lt;/line&gt;
+         &lt;line&gt;und wird beendet, indem Sie &amp;quot;A&amp;quot; drücken.&lt;/line&gt;
+      &lt;/driving-directions&gt;
+   &lt;/house-info&gt;
+   &lt;branchoffice addr1="Vesterhavsgade 20" addr2="Vorupør" city="Thisted" country="DK"
+                 email="vorupor@dancenter.com" name="DanCenter Vorupør" phone="+4597985871"
+                 zip="7700"/&gt;
+   &lt;legal addr1="Lyngbyvej 20" city="København Ø" country="DK" email="booking@dancenter.com"
+          fax="+45 70 13 70 71" name="DanCenter A/S" phone="+45 70 13 00 00" place="Østerbro"
+          zip="2100"/&gt;
+   &lt;rental-period from="2009-12-05" to="2009-12-12"/&gt;
+   &lt;customer-info addr1="Rathausplatz 1" city="Flensburg" country="DE"
+                  email="johndoe@example.com" max-persons="4" name1="Hans Jensen"
+                  phone="12345678" zip="24937"/&gt;
+   &lt;product-info-list/&gt;
+   &lt;cost-info-list&gt;
+      &lt;cost-info currency="EUR" group="35" id="74" included-in-rental-price="false"
+                 name="Heizkosten" price-pr-unit="4.44" type="30" unit-text="Enh."/&gt;
+      &lt;cost-info currency="EUR" group="35" id="76" included-in-rental-price="false"
+                 name="Stromverbrauch" price-pr-unit="0.28" type="30" unit-text="KwH"/&gt;
+      &lt;cost-info currency="EUR" group="35" id="78" included-in-rental-price="false"
+                 name="Wasserverbrauch" price-pr-unit="3.81" type="30" unit-text="M3"/&gt;
+      &lt;cost-info currency="EUR" group="35" id="70" included-in-rental-price="true"
+                 name="Ruderboot" price-pr-unit="0.00" type="30" unit-text=""/&gt;
+   &lt;/cost-info-list&gt;
+&lt;/booking-info&gt;</pre>
+</div>
+
+
+</body></html>

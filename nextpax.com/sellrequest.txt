@@ -1,0 +1,44 @@
+<?xml version="1.0" ?>
+<TravelMessage VersionID="1.8N">
+  <Control Language="NL" Test="ja">
+    <SenderSessionID>mySession01</SenderSessionID>
+    <ReceiverSessionID>hisSessionID</ReceiverSessionID>
+    <Date>2013-12-06</Date>
+    <Time Reliability="zeker">02:55:56</Time>
+    <MessageSequence>1</MessageSequence>
+    <SenderID>MYB112</SenderID>
+    <ReceiverID>NPS001</ReceiverID>
+    <RequestID>SellRequest</RequestID>
+    <ResponseID>SellResponse</ResponseID>
+  </Control>
+  <TRequest>
+    <SellRequest>
+      <PackageDetails>
+        <PackageID>712891508247</PackageID>
+        <NumberOfAdults>2</NumberOfAdults>
+        <NumberOfChildren>0</NumberOfChildren>
+        <NumberOfBabies>0</NumberOfBabies>
+        <DepartureDate>2015-08-24</DepartureDate>
+        <Duration DurationType="dagen">7</Duration>
+      </PackageDetails>
+      <Transport>
+        <TransportTo>
+          <ComponentID>T01</ComponentID>
+          <TransportType>EV</TransportType>
+          <Departure>
+            <Point PointType="Internal">
+              <PointID />
+            </Point>
+            <Date>2015-08-24</Date>
+          </Departure>
+          <Arrival>
+            <Point PointType="Internal">
+              <PointID />
+            </Point>
+            <Date>2015-08-24</Date>
+          </Arrival>
+        </TransportTo>
+      </Transport>
+    </SellRequest>
+  </TRequest>
+</TravelMessage>
